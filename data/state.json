@@ -1,7 +1,11 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-08T07:59:18.819Z",
+<<<<<<< HEAD
   "lastCheckedAt": "2026-08-08T10:41:53.050Z",
+=======
+  "lastCheckedAt": "2026-08-08T10:48:04.211Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
   "board": [],
   "retired": [
     {
@@ -13,8 +17,13 @@
   ],
   "sources": {
     "malolos-city-website": {
+<<<<<<< HEAD
       "consecutiveFailures": 9,
       "lastFailureAt": "2026-08-08T10:41:53.058Z",
+=======
+      "consecutiveFailures": 11,
+      "lastFailureAt": "2026-08-08T10:48:04.215Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "lastError": {
         "kind": "network",
         "message": "fetch failed",
@@ -23,35 +32,70 @@
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
+<<<<<<< HEAD
       "lastSuccessAt": "2026-08-08T10:41:54.210Z",
+=======
+      "lastSuccessAt": "2026-08-08T10:48:06.351Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "lastError": null,
       "etag": "\"7e34f416a78a697e09f0cb1971a312f3-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 05:59:35 GMT"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
+<<<<<<< HEAD
       "lastSuccessAt": "2026-08-08T10:41:53.626Z",
+=======
+      "lastSuccessAt": "2026-08-08T10:48:05.698Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
+<<<<<<< HEAD
       "consecutiveFailures": 0,
       "lastSuccessAt": "2026-08-08T10:41:53.429Z",
       "lastError": null,
+=======
+      "consecutiveFailures": 4,
+      "lastSuccessAt": "2026-08-08T08:21:35.588Z",
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "etag": "\"1786163573.904-0\"",
-      "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT"
+      "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT",
+      "lastFailureAt": "2026-08-08T10:48:04.280Z"
     },
     "deped-central": {
+<<<<<<< HEAD
       "consecutiveFailures": 0,
       "lastSuccessAt": "2026-08-08T10:41:54.541Z",
       "lastError": null,
+=======
+      "consecutiveFailures": 4,
+      "lastSuccessAt": "2026-08-08T08:21:36.841Z",
+      "lastError": {
+        "kind": "http",
+        "message": "HTTP 403",
+        "status": 403
+      },
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "etag": "\"66ce4c940bcc642212304ebf3827318d\"",
-      "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT"
+      "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT",
+      "lastFailureAt": "2026-08-08T10:48:04.281Z"
     },
     "deped-region3": {
+<<<<<<< HEAD
       "consecutiveFailures": 9,
       "lastFailureAt": "2026-08-08T10:41:53.238Z",
+=======
+      "consecutiveFailures": 11,
+      "lastFailureAt": "2026-08-08T10:48:04.282Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "lastError": {
         "kind": "http",
         "message": "HTTP 403",
@@ -59,15 +103,30 @@
       }
     },
     "official-gazette": {
+<<<<<<< HEAD
       "consecutiveFailures": 0,
       "lastSuccessAt": "2026-08-08T10:41:53.808Z",
       "lastError": null,
+=======
+      "consecutiveFailures": 4,
+      "lastSuccessAt": "2026-08-08T08:21:35.916Z",
+      "lastError": {
+        "kind": "http",
+        "message": "HTTP 403",
+        "status": 403
+      },
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
-      "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT"
+      "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
+      "lastFailureAt": "2026-08-08T10:48:04.283Z"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
+<<<<<<< HEAD
       "lastSuccessAt": "2026-08-08T10:41:53.230Z",
+=======
+      "lastSuccessAt": "2026-08-08T10:48:04.277Z",
+>>>>>>> 86f4f9e29685798c384e2404f235d2e5eaedfa4b
       "lastError": null,
       "etag": null,
       "lastModified": null
