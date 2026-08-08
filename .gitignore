@@ -1,0 +1,9 @@
+node_modules/
+.preview/
+logs/*.log
+logs/*.json
+!logs/.gitkeep
+.DS_Store
+Thumbs.db
+*.tmp
+.cache/

@@ -1,0 +1,21 @@
+{
+  "name": "alertomalolos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AlertoMalolos - a civic announcement board for the citizens of Malolos. A project by Benedict de Jesus.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "update": "node src/pipeline/update.js",
+    "update:dry": "node src/pipeline/update.js --dry-run",
+    "build": "node src/site/build.js",
+    "serve": "node tools/serve.js",
+    "test": "node --test",
+    "preview": "node tools/preview.js",
+    "fonts": "node tools/fetch-fonts.js"
+  },
+  "license": "MIT",
+  "author": "Benedict de Jesus"
+}

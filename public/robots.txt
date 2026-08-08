@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://benedict-dejesus.github.io/AlertoMalolos/sitemap.xml
