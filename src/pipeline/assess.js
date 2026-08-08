@@ -148,7 +148,7 @@ function isWeakLocalLink(basis) {
 }
 
 /**
- * The post-it snippet is source text, shortened at sentence boundaries. Nothing
+ * The alert snippet is source text, shortened at sentence boundaries. Nothing
  * is reworded, summarised or added; the original notice stays authoritative.
  */
 export function buildSnippet(candidate) {

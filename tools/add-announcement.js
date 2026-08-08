@@ -166,7 +166,7 @@ if (!verdict.ok) {
   process.stdout.write(`  Accepted as: ${verdict.record.category}`);
   if (verdict.record.isEmergency) process.stdout.write(' (emergency)');
   process.stdout.write(`, score ${verdict.record.totalScore}\n`);
-  process.stdout.write(`  Snippet on the post-it:\n    "${verdict.record.snippet}"\n\n`);
+  process.stdout.write(`  Snippet on the alert:\n    "${verdict.record.snippet}"\n\n`);
 }
 
 if (args.check) {

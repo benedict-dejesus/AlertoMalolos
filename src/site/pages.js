@@ -7,97 +7,106 @@ import { CATEGORIES } from '../../config/rules.js';
 import { sourcesForPublicDisplay } from '../../config/sources.js';
 import { AUTHOR, DISCLAIMER, EMPTY_STATE, SITE } from '../../config/site.js';
 import { escapeHtml, escapeJson } from '../lib/sanitize.js';
-import { hashUnit } from '../lib/text.js';
 import { formatManila, relativeTime } from '../lib/time.js';
-
-const PIN_COLOURS = ['var(--pin-red)', 'var(--pin-blue)', 'var(--pin-brass)', 'var(--pin-slate)'];
 
 export function categoryLabel(id) {
   return CATEGORIES[id]?.label ?? 'Public notice';
 }
 
-/** A post-it, or - for emergencies - a printed notice sheet. */
-export function renderNote(record, { base = '', index = 0 } = {}) {
-  const rotation = (hashUnit(record.id, 'rotate') * 2.6 - 1.3).toFixed(2);
-  const lift = (hashUnit(record.id, 'lift') * 5).toFixed(1);
-  const pin = PIN_COLOURS[Math.floor(hashUnit(record.id, 'pin') * PIN_COLOURS.length) % PIN_COLOURS.length];
+/**
+ * One alert panel.
+ *
+ * The rank is real information - the board is ordered by how much each notice
+ * affects residents - so it is shown as a numeral rather than hidden in the
+ * sort order. Status is stated in words as well as colour.
+ */
+export function renderAlert(record, { base = '', index = 0 } = {}) {
   const detailHref = `${base}a/${encodeURIComponent(record.id)}.html`;
 
-  const flags = [];
-  if (record.isEmergency) flags.push('<span class="flag flag--emergency">Emergency advisory</span>');
-  if (record.isPriority) flags.push(`<span class="flag flag--priority">Priority ${record.priorityRank}</span>`);
-  if (record.isNew && !record.isPriority) flags.push('<span class="flag flag--new">New</span>');
-  if (record.isUpdated) flags.push('<span class="flag flag--updated">Updated</span>');
+  const status = record.isEmergency
+    ? { label: 'Emergency advisory', tone: 'emergency' }
+    : record.isPriority
+      ? { label: `Priority ${record.priorityRank}`, tone: 'priority' }
+      : record.isNew
+        ? { label: 'New', tone: 'new' }
+        : { label: 'Active', tone: 'active' };
 
   const published = record.publishedAtIsKnown
     ? `<time datetime="${escapeHtml(record.publishedAt)}" data-relative="${escapeHtml(record.publishedAt)}">${escapeHtml(
         formatManila(record.publishedAt)
       )}</time>`
-    : `<span class="note__nodate">Publication time not stated by the source</span>`;
+    : `<span class="alert__nodate">Time not stated by the source</span>`;
 
-  return `<article class="note note--${escapeHtml(record.displayState)}${record.isEmergency ? ' note--emergency' : ''}"
-  style="--rot:${rotation}deg;--lift:${lift}px;--pin-colour:${pin}"
+  return `<article class="alert alert--${escapeHtml(record.category)}${
+    record.isEmergency ? ' alert--emergency' : ''
+  }${record.isPriority ? ' alert--priority' : ''}"
+  style="--i:${index}"
   data-id="${escapeHtml(record.id)}"
   data-category="${escapeHtml(record.category)}"
   data-emergency="${record.isEmergency ? 'true' : 'false'}"
   aria-labelledby="title-${escapeHtml(record.id)}">
-  <span class="note__pin" aria-hidden="true"></span>
-  ${flags.length ? `<p class="note__flags">${flags.join('')}</p>` : ''}
-  <h3 class="note__title" id="title-${escapeHtml(record.id)}">
-    <a class="note__link" href="${escapeHtml(detailHref)}">${escapeHtml(record.title)}</a>
-  </h3>
-  ${record.snippet ? `<p class="note__snippet">${escapeHtml(record.snippet)}</p>` : ''}
-  <p class="note__attribution">
-    <span class="note__source">${escapeHtml(record.sourceName)}</span>
-    <span class="note__published">${published}</span>
+  <span class="alert__spine" aria-hidden="true"></span>
+  <span class="alert__sweep" aria-hidden="true"></span>
+  <p class="alert__head">
+    <span class="alert__rank" aria-hidden="true">${String(record.priorityRank ?? index + 1).padStart(2, '0')}</span>
+    <span class="alert__category">${escapeHtml(categoryLabel(record.category))}</span>
+    <span class="alert__status alert__status--${status.tone}">
+      <span class="alert__status-dot" aria-hidden="true"></span>${escapeHtml(status.label)}
+    </span>
+    ${record.isUpdated ? '<span class="alert__badge">Updated</span>' : ''}
   </p>
-  <p class="note__foot">
-    <span class="chip chip--${escapeHtml(record.category)}">${escapeHtml(categoryLabel(record.category))}</span>
-    <a class="note__official" href="${escapeHtml(record.announcementUrl)}" target="_blank" rel="noopener noreferrer">
-      Read official announcement<span class="note__external" aria-hidden="true">↗</span>
+  <h3 class="alert__title" id="title-${escapeHtml(record.id)}">
+    <a class="alert__link" href="${escapeHtml(detailHref)}">${escapeHtml(record.title)}</a>
+  </h3>
+  ${record.snippet ? `<p class="alert__snippet">${escapeHtml(record.snippet)}</p>` : ''}
+  <p class="alert__meta">
+    <span class="alert__source">${escapeHtml(record.sourceName)}</span>
+    <span class="alert__time">${published}</span>
+  </p>
+  <p class="alert__foot">
+    <a class="alert__official" href="${escapeHtml(record.announcementUrl)}" target="_blank" rel="noopener noreferrer">
+      Read official announcement<span class="alert__arrow" aria-hidden="true">→</span>
       <span class="visually-hidden">(opens the ${escapeHtml(record.sourceName)} website in a new tab)</span>
     </a>
   </p>
 </article>`;
 }
 
-/** HOME - the corkboard. */
+/** HOME - the monitor. */
 export function renderHome(board, options = {}) {
   const announcements = board.announcements ?? [];
   const categoriesPresent = [...new Set(announcements.map((record) => record.category))];
 
-  const filters = announcements.length > 3
-    ? `<div class="filters" hidden data-filters>
-    <span class="filters__label" id="filter-label">Show</span>
-    <div class="filters__chips" role="group" aria-labelledby="filter-label">
-      <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All (${announcements.length})</button>
+  const filters =
+    announcements.length > 3
+      ? `<div class="filters" hidden data-filters>
+    <div class="filters__chips" role="group" aria-label="Filter by kind of announcement">
+      <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All <span class="filter__n">${announcements.length}</span></button>
       ${categoriesPresent
         .map((id) => {
           const count = announcements.filter((record) => record.category === id).length;
-          return `<button type="button" class="filter" data-filter="${escapeHtml(id)}" aria-pressed="false">${escapeHtml(
-            categoryLabel(id)
-          )} (${count})</button>`;
+          return `<button type="button" class="filter filter--${escapeHtml(id)}" data-filter="${escapeHtml(
+            id
+          )}" aria-pressed="false">${escapeHtml(categoryLabel(id))} <span class="filter__n">${count}</span></button>`;
         })
         .join('\n      ')}
     </div>
   </div>`
-    : '';
+      : '';
 
-  const boardBody = announcements.length
-    ? `<div class="board__notes" data-notes>
-${announcements.map((record, index) => renderNote(record, { index })).join('\n')}
+  const body = announcements.length
+    ? `<div class="alerts" data-alerts>
+${announcements.map((record, index) => renderAlert(record, { index })).join('\n')}
 </div>
-<p class="board__count" data-count>${announcements.length} active announcement${
+<p class="alerts__count" data-count><span class="alerts__count-n">${announcements.length}</span> active announcement${
         announcements.length === 1 ? '' : 's'
       }</p>`
     : renderEmptyState();
 
-  return `<section class="board-section">
+  return `<section class="monitor">
   ${filters}
-  <div class="board" role="region" aria-label="Active public announcements for Malolos">
-    <div class="board__surface">
-${boardBody}
-    </div>
+  <div class="monitor__screen" role="region" aria-label="Active public announcements for Malolos">
+${body}
   </div>
 </section>
 ${
@@ -109,7 +118,7 @@ ${
 
 function renderEmptyState() {
   return `<div class="empty">
-  <span class="empty__pin" aria-hidden="true"></span>
+  <span class="empty__radar" aria-hidden="true"><span class="empty__ring"></span><span class="empty__ring"></span><span class="empty__dot"></span></span>
   <h2 class="empty__title">${escapeHtml(EMPTY_STATE.title)}</h2>
   <p class="empty__body">${escapeHtml(EMPTY_STATE.body)}</p>
 </div>`;
@@ -117,9 +126,11 @@ function renderEmptyState() {
 
 /** The expanded view, used by the dialog. Detail pages work without it. */
 function renderDialog() {
-  return `<dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-dialog-title">
+  return `<dialog class="sheet" id="detail-dialog" aria-labelledby="detail-dialog-title">
   <article class="detail detail--dialog">
-    <button type="button" class="detail__close" data-close-dialog aria-label="Close announcement">×</button>
+    <button type="button" class="sheet__close" data-close-dialog aria-label="Close announcement">
+      <span aria-hidden="true">✕</span>
+    </button>
     <div data-dialog-content></div>
   </article>
 </dialog>`;
@@ -143,7 +154,7 @@ export function renderDetail(record, options = {}) {
           (entry) =>
             `<li><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
               entry.sourceName ?? 'Official source'
-            )}<span aria-hidden="true"> ↗</span></a></li>`
+            )}<span aria-hidden="true"> →</span></a></li>`
         )
         .join('')}</ul></dd>
     </div>`
@@ -157,12 +168,12 @@ export function renderDetail(record, options = {}) {
         ? 'Recently posted'
         : 'Active';
 
-  return `<article class="detail">
-  <p class="detail__back"><a href="${base}index.html">Back to the board</a></p>
+  return `<article class="detail detail--${escapeHtml(record.category)}${record.isEmergency ? ' detail--emergency' : ''}">
+  <p class="detail__back"><a href="${base}index.html"><span aria-hidden="true">←</span> Back to the board</a></p>
   ${record.isEmergency ? '<p class="detail__banner">Emergency advisory</p>' : ''}
   <p class="detail__flags">
     <span class="chip chip--${escapeHtml(record.category)}">${escapeHtml(categoryLabel(record.category))}</span>
-    ${record.isUpdated ? '<span class="flag flag--updated">Updated since first posted</span>' : ''}
+    ${record.isUpdated ? '<span class="chip chip--updated">Updated since first posted</span>' : ''}
   </p>
   <h1 class="detail__title">${escapeHtml(record.title)}</h1>
   ${record.snippet ? `<blockquote class="detail__snippet"><p>${escapeHtml(record.snippet)}</p><cite>From the announcement published by ${escapeHtml(record.sourceName)}</cite></blockquote>` : ''}
@@ -173,7 +184,7 @@ export function renderDetail(record, options = {}) {
   }
   <p class="detail__cta">
     <a class="button" href="${escapeHtml(record.announcementUrl)}" target="_blank" rel="noopener noreferrer">
-      Read official announcement<span aria-hidden="true"> ↗</span>
+      Read official announcement<span aria-hidden="true"> →</span>
       <span class="visually-hidden">(opens ${escapeHtml(record.sourceName)} in a new tab)</span>
     </a>
   </p>
@@ -208,7 +219,7 @@ export function renderAbout() {
   <p>The board holds a maximum of 20 notices. When a new one arrives and the board is full, the least important notice comes down. An active advisory is never removed just because something newer was published.</p>
 
   <h2>Why the original source matters</h2>
-  <p>Every post-it carries the name of the office that issued the notice and a link to the original. The wording shown here is taken from the source and shortened; it is never rewritten, reinterpreted or made to sound more urgent than the original. If the two ever differ, the official announcement is correct.</p>
+  <p>Every alert carries the name of the office that issued the notice and a link to the original. The wording shown here is taken from the source and shortened; it is never rewritten, reinterpreted or made to sound more urgent than the original. If the two ever differ, the official announcement is correct.</p>
 
   <h2>How often it is checked</h2>
   <p>Official sources are checked every hour. The time of the last check is shown at the top of the board. This is not a live feed, and it is not a substitute for emergency services.</p>
@@ -224,7 +235,7 @@ export function renderAbout() {
 }
 
 /** SOURCES */
-export function renderSources(sources, state = {}) {
+export function renderSources(sources) {
   const groups = sourcesForPublicDisplay(sources);
   return `<article class="prose">
   <h1>Where the announcements come from</h1>
@@ -242,7 +253,7 @@ export function renderSources(sources, state = {}) {
         <p class="source__desc">${escapeHtml(source.publicDescription ?? '')}</p>
         <p class="source__link"><a href="${escapeHtml(source.homepage)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
             (source.homepage ?? '').replace(/^https?:\/\//, '').replace(/\/$/, '')
-          )}<span aria-hidden="true"> ↗</span></a></p>
+          )}<span aria-hidden="true"> →</span></a></p>
         ${source.enabled === false ? '<p class="source__status">Not being checked at the moment</p>' : ''}
       </li>`
         )

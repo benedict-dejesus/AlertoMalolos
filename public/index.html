@@ -6,7 +6,8 @@
 <title>AlertoMalolos — Important announcements for the citizens of Malolos.</title>
 <meta name="description" content="AlertoMalolos is a civic announcement board that collects active public advisories affecting the City of Malolos and links each one back to its official source.">
 <meta name="author" content="Benedict de Jesus">
-<meta name="theme-color" content="#2E2019">
+<meta name="theme-color" content="#090D13">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://benedict-dejesus.github.io/AlertoMalolos/index.html">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -21,41 +22,47 @@
 <link rel="preload" href="assets/fonts/plex-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/board.css">
+<script>document.documentElement.classList.add('has-js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AlertoMalolos","url":"https://benedict-dejesus.github.io/AlertoMalolos","description":"AlertoMalolos is a civic announcement board that collects active public advisories affecting the City of Malolos and links each one back to its official source.","inLanguage":"en-PH","author":{"@type":"Person","name":"Benedict de Jesus"},"publisher":{"@type":"Person","name":"Benedict de Jesus"},"about":{"@type":"City","name":"Malolos","address":{"@type":"PostalAddress","addressRegion":"Bulacan","addressCountry":"PH"}}}</script>
 </head>
 <body class="is-board">
 <a class="skip-link" href="#main">Skip to the announcements</a>
 
-<header class="masthead">
-  <div class="masthead__inner">
-    <h1 class="masthead__name"><a class="wordmark" href="index.html">
-      <span class="wordmark__alerto">Alerto</span><span class="wordmark__malolos">Malolos</span>
-    </a></h1>
-    <p class="masthead__tagline">Important announcements for the citizens of Malolos.</p>
-    <p class="status" data-last-checked="2026-08-08T08:21:35.162Z">
-      <span class="status__dot" aria-hidden="true"></span>
-      <span class="status__text">Checked 4:21 PM</span>
-    </p>
-    <nav class="nav" aria-label="Sections">
-      <ul>
-        <li><a href="index.html" aria-current="page">Board</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="sources.html">Sources</a></li>
-      </ul>
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__brand">
+      <span class="beacon" aria-hidden="true"><span class="beacon__core"></span></span>
+      <h1 class="brand"><a class="wordmark" href="index.html">
+        <span class="wordmark__a">Alerto</span><span class="wordmark__b">Malolos</span>
+      </a></h1>
+    </div>
+    <p class="topbar__tagline">Important announcements for the citizens of Malolos.</p>
+    <div class="cycle" data-cycle data-last-checked="2026-08-08T10:41:53.050Z" data-interval="60">
+      <p class="cycle__row">
+        <span class="cycle__label">Checked</span>
+        <span class="cycle__value" data-cycle-checked>6:41 PM</span>
+        <span class="cycle__spacer"></span>
+        <span class="cycle__label cycle__label--next">Next check</span>
+        <span class="cycle__value" data-cycle-next>in under an hour</span>
+      </p>
+      <span class="cycle__track" aria-hidden="true"><span class="cycle__fill" data-cycle-fill></span></span>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <a class="tab" href="index.html" aria-current="page">Board</a>
+      <a class="tab" href="about.html">About</a>
+      <a class="tab" href="sources.html">Sources</a>
     </nav>
   </div>
 </header>
 <main id="main" tabindex="-1">
-<section class="board-section">
+<section class="monitor">
   
-  <div class="board" role="region" aria-label="Active public announcements for Malolos">
-    <div class="board__surface">
+  <div class="monitor__screen" role="region" aria-label="Active public announcements for Malolos">
 <div class="empty">
-  <span class="empty__pin" aria-hidden="true"></span>
+  <span class="empty__radar" aria-hidden="true"><span class="empty__ring"></span><span class="empty__ring"></span><span class="empty__dot"></span></span>
   <h2 class="empty__title">No major announcements right now.</h2>
   <p class="empty__body">AlertoMalolos is monitoring official sources. When an advisory affects Malolos, it is posted here.</p>
 </div>
-    </div>
   </div>
 </section>
 

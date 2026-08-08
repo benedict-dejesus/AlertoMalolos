@@ -6,7 +6,7 @@ Designed and built by **Benedict de Jesus**.
 AlertoMalolos collects public advisories that are in force right now — class and
 work suspensions, road closures, water and power interruptions, flood and severe
 weather warnings, health advisories, service changes — from official government
-sources, and pins them to a corkboard with a link back to the original notice.
+sources, and shows them on one screen with a link back to the original notice.
 
 It is an independent project. It is not the official website of the City
 Government of Malolos.
@@ -20,7 +20,7 @@ opinion, sport and crime reports are rejected by design. When a candidate is
 ambiguous, it is dropped. A quiet board is the correct result on a quiet day —
 the empty state is a feature, not a failure.
 
-The board never holds more than **20** post-its, and the **three** most
+The board never holds more than **20** alerts, and the **three** most
 important active notices get the priority treatment.
 
 ## How it works
@@ -98,7 +98,7 @@ publisher is credible.
 ```js
 {
   id: 'malolos-cdrrmo',                 // stable, used in record ids
-  name: 'Malolos City DRRMO',           // shown on the post-it
+  name: 'Malolos City DRRMO',           // shown on the alert
   publicDescription: 'Disaster advisories and evacuation information.',
   tier: 2,                              // 1 city … 5 utility; lower wins duplicates
   scope: 'malolos',                     // malolos | bulacan | regional | national
@@ -134,17 +134,17 @@ not being checked.
   something an advisory or a story
 - `MALOLOS_TERMS`, `MALOLOS_BARANGAYS`, `BULACAN_TERMS` — geographic relevance
 - `THRESHOLDS` — raise them for a quieter board, lower them for a busier one
-- `SCORE_WEIGHTS`, `BOARD_LIMITS` — ranking and the hard 20 post-it cap
+- `SCORE_WEIGHTS`, `BOARD_LIMITS` — ranking and the hard 20 alert cap
 
 Change a threshold, then run `npm run update:dry --verbose` and read the
 rejection reasons before committing.
 
 ## Content integrity
 
-The snippet on a post-it is source text, shortened at sentence boundaries and
+The snippet on an alert is source text, shortened at sentence boundaries and
 marked with an ellipsis where text was removed. Nothing is reworded,
 summarised, translated or made more urgent than the original. Dates, times,
-place names and numbers are never touched. Every post-it links to the original
+place names and numbers are never touched. Every alert links to the original
 notice, and the detail view repeats the publisher, the publication time and the
 link. Tests in `test/content.test.js` assert that every character of a snippet
 appears in the source text.

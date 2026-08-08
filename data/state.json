@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-08T07:59:18.819Z",
-  "lastCheckedAt": "2026-08-08T08:21:35.162Z",
+  "lastCheckedAt": "2026-08-08T10:41:53.050Z",
   "board": [],
   "retired": [
     {
@@ -13,8 +13,8 @@
   ],
   "sources": {
     "malolos-city-website": {
-      "consecutiveFailures": 7,
-      "lastFailureAt": "2026-08-08T08:21:35.169Z",
+      "consecutiveFailures": 9,
+      "lastFailureAt": "2026-08-08T10:41:53.058Z",
       "lastError": {
         "kind": "network",
         "message": "fetch failed",
@@ -23,35 +23,35 @@
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:36.695Z",
+      "lastSuccessAt": "2026-08-08T10:41:54.210Z",
       "lastError": null,
       "etag": "\"7e34f416a78a697e09f0cb1971a312f3-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 05:59:35 GMT"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:35.830Z",
+      "lastSuccessAt": "2026-08-08T10:41:53.626Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:35.588Z",
+      "lastSuccessAt": "2026-08-08T10:41:53.429Z",
       "lastError": null,
       "etag": "\"1786163573.904-0\"",
       "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT"
     },
     "deped-central": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:36.841Z",
+      "lastSuccessAt": "2026-08-08T10:41:54.541Z",
       "lastError": null,
       "etag": "\"66ce4c940bcc642212304ebf3827318d\"",
       "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT"
     },
     "deped-region3": {
-      "consecutiveFailures": 7,
-      "lastFailureAt": "2026-08-08T08:21:35.394Z",
+      "consecutiveFailures": 9,
+      "lastFailureAt": "2026-08-08T10:41:53.238Z",
       "lastError": {
         "kind": "http",
         "message": "HTTP 403",
@@ -60,14 +60,14 @@
     },
     "official-gazette": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:35.916Z",
+      "lastSuccessAt": "2026-08-08T10:41:53.808Z",
       "lastError": null,
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T08:21:35.385Z",
+      "lastSuccessAt": "2026-08-08T10:41:53.230Z",
       "lastError": null,
       "etag": null,
       "lastModified": null

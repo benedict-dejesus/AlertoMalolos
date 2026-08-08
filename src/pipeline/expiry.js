@@ -2,7 +2,7 @@
  * When does an announcement stop being useful?
  *
  * Expiry is an internal lifecycle decision, never shown to citizens as a claim
- * about the announcement itself. It only controls how long a post-it stays on
+ * about the announcement itself. It only controls how long an alert stays on
  * the board. When the text gives an explicit end, that end is used; otherwise a
  * conservative default for the category applies.
  */

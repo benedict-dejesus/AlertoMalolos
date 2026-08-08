@@ -218,7 +218,7 @@ describe('taking a recorded notice back', () => {
     });
   }
 
-  it('takes the post-it down when the entry is removed from the file', async () => {
+  it('takes the alert down when the entry is removed from the file', async () => {
     const posted = await withCuratedFile([entry], boardWithNotice);
     assert.equal(posted.state.board.length, 1);
 

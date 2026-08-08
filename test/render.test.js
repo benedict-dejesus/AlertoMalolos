@@ -15,7 +15,7 @@ import { assess } from '../src/pipeline/assess.js';
 import { emptyState, mergeBoard } from '../src/pipeline/board.js';
 import { publicBoard, publicRecord } from '../src/pipeline/store.js';
 import { buildSite } from '../src/site/build.js';
-import { renderDetail, renderHome, renderNote } from '../src/site/pages.js';
+import { renderAlert, renderDetail, renderHome } from '../src/site/pages.js';
 import { QUALIFYING, candidate } from './fixtures/candidates.js';
 
 const NOW = '2026-08-08T01:00:00.000Z';
@@ -48,7 +48,7 @@ describe('escaping and safety', () => {
     const verdict = assess(hostile, sourceById('malolos-city-website'), { now: NOW, sources: SOURCES });
     assert.equal(verdict.ok, true, verdict.reason);
 
-    const html = renderNote(publicRecord({ ...verdict.record, isPriority: true, priorityRank: 1 }));
+    const html = renderAlert(publicRecord({ ...verdict.record, isPriority: true, priorityRank: 1 }));
     assert.ok(!html.includes('<script>'), 'a script tag must never survive into the page');
     assert.ok(!html.includes('onerror='), 'an event handler must never survive into the page');
     assert.ok(html.includes('&lt;script&gt;') || !html.includes('script'), 'the text must be escaped');
@@ -69,7 +69,7 @@ describe('escaping and safety', () => {
 
   it('opens source links safely in a new tab', () => {
     const { board } = boardFrom([QUALIFYING[0]]);
-    const html = renderNote(board.announcements[0]);
+    const html = renderAlert(board.announcements[0]);
     assert.ok(html.includes('rel="noopener noreferrer"'));
     assert.ok(html.includes('target="_blank"'));
   });
@@ -113,7 +113,7 @@ describe('the board page', () => {
     const html = await readFile(join(dir, 'index.html'), 'utf8');
     assert.ok(html.includes('No major announcements right now.'));
     assert.ok(html.includes('monitoring official sources'));
-    assert.ok(!html.includes('class="note '), 'no post-its should be rendered');
+    assert.ok(!html.includes('class="alert '), 'no alert panels should be rendered');
     await rm(dir, { recursive: true, force: true });
   });
 
@@ -126,12 +126,12 @@ describe('the board page', () => {
       assert.ok(html.includes(record.announcementUrl), `missing the source link for ${record.id}`);
       assert.ok(html.includes(record.sourceName), `missing the source name for ${record.id}`);
     }
-    const notes = html.match(/class="note note--/g) ?? [];
-    assert.equal(notes.length, state.board.length);
+    const panels = html.match(/class="alert alert--/g) ?? [];
+    assert.equal(panels.length, state.board.length);
     await rm(dir, { recursive: true, force: true });
   });
 
-  it('writes a detail page for every post-it and clears stale ones', async () => {
+  it('writes a detail page for every alert and clears stale ones', async () => {
     const many = boardFrom(QUALIFYING);
     const { dir } = await buildInto(many.state);
     let pages = (await readdir(join(dir, 'a'))).filter((name) => name.endsWith('.html'));
@@ -149,7 +149,8 @@ describe('the board page', () => {
     const { dir } = await buildInto({ ...state, lastCheckedAt: NOW });
     const html = await readFile(join(dir, 'index.html'), 'utf8');
     assert.ok(html.includes(`data-last-checked="${NOW}"`));
-    assert.ok(/Checked \d/.test(html));
+    assert.ok(html.includes('>Checked<'), 'the last check must be labelled');
+    assert.ok(/cycle__value[^>]*>\d/.test(html), 'the last check must show a time');
     await rm(dir, { recursive: true, force: true });
   });
 
@@ -203,9 +204,9 @@ describe('the board page', () => {
     const html = await readFile(join(dir, 'index.html'), 'utf8');
 
     const body = html.split('<body')[1];
-    const firstNote = body.indexOf('class="note note--');
-    const paragraphs = (body.slice(0, firstNote).match(/<p[\s>]/g) ?? []).length;
-    assert.ok(paragraphs <= 4, `${paragraphs} paragraphs before the first post-it is too many`);
+    const firstAlert = body.indexOf('class="alert alert--');
+    const paragraphs = (body.slice(0, firstAlert).match(/<p[\s>]/g) ?? []).length;
+    assert.ok(paragraphs <= 4, `${paragraphs} paragraphs before the first alert is too many`);
     await rm(dir, { recursive: true, force: true });
   });
 
@@ -255,7 +256,7 @@ describe('accessibility basics', () => {
 
     assert.ok(html.includes('class="skip-link"'));
     assert.ok(html.includes('<main id="main"'));
-    assert.ok(html.includes('<header class="masthead">'));
+    assert.ok(html.includes('<header class="topbar">'));
     assert.ok(html.includes('<footer class="footer">'));
     assert.ok(html.includes('aria-label="Active public announcements for Malolos"'));
     assert.equal((html.match(/<h1[\s>]/g) ?? []).length, 1);
@@ -266,14 +267,14 @@ describe('accessibility basics', () => {
     const { board } = boardFrom(QUALIFYING);
     const emergency = board.announcements.find((record) => record.isEmergency);
     assert.ok(emergency, 'the fixtures should contain an emergency advisory');
-    const html = renderNote(emergency);
+    const html = renderAlert(emergency);
     assert.ok(html.includes('Emergency advisory'), 'an emergency must say so in text');
     assert.ok(html.includes('data-emergency="true"'));
   });
 
   it('describes where an external link goes', () => {
     const { board } = boardFrom([QUALIFYING[0]]);
-    const html = renderNote(board.announcements[0]);
+    const html = renderAlert(board.announcements[0]);
     assert.ok(html.includes('opens the City Government of Malolos website in a new tab'));
   });
 });

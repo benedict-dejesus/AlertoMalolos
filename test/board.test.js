@@ -1,5 +1,5 @@
 /**
- * Board behaviour: lifecycle, ranking, duplicates and the twenty post-it limit.
+ * Board behaviour: lifecycle, ranking, duplicates and the twenty alert limit.
  */
 
 import assert from 'node:assert/strict';
@@ -168,7 +168,7 @@ describe('duplicates', () => {
 });
 
 describe('updates and expiry', () => {
-  it('updates an existing post-it in place when the source revises it', () => {
+  it('updates an existing alert in place when the source revises it', () => {
     const first = build([QUALIFYING[0]]);
     const revised = {
       ...QUALIFYING[0],

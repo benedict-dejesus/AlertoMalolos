@@ -17,16 +17,18 @@ const WIDTH = 1200;
 const HEIGHT = 630;
 
 const COLOURS = {
-  wood: [42, 29, 21],
-  cork: [192, 142, 85],
-  corkDark: [162, 112, 62],
-  paper: [255, 203, 51],
-  paperEdge: [232, 174, 5],
-  ink: [25, 20, 16],
-  cream: [243, 230, 213],
-  muted: [232, 216, 196],
-  pin: [198, 57, 43],
-  alertInk: [125, 28, 17],
+  bg: [9, 13, 19],
+  panel: [18, 27, 38],
+  panelLit: [23, 34, 47],
+  line: [34, 48, 63],
+  amber: [255, 178, 36],
+  cyan: [63, 216, 228],
+  green: [69, 207, 124],
+  slate: [143, 166, 191],
+  text: [234, 241, 248],
+  dim: [157, 176, 198],
+  faint: [109, 129, 153],
+  ink: [16, 22, 31],
 };
 
 /* A 5x7 stencil alphabet. Enough for the wordmark and two lines of caption. */
@@ -121,54 +123,70 @@ function textWidth(value, scale, tracking = 1) {
 }
 
 /* ---- compose ---------------------------------------------------------- */
-rect(0, 0, WIDTH, HEIGHT, COLOURS.wood);
+rect(0, 0, WIDTH, HEIGHT, COLOURS.bg);
 
-// cork panel with a speckle, inside a wood frame
-const M = 34;
-rect(M, M, WIDTH - M * 2, HEIGHT - M * 2, COLOURS.cork);
-let seed = 20260808;
-const random = () => {
-  seed = (seed * 1664525 + 1013904223) % 4294967296;
-  return seed / 4294967296;
-};
-for (let i = 0; i < 3200; i += 1) {
-  const x = M + Math.floor(random() * (WIDTH - M * 2));
-  const y = M + Math.floor(random() * (HEIGHT - M * 2));
-  disc(x, y, random() < 0.3 ? 2 : 1, random() < 0.25 ? COLOURS.cream : COLOURS.corkDark);
+// a faint instrument grid, the same one the site uses
+for (let x = 0; x < WIDTH; x += 44) rect(x, 0, 1, HEIGHT, [14, 20, 28]);
+for (let y = 0; y < HEIGHT; y += 44) rect(0, y, WIDTH, 1, [14, 20, 28]);
+
+// warm glow at the top left, cool at the top right
+for (let y = 0; y < 320; y += 1) {
+  for (let x = 0; x < WIDTH; x += 1) {
+    const warm = Math.max(0, 1 - Math.hypot((x - 140) / 620, (y + 40) / 380));
+    const cool = Math.max(0, 1 - Math.hypot((x - 1080) / 520, (y + 30) / 330));
+    if (warm <= 0 && cool <= 0) continue;
+    const index = (y * WIDTH + x) * 3;
+    pixels[index] = Math.min(255, pixels[index] + warm * 26 + cool * 4);
+    pixels[index + 1] = Math.min(255, pixels[index + 1] + warm * 18 + cool * 16);
+    pixels[index + 2] = Math.min(255, pixels[index + 2] + warm * 4 + cool * 20);
+  }
 }
 
-// the post-it carrying the wordmark
-const cardX = 86;
-const cardY = 96;
-const cardW = WIDTH - cardX * 2;
-const cardH = 340;
-rect(cardX + 8, cardY + 10, cardW, cardH, [120, 82, 40]);
-rect(cardX, cardY, cardW, cardH, COLOURS.paper);
-rect(cardX, cardY + cardH - 8, cardW, 8, COLOURS.paperEdge);
-disc(cardX + cardW / 2, cardY + 6, 13, COLOURS.pin);
-disc(cardX + cardW / 2 - 4, cardY + 2, 4, COLOURS.cream);
-
-// Two-tone wordmark, echoing the masthead on the site.
+// the wordmark, two tone
 const wordScale = 11;
-const wordmarkWidth = textWidth('ALERTOMALOLOS', wordScale);
-const wordmarkX = Math.round((WIDTH - wordmarkWidth) / 2) + 6;
-text('ALERTO', wordmarkX, cardY + 92, wordScale, COLOURS.ink);
-text('MALOLOS', wordmarkX + textWidth('ALERTO', wordScale), cardY + 92, wordScale, COLOURS.alertInk);
+const wordmarkX = 74;
+const wordmarkY = 84;
+text('ALERTO', wordmarkX, wordmarkY, wordScale, COLOURS.text);
+text('MALOLOS', wordmarkX + textWidth('ALERTO', wordScale), wordmarkY, wordScale, COLOURS.amber);
 
-const line = 'IMPORTANT ANNOUNCEMENTS FOR';
-const line2 = 'THE CITIZENS OF MALOLOS';
-const capScale = 4;
-text(line, Math.round((WIDTH - textWidth(line, capScale)) / 2) + 3, cardY + 208, capScale, COLOURS.ink);
-text(line2, Math.round((WIDTH - textWidth(line2, capScale)) / 2) + 3, cardY + 254, capScale, COLOURS.ink);
+// the beacon beside it
+const beaconX = wordmarkX + textWidth('ALERTOMALOLOS', wordScale) + 34;
+disc(beaconX, wordmarkY + 42, 11, COLOURS.green);
 
-// credit strip on the cork
-const credit = 'A CIVIC INFORMATION PROJECT BY BENEDICT DE JESUS';
-const creditScale = 3;
-text(credit, Math.round((WIDTH - textWidth(credit, creditScale)) / 2) + 2, cardY + cardH + 62, creditScale, COLOURS.cream);
+// tagline
+text('IMPORTANT ANNOUNCEMENTS FOR THE CITIZENS OF MALOLOS', wordmarkX, wordmarkY + 112, 3, COLOURS.dim);
 
-const note = 'NOT THE OFFICIAL WEBSITE OF THE CITY GOVERNMENT OF MALOLOS';
-const noteScale = 2;
-text(note, Math.round((WIDTH - textWidth(note, noteScale)) / 2) + 1, cardY + cardH + 118, noteScale, COLOURS.muted);
+// the hourly cycle bar
+const barY = wordmarkY + 156;
+rect(wordmarkX, barY, WIDTH - wordmarkX * 2, 4, COLOURS.line);
+rect(wordmarkX, barY, Math.round((WIDTH - wordmarkX * 2) * 0.62), 4, COLOURS.amber);
+
+// three ranked alert panels, in the colours the site uses
+const panels = [
+  { accent: COLOURS.amber, label: 'CLASS AND WORK SUSPENSION', bar: 0.82 },
+  { accent: COLOURS.cyan, label: 'WEATHER', bar: 0.6 },
+  { accent: COLOURS.slate, label: 'WATER AND POWER', bar: 0.44 },
+];
+const panelX = 74;
+const panelW = WIDTH - panelX * 2;
+let panelY = barY + 32;
+panels.forEach((panel, index) => {
+  const h = 78;
+  rect(panelX, panelY, panelW, h, COLOURS.panel);
+  rect(panelX, panelY, panelW, 1, COLOURS.line);
+  rect(panelX, panelY + h - 1, panelW, 1, COLOURS.line);
+  rect(panelX, panelY, 5, h, panel.accent);
+  text(String(index + 1).padStart(2, '0'), panelX + 26, panelY + 22, 3, panel.accent);
+  text(panel.label, panelX + 70, panelY + 22, 3, COLOURS.faint);
+  // two ruled lines standing in for the notice text
+  rect(panelX + 26, panelY + 44, Math.round((panelW - 60) * panel.bar), 9, COLOURS.dim);
+  rect(panelX + 26, panelY + 60, Math.round((panelW - 60) * panel.bar * 0.55), 7, COLOURS.line);
+  panelY += h + 12;
+});
+
+// credit and disclaimer
+text('A CIVIC PROJECT BY BENEDICT DE JESUS', panelX, HEIGHT - 56, 3, COLOURS.dim);
+text('NOT THE OFFICIAL WEBSITE OF THE CITY GOVERNMENT OF MALOLOS', panelX, HEIGHT - 28, 2, COLOURS.faint);
 
 /* ---- encode ----------------------------------------------------------- */
 function crc32(buffer) {

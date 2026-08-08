@@ -1,6 +1,9 @@
 /**
- * Page shell: head, masthead, navigation, footer.
- * Every value that reaches the markup passes through escapeHtml first.
+ * Page shell: head, header, footer.
+ *
+ * The interface is a monitor, not a page of prose: the name, the state of the
+ * hourly cycle, a way between the three views, and then the alerts. Everything
+ * that reaches the markup passes through escapeHtml first.
  */
 
 import { AUTHOR, DISCLAIMER, NAV, SITE } from '../../config/site.js';
@@ -10,14 +13,13 @@ import { formatManila } from '../lib/time.js';
 /**
  * @param {object} page
  * @param {string} page.title      full <title>
- * @param {string} page.heading    page name for the document outline
  * @param {string} page.description meta description
  * @param {string} page.body       page markup
  * @param {string} page.current    nav item to mark as current
  * @param {string} [page.canonical] path relative to the site root
+ * @param {boolean}[page.isHome]   the site name becomes the page heading
  * @param {string} [page.bodyClass]
  * @param {string} [page.head]     extra head markup (structured data)
- * @param {string} [page.foot]     extra markup before </body>
  * @param {string} [page.base]     '' for root pages, '../' for detail pages
  * @param {string} [page.lastCheckedAt]
  * @param {boolean} [page.preview] marks a build made from sample data
@@ -34,7 +36,8 @@ export function renderPage(page) {
 <title>${escapeHtml(page.title)}</title>
 <meta name="description" content="${escapeHtml(page.description)}">
 <meta name="author" content="${escapeHtml(AUTHOR.name)}">
-<meta name="theme-color" content="#2E2019">
+<meta name="theme-color" content="#090D13">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="${escapeHtml(canonical)}">
 <link rel="icon" href="${base}assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${base}assets/icon.svg">
@@ -49,11 +52,12 @@ export function renderPage(page) {
 <link rel="preload" href="${base}assets/fonts/plex-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}assets/board.css">
+<script>document.documentElement.classList.add('has-js')</script>
 ${page.head ?? ''}</head>
 <body class="${escapeHtml(page.bodyClass ?? '')}">
 <a class="skip-link" href="#main">Skip to the announcements</a>
 ${page.preview ? previewBanner() : ''}
-${masthead(page, base)}
+${header(page, base)}
 <main id="main" tabindex="-1">
 ${page.body}
 </main>
@@ -65,42 +69,48 @@ ${page.foot ?? ''}</body>
 }
 
 function previewBanner() {
-  return `<p class="preview-banner" role="status">Preview build. The notices below are sample data, not live announcements.</p>\n`;
+  return `<p class="preview-banner" role="status">Preview build. The alerts below are sample data, not live announcements.</p>\n`;
 }
 
 /**
- * The masthead is the board's sign, not an introduction: name, when it was last
- * checked, and the way to the two other pages. Anything that explains the
- * project belongs on the About page, one tap away.
+ * The console head. The sweep shows how far through the hourly cycle the board
+ * is; its width is set from real times, never from a decorative loop.
  */
-function masthead(page, base) {
-  const checked = page.lastCheckedAt
-    ? `<p class="status" data-last-checked="${escapeHtml(page.lastCheckedAt)}">
-      <span class="status__dot" aria-hidden="true"></span>
-      <span class="status__text">Checked ${escapeHtml(formatManila(page.lastCheckedAt, { dateStyle: undefined, timeStyle: 'short' }))}</span>
-    </p>`
+function header(page, base) {
+  const wordmark = `<a class="wordmark" href="${base}index.html">
+        <span class="wordmark__a">Alerto</span><span class="wordmark__b">Malolos</span>
+      </a>`;
+
+  const cycle = page.lastCheckedAt
+    ? `<div class="cycle" data-cycle data-last-checked="${escapeHtml(page.lastCheckedAt)}" data-interval="${SITE.updateIntervalMinutes}">
+      <p class="cycle__row">
+        <span class="cycle__label">Checked</span>
+        <span class="cycle__value" data-cycle-checked>${escapeHtml(
+          formatManila(page.lastCheckedAt, { dateStyle: undefined, timeStyle: 'short' })
+        )}</span>
+        <span class="cycle__spacer"></span>
+        <span class="cycle__label cycle__label--next">Next check</span>
+        <span class="cycle__value" data-cycle-next>in under an hour</span>
+      </p>
+      <span class="cycle__track" aria-hidden="true"><span class="cycle__fill" data-cycle-fill></span></span>
+    </div>`
     : '';
 
-  // On the board itself the site name is the page's heading. On the other
-  // pages it is a link back, and those pages carry their own heading.
-  const wordmark = `<a class="wordmark" href="${base}index.html">
-      <span class="wordmark__alerto">Alerto</span><span class="wordmark__malolos">Malolos</span>
-    </a>`;
-
-  return `<header class="masthead">
-  <div class="masthead__inner">
-    ${page.isHome ? `<h1 class="masthead__name">${wordmark}</h1>` : `<p class="masthead__name">${wordmark}</p>`}
-    <p class="masthead__tagline">${escapeHtml(SITE.tagline)}</p>
-    ${checked}
-    <nav class="nav" aria-label="Sections">
-      <ul>
-        ${NAV.map(
-          (item) =>
-            `<li><a href="${base}${item.href}"${
-              page.current === item.href ? ' aria-current="page"' : ''
-            }>${escapeHtml(item.label)}</a></li>`
-        ).join('\n        ')}
-      </ul>
+  return `<header class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__brand">
+      <span class="beacon" aria-hidden="true"><span class="beacon__core"></span></span>
+      ${page.isHome ? `<h1 class="brand">${wordmark}</h1>` : `<p class="brand">${wordmark}</p>`}
+    </div>
+    <p class="topbar__tagline">${escapeHtml(SITE.tagline)}</p>
+    ${cycle}
+    <nav class="tabs" aria-label="Sections">
+      ${NAV.map(
+        (item) =>
+          `<a class="tab" href="${base}${item.href}"${
+            page.current === item.href ? ' aria-current="page"' : ''
+          }>${escapeHtml(item.label)}</a>`
+      ).join('\n      ')}
     </nav>
   </div>
 </header>`;
@@ -125,7 +135,11 @@ export function siteStructuredData() {
     inLanguage: 'en-PH',
     author: { '@type': 'Person', name: AUTHOR.name },
     publisher: { '@type': 'Person', name: AUTHOR.name },
-    about: { '@type': 'City', name: 'Malolos', address: { '@type': 'PostalAddress', addressRegion: 'Bulacan', addressCountry: 'PH' } },
+    about: {
+      '@type': 'City',
+      name: 'Malolos',
+      address: { '@type': 'PostalAddress', addressRegion: 'Bulacan', addressCountry: 'PH' },
+    },
   };
   return `<script type="application/ld+json">${JSON.stringify(data)}</script>\n`;
 }

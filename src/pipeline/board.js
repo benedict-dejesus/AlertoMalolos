@@ -1,9 +1,9 @@
 /**
  * The board itself: lifecycle, ranking, the top three, and the hard limit of
- * twenty post-its.
+ * twenty alerts.
  *
  * `mergeBoard` is pure and idempotent. Running it twice with the same inputs
- * produces the same board, the same order and no duplicate post-its.
+ * produces the same board, the same order and no duplicate alerts.
  */
 
 import { BOARD_LIMITS } from '../../config/rules.js';
@@ -78,7 +78,7 @@ export function mergeBoard({
     const winner = preferred(existing, candidate, sourceLookup);
     const loser = winner === existing ? candidate : existing;
 
-    // Keep the post-it's own history: it stays the same post-it even when a
+    // Keep the alert's own history: it stays the same alert even when a
     // more authoritative source takes it over or the wording is revised.
     const merged = mergeInto(
       {
@@ -132,7 +132,7 @@ export function mergeBoard({
   // 4. Re-score what remains: urgency and freshness move with the clock.
   const rescored = surviving.map((record) => rescore(record, now, sourceLookup));
 
-  // 5. Rank, then enforce the twenty post-it limit.
+  // 5. Rank, then enforce the twenty alert limit.
   const ranked = rank(rescored);
   const { kept, evicted } = enforceLimit(ranked, BOARD_LIMITS.maxPostIts);
   for (const record of evicted) {
@@ -168,7 +168,7 @@ export function mergeBoard({
 
 /**
  * True when a source that reports its complete set no longer carries this
- * notice. A post-it corroborated by another office stays up: only that office's
+ * notice. An alert corroborated by another office stays up: only that office's
  * own credit would be withdrawn, and the advisory itself still stands.
  */
 function wasWithdrawn(record, completeSources) {
@@ -178,7 +178,7 @@ function wasWithdrawn(record, completeSources) {
   return (record.alsoReportedBy ?? []).length === 0;
 }
 
-/** Existing post-it representing the same announcement, or -1. */
+/** Existing alert representing the same announcement, or -1. */
 function findMatch(board, candidate) {
   const byId = board.findIndex((record) => record.id === candidate.id);
   if (byId !== -1) return byId;

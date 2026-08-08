@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AlertoMalolos">
-  <rect width="64" height="64" rx="10" fill="#2A1D15"/>
-  <rect x="7" y="7" width="50" height="50" rx="3" fill="#C08E55"/>
-  <g transform="rotate(-4 32 34)">
-    <rect x="14" y="17" width="36" height="34" rx="1.5" fill="#FFCB33"/>
-    <rect x="14" y="49" width="36" height="2" fill="#E8AE05"/>
-    <rect x="20" y="27" width="24" height="3.4" rx="1.2" fill="#2A1D15" opacity="0.82"/>
-    <rect x="20" y="34" width="24" height="3.4" rx="1.2" fill="#2A1D15" opacity="0.55"/>
-    <rect x="20" y="41" width="15" height="3.4" rx="1.2" fill="#2A1D15" opacity="0.38"/>
-  </g>
-  <circle cx="32" cy="17" r="5.5" fill="#C6392B"/>
-  <circle cx="30" cy="15" r="1.7" fill="#FFF" opacity="0.8"/>
+  <rect width="64" height="64" rx="14" fill="#0B1119"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#22303F" stroke-width="1.5"/>
+  <!-- three ranked alert bars, brightest first: the board's whole idea -->
+  <rect x="14" y="16" width="4" height="12" rx="2" fill="#FFB224"/>
+  <rect x="22" y="16" width="28" height="12" rx="3" fill="#FFB224" opacity="0.22"/>
+  <rect x="14" y="32" width="4" height="12" rx="2" fill="#3FD8E4"/>
+  <rect x="22" y="32" width="21" height="12" rx="3" fill="#3FD8E4" opacity="0.18"/>
+  <rect x="14" y="48" width="4" height="8" rx="2" fill="#8FA6BF"/>
+  <rect x="22" y="48" width="15" height="8" rx="3" fill="#8FA6BF" opacity="0.15"/>
+  <!-- the beacon -->
+  <circle cx="47" cy="12" r="6.5" fill="#0B1119"/>
+  <circle cx="47" cy="12" r="4" fill="#45CF7C"/>
 </svg>

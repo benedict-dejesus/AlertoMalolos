@@ -182,7 +182,7 @@ export const NON_QUALIFYING = [
   },
 ];
 
-/** Bulk filler used to test the twenty post-it limit. */
+/** Bulk filler used to test the twenty alert limit. */
 export function fillerCandidates(count, { startHours = 4, spacingHours = 0.5 } = {}) {
   const barangays = [
     'Anilao', 'Atlag', 'Bulihan', 'Caniogan', 'Catmon', 'Dakila', 'Guinhawa',

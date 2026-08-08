@@ -249,7 +249,7 @@ export const BOARD_LIMITS = {
 /** How long an item may stay on the board with no end date of its own. */
 export const DEFAULT_TTL_HOURS = 24 * 5;
 
-/** Snippet length for the post-it face. Snippets are trimmed source text only. */
+/** Snippet length for the alert face. Snippets are trimmed source text only. */
 export const SNIPPET = {
   maxChars: 190,
   minChars: 40,

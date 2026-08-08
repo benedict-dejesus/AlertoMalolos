@@ -129,7 +129,7 @@ export function makeSnippet(text, maxChars) {
   return out.length < clean.length ? `${out} …` : out;
 }
 
-/** Deterministic 0-1 value from a string. Used for post-it rotation and pins. */
+/** Deterministic 0-1 value from a string. Kept for deterministic per-record variation. */
 export function hashUnit(value, salt = '') {
   const digest = sha1(`${salt}:${value}`);
   return parseInt(digest.slice(0, 8), 16) / 0xffffffff;

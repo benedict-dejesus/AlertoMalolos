@@ -46,6 +46,6 @@ await rm(OUT, { recursive: true, force: true });
 const result = await buildSite({ state, outDir: OUT, preview: true, now, logger: silentLogger() });
 
 process.stdout.write(
-  `Preview: ${result.announcements} post-it(s), ${result.pages} page(s) in ${OUT}/\n` +
+  `Preview: ${result.announcements} alert(s), ${result.pages} page(s) in ${OUT}/\n` +
     `Serve it with: node tools/serve.js ${OUT} 4174\n`
 );

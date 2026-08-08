@@ -84,7 +84,7 @@ export function compare(a, b) {
   return { isDuplicate: false, signal: null, similarity };
 }
 
-/** The record that should own the post-it: highest authority, then best score. */
+/** The record that should own the alert: highest authority, then best score. */
 export function preferred(a, b, sourceLookup) {
   const authorityA = sourceAuthority(sourceLookup(a.sourceId));
   const authorityB = sourceAuthority(sourceLookup(b.sourceId));
@@ -96,7 +96,7 @@ export function preferred(a, b, sourceLookup) {
   return timeA <= timeB ? a : b;
 }
 
-/** Merge the loser into the winner: keep one post-it, remember both publishers. */
+/** Merge the loser into the winner: keep one alert, remember both publishers. */
 export function mergeInto(winner, loser) {
   const alsoReportedBy = [...(winner.alsoReportedBy ?? [])];
   const seen = new Set([winner.sourceId, ...alsoReportedBy.map((entry) => entry.sourceId)]);

@@ -154,7 +154,7 @@ export async function runUpdate(options = {}) {
 
   if (state.board.length > 20) {
     logger.error('board limit breached', { count: state.board.length });
-    throw new Error(`Board holds ${state.board.length} post-its; the limit is 20`);
+    throw new Error(`Board holds ${state.board.length} alerts; the limit is 20`);
   }
 
   if (dryRun) {
@@ -196,7 +196,7 @@ async function main() {
       await buildSite({ state, logger });
     }
     await logger.persist(summary);
-    process.stdout.write(`\nBoard: ${state.board.length} post-it(s). Last checked ${state.lastCheckedAt}.\n`);
+    process.stdout.write(`\nBoard: ${state.board.length} alert(s). Last checked ${state.lastCheckedAt}.\n`);
   } catch (error) {
     logger.error('update failed', { message: error.message, stack: error.stack });
     await logger.persist({ failed: true, message: error.message });

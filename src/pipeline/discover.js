@@ -53,7 +53,7 @@ export async function retrieveSource(source, options = {}) {
         candidates: candidates.length,
       });
       // The file is the whole truth for this source: taking an entry out of it
-      // is a deliberate act, so the post-it comes down at the next update.
+      // is a deliberate act, so the alert comes down at the next update.
       return { ...base, ok: true, candidates, complete: true, durationMs: Date.now() - startedAt };
     }
 

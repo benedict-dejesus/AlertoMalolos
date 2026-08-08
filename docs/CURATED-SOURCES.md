@@ -37,7 +37,7 @@ The command checks the entry before writing anything and tells you the verdict:
   published: Aug 8, 2026, 7:30 PM
 
   Accepted as: suspension, score 93
-  Snippet on the post-it:
+  Snippet on the alert:
     "PAALALA SA PUBLIKO: Suspendido ang klase sa lahat ng antas sa lahat ng
      pampubliko at pribadong paaralan sa Lungsod ng Malolos bukas, ..."
 ```
@@ -72,7 +72,7 @@ languages.
 `--published` to when it was posted. The board works out the expiry from that.
 
 **One post, one entry.** If the office posts a correction, add the correction as
-its own entry with its own link; duplicate detection will keep one post-it and
+its own entry with its own link; duplicate detection will keep one alert and
 credit the more authoritative source.
 
 **If you are unsure, leave it off.** A missing notice is a smaller failure than
@@ -85,7 +85,7 @@ A notice recorded this way carries a line on its detail page:
 > This notice was recorded from the official post by hand, because that page
 > cannot be read automatically. Open the original post for the exact wording.
 
-The post-it still shows the City Information Office as the source, and the link
+The alert still shows the City Information Office as the source, and the link
 still opens the original post. Nobody is misled about where the words came
 from.
 
@@ -145,10 +145,10 @@ message, created_time, updated_time, permalink_url, id
 
 No comments, no reactions, no author details, no images. A post with no text is
 skipped, because a photograph with no caption cannot be verified as an
-announcement. The first sentence of the post becomes the post-it title, word for
+announcement. The first sentence of the post becomes the alert title, word for
 word, and the rest is available in the detail view.
 
-When both routes are active, duplicate detection keeps a single post-it: the
+When both routes are active, duplicate detection keeps a single alert: the
 same notice arriving through the API and by hand is recognised as one
 announcement.
 
