@@ -13,8 +13,9 @@ import { emptyState } from './board.js';
 export const STATE_PATH = join('data', 'state.json');
 
 export async function readState(path = STATE_PATH, { logger } = {}) {
+  let raw = null;
   try {
-    const raw = await readFile(path, 'utf8');
+    raw = await readFile(path, 'utf8');
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.board)) {
       throw new Error('state file has no board array');
@@ -25,13 +26,28 @@ export async function readState(path = STATE_PATH, { logger } = {}) {
       logger?.info('no existing state; starting a new board');
       return emptyState();
     }
+
+    // The most likely reason by far: the hourly workflow committed a new state
+    // and a local pull tried to merge it line by line. Say so, rather than
+    // leaving the maintainer to work it out from a parse error.
+    const conflicted = typeof raw === 'string' && /^<{7} |^={7}$|^>{7} /m.test(raw);
+
     // Never destroy data we cannot read: keep a copy for inspection.
     const backup = `${path}.corrupt-${Date.now()}`;
     try {
       await copyFile(path, backup);
-      logger?.error('state file unreadable; kept a copy', { backup, message: error.message });
     } catch {
-      logger?.error('state file unreadable and could not be copied', { message: error.message });
+      /* the copy is a courtesy; carry on either way */
+    }
+
+    if (conflicted) {
+      logger?.error('state file contains merge conflict markers; starting from a fresh board', {
+        backup,
+        fix: `git checkout --theirs ${path} || git checkout HEAD -- ${path}`,
+        note: 'The board rebuilds itself from the sources on this run; nothing is lost but the memory of what was already posted.',
+      });
+    } else {
+      logger?.error('state file unreadable; kept a copy', { backup, message: error.message });
     }
     return emptyState();
   }

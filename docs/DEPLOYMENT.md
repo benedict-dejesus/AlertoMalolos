@@ -205,6 +205,49 @@ DNS changes can take a few hours to propagate.
 
 ---
 
+## Working alongside the hourly commits
+
+Once the workflow is running, **GitHub is writing to your repository every
+hour**. It commits `data/state.json` (the board's memory of what is already
+posted) and `public/` (the built pages). Both are generated files, and the
+robot owns them.
+
+So: **pull before you work, and let the robot's copy win.**
+
+```bash
+git pull
+```
+
+If the pull reports a conflict in `data/state.json` or anything under `public/`,
+do not merge it by hand — take the remote side and rebuild:
+
+```bash
+git checkout --theirs data/state.json public && npm run build
+```
+
+`.gitattributes` marks these paths `merge=binary`, so git will not write
+conflict markers into them; it leaves your copy in place and tells you there is
+a conflict. If a conflicted `state.json` ever does reach the update cycle, the
+cycle notices, sets the file aside as `state.json.corrupt-<time>`, logs the fix,
+and rebuilds the board from the sources. Nothing is lost except the memory of
+what was already posted, which the next cycle restores. Those `.corrupt-` files
+are ignored by git and safe to delete.
+
+The one thing worth avoiding: running `npm run update` locally and committing
+it. That is the robot's job. Locally, use the versions that write nothing to the
+board:
+
+```bash
+npm run update:dry
+```
+
+```bash
+npm run preview -- 14
+```
+
+The exception is `data/curated.json` — that one is yours. Edit it with
+`npm run add`, commit it, and let the workflow do the rest.
+
 ## Everyday use
 
 **Add a notice from the information office page**
@@ -246,6 +289,15 @@ Step 4. Workflow permissions must be read and write.
 `SITE.basePath` does not match the repository name, or `.nojekyll` is missing so
 GitHub is hiding files. `.nojekyll` is written on every build; check it exists
 in `public/`.
+
+**The page looks half-styled — new wording, old colours**
+That is a cached stylesheet: new markup being painted with the styles a browser
+already had. It should no longer be possible, because the stylesheet and script
+are published under names containing a hash of their contents
+(`board.10a6b7a727.css`), so any change is a new address that no cache can have
+seen. If you ever do see it, hard-refresh (Ctrl+Shift+R) and check that the
+filename in the page's `<link rel="stylesheet">` matches the file that exists in
+`public/assets/` — a test covers exactly this.
 
 **The board is empty**
 Usually correct. Confirm by reading the run log: if it shows candidates being

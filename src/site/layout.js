@@ -27,6 +27,10 @@ import { formatManila } from '../lib/time.js';
 export function renderPage(page) {
   const base = page.base ?? '';
   const canonical = `${SITE.origin.replace(/\/$/, '')}/${(page.canonical ?? '').replace(/^\//, '')}`;
+  // Fingerprinted at build time so a changed stylesheet can never be served
+  // from a cache alongside new markup.
+  const styles = page.assets?.css ?? 'assets/board.css';
+  const script = page.assets?.js ?? 'assets/board.js';
 
   return `<!DOCTYPE html>
 <html lang="en-PH">
@@ -51,7 +55,7 @@ export function renderPage(page) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="${base}assets/fonts/plex-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${base}assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${base}assets/board.css">
+<link rel="stylesheet" href="${base}${styles}">
 <script>document.documentElement.classList.add('has-js')</script>
 ${page.head ?? ''}</head>
 <body class="${escapeHtml(page.bodyClass ?? '')}">
@@ -62,7 +66,7 @@ ${header(page, base)}
 ${page.body}
 </main>
 ${footer(base)}
-<script src="${base}assets/board.js" defer></script>
+<script src="${base}${script}" defer></script>
 ${page.foot ?? ''}</body>
 </html>
 `;

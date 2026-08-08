@@ -7,7 +7,8 @@
  * required. JavaScript only adds filtering, in-place detail and local times.
  */
 
-import { cp, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { cp, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { SOURCES } from '../../config/sources.js';
@@ -42,8 +43,9 @@ export async function buildSite(options = {}) {
   await clearDetailPages(join(outDir, 'a'));
 
   await cp(ASSETS_DIR, join(outDir, 'assets'), { recursive: true });
+  const assets = await fingerprintAssets(join(outDir, 'assets'));
 
-  const common = { lastCheckedAt: state.lastCheckedAt, preview };
+  const common = { lastCheckedAt: state.lastCheckedAt, preview, assets };
   const pages = [];
 
   pages.push([
@@ -123,6 +125,41 @@ export async function buildSite(options = {}) {
 
   logger.info('site built', { outDir, pages: pages.length, announcements: board.announcements.length });
   return { outDir, pages: pages.length, announcements: board.announcements.length };
+}
+
+/**
+ * Give the stylesheet and the script a name that changes with their contents.
+ *
+ * Without this, a redesign ships under the same two filenames and browsers and
+ * caches keep serving what they already have - new markup with the old styles.
+ * A content hash in the name makes every change a new address, so a stale copy
+ * is impossible.
+ *
+ * @returns {Promise<{css: string, js: string}>} paths relative to the site root
+ */
+async function fingerprintAssets(assetsDir) {
+  const named = {};
+
+  // Clear the fingerprinted files left by earlier builds.
+  const existing = await readdir(assetsDir).catch(() => []);
+  await Promise.all(
+    existing
+      .filter((name) => /^board\.[0-9a-f]{8,}\.(css|js)$/.test(name))
+      .map((name) => rm(join(assetsDir, name), { force: true }))
+  );
+
+  for (const [key, file] of [
+    ['css', 'board.css'],
+    ['js', 'board.js'],
+  ]) {
+    const path = join(assetsDir, file);
+    const contents = await readFile(path);
+    const hash = createHash('sha1').update(contents).digest('hex').slice(0, 10);
+    const hashed = file.replace(/\.(css|js)$/, `.${hash}.$1`);
+    await rename(path, join(assetsDir, hashed));
+    named[key] = `assets/${hashed}`;
+  }
+  return named;
 }
 
 /** Detail pages are regenerated every build; stale ones must not linger. */

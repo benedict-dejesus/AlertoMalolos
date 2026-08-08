@@ -4,7 +4,7 @@
  */
 
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, readdir, rm } from 'node:fs/promises';
+import { mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
@@ -288,9 +288,58 @@ describe('site files', () => {
       assert.ok(files.includes(name), `missing ${name}`);
     }
     const assets = await readdir(join(dir, 'assets'));
-    assert.ok(assets.includes('board.css'));
-    assert.ok(assets.includes('board.js'));
+    assert.ok(assets.some((name) => /^board\.[0-9a-f]+\.css$/.test(name)));
+    assert.ok(assets.some((name) => /^board\.[0-9a-f]+\.js$/.test(name)));
     assert.ok(assets.includes('icon.svg'));
+    assert.ok(assets.includes('fonts'));
+    await rm(dir, { recursive: true, force: true });
+  });
+
+  it('fingerprints the stylesheet and script so a cache cannot serve stale ones', async () => {
+    const { state } = boardFrom(QUALIFYING);
+    const { dir } = await buildInto(state);
+    const html = await readFile(join(dir, 'index.html'), 'utf8');
+
+    const css = html.match(/<link rel="stylesheet" href="([^"]+)"/)?.[1];
+    const js = html.match(/<script src="([^"]+)" defer>/)?.[1];
+    assert.match(css ?? '', /^assets\/board\.[0-9a-f]{10}\.css$/, 'the stylesheet needs a content hash');
+    assert.match(js ?? '', /^assets\/board\.[0-9a-f]{10}\.js$/, 'the script needs a content hash');
+
+    // Every asset the page asks for must actually be there.
+    const files = await readdir(join(dir, 'assets'));
+    assert.ok(files.includes(css.replace('assets/', '')), `${css} is referenced but missing`);
+    assert.ok(files.includes(js.replace('assets/', '')), `${js} is referenced but missing`);
+    assert.ok(!files.includes('board.css'), 'the unhashed stylesheet must not be left behind');
+
+    // A detail page one level down must reach the same files.
+    const detail = await readdir(join(dir, 'a'));
+    const detailHtml = await readFile(join(dir, 'a', detail[0]), 'utf8');
+    assert.ok(detailHtml.includes(`href="../${css}"`), 'detail pages must reference the hashed stylesheet');
+
+    await rm(dir, { recursive: true, force: true });
+  });
+
+  it('changes the asset name when the asset changes', async () => {
+    const { state } = boardFrom(QUALIFYING);
+    const first = await buildInto(state);
+    const second = await buildInto(state);
+    const nameOf = async (dir) =>
+      (await readFile(join(dir, 'index.html'), 'utf8')).match(/board\.([0-9a-f]{10})\.css/)?.[1];
+
+    // Same input, same name: the hash is of the contents, not of the moment.
+    assert.equal(await nameOf(first.dir), await nameOf(second.dir));
+    await rm(first.dir, { recursive: true, force: true });
+    await rm(second.dir, { recursive: true, force: true });
+  });
+
+  it('does not accumulate old fingerprinted assets across builds', async () => {
+    const { state } = boardFrom(QUALIFYING);
+    const { dir } = await buildInto(state);
+    await writeFile(join(dir, 'assets', 'board.deadbeef00.css'), '/* from an earlier build */', 'utf8');
+    await buildSite({ state, outDir: dir, now: NOW, logger: silentLogger() });
+
+    const files = await readdir(join(dir, 'assets'));
+    assert.equal(files.filter((name) => /^board\.[0-9a-f]+\.css$/.test(name)).length, 1);
     await rm(dir, { recursive: true, force: true });
   });
 

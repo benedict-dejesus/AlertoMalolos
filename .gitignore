@@ -7,3 +7,6 @@ logs/*.json
 Thumbs.db
 *.tmp
 .cache/
+
+# Copies the update cycle sets aside when it finds a state file it cannot read.
+*.corrupt-*

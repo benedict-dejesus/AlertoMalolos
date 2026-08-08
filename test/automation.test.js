@@ -317,6 +317,35 @@ describe('state file handling', () => {
     assert.deepEqual(state.board, []);
   });
 
+  it('recognises a state file left conflicted by a pull, and says so', async () => {
+    const dir = await mkdtemp(join(tmpdir(), 'alerto-conflict-'));
+    const path = join(dir, 'state.json');
+    await writeFile(
+      path,
+      [
+        '{',
+        '  "version": 1,',
+        '<<<<<<< HEAD',
+        '  "lastCheckedAt": "2026-08-08T10:41:53.050Z",',
+        '=======',
+        '  "lastCheckedAt": "2026-08-08T10:48:04.211Z",',
+        '>>>>>>> 86f4f9e',
+        '  "board": []',
+        '}',
+      ].join('\n'),
+      'utf8'
+    );
+
+    const logger = silentLogger();
+    const state = await readState(path, { logger });
+    assert.deepEqual(state.board, [], 'a conflicted file must not take the board down with it');
+
+    const complaint = logger.entries.find((entry) => entry.level === 'error');
+    assert.match(complaint.message, /merge conflict/, 'the log must name the real cause');
+    assert.ok(complaint.details.fix, 'the log must say how to fix it');
+    await rm(dir, { recursive: true, force: true });
+  });
+
   it('keeps a copy of an unreadable state file instead of overwriting it', async () => {
     const dir = await mkdtemp(join(tmpdir(), 'alerto-corrupt-'));
     const path = join(dir, 'state.json');
