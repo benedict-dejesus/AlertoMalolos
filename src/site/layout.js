@@ -68,23 +68,29 @@ function previewBanner() {
   return `<p class="preview-banner" role="status">Preview build. The notices below are sample data, not live announcements.</p>\n`;
 }
 
+/**
+ * The masthead is the board's sign, not an introduction: name, when it was last
+ * checked, and the way to the two other pages. Anything that explains the
+ * project belongs on the About page, one tap away.
+ */
 function masthead(page, base) {
   const checked = page.lastCheckedAt
     ? `<p class="status" data-last-checked="${escapeHtml(page.lastCheckedAt)}">
-        <span class="status__dot" aria-hidden="true"></span>
-        <span class="status__text">Checked ${escapeHtml(formatManila(page.lastCheckedAt, { dateStyle: undefined, timeStyle: 'short' }))}</span>
-        <span class="status__sep" aria-hidden="true">·</span>
-        <span class="status__note">Official sources are checked every hour</span>
-      </p>`
+      <span class="status__dot" aria-hidden="true"></span>
+      <span class="status__text">Checked ${escapeHtml(formatManila(page.lastCheckedAt, { dateStyle: undefined, timeStyle: 'short' }))}</span>
+    </p>`
     : '';
+
+  // On the board itself the site name is the page's heading. On the other
+  // pages it is a link back, and those pages carry their own heading.
+  const wordmark = `<a class="wordmark" href="${base}index.html">
+      <span class="wordmark__alerto">Alerto</span><span class="wordmark__malolos">Malolos</span>
+    </a>`;
 
   return `<header class="masthead">
   <div class="masthead__inner">
-    <a class="wordmark" href="${base}index.html">
-      <span class="wordmark__alerto">Alerto</span><span class="wordmark__malolos">Malolos</span>
-    </a>
+    ${page.isHome ? `<h1 class="masthead__name">${wordmark}</h1>` : `<p class="masthead__name">${wordmark}</p>`}
     <p class="masthead__tagline">${escapeHtml(SITE.tagline)}</p>
-    <p class="masthead__byline">A civic information project by <strong>${escapeHtml(AUTHOR.name)}</strong></p>
     ${checked}
     <nav class="nav" aria-label="Sections">
       <ul>
@@ -97,31 +103,14 @@ function masthead(page, base) {
       </ul>
     </nav>
   </div>
-  <p class="masthead__disclaimer">${escapeHtml(DISCLAIMER.short)}</p>
 </header>`;
 }
 
+/** One line: who made it, and what it is not. The rest is on the About page. */
 function footer(base) {
   return `<footer class="footer">
-  <div class="footer__grid">
-    <section class="footer__block">
-      <h2 class="footer__heading">About this board</h2>
-      <p>${escapeHtml(DISCLAIMER.full[0])}</p>
-      <p><a href="${base}about.html">How announcements are chosen</a></p>
-    </section>
-    <section class="footer__block">
-      <h2 class="footer__heading">Where the notices come from</h2>
-      <p>${escapeHtml(DISCLAIMER.full[1])}</p>
-      <p><a href="${base}sources.html">See the official sources</a></p>
-    </section>
-    <section class="footer__block footer__block--credit">
-      <h2 class="footer__heading">Built by</h2>
-      <p class="credit-name">${escapeHtml(AUTHOR.name)}</p>
-      <p class="credit-role">${escapeHtml(AUTHOR.role)}, ${escapeHtml(SITE.name)}</p>
-      <p class="credit-note">${escapeHtml(AUTHOR.long)}</p>
-    </section>
-  </div>
-  <p class="footer__legal">${escapeHtml(DISCLAIMER.full[2])}</p>
+  <p class="footer__credit"><strong>${escapeHtml(SITE.name)}</strong> — a civic project by ${escapeHtml(AUTHOR.name)}</p>
+  <p class="footer__note">${escapeHtml(DISCLAIMER.short)} <a href="${base}about.html">About</a> · <a href="${base}sources.html">Sources</a></p>
 </footer>`;
 }
 

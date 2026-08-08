@@ -54,6 +54,8 @@ export async function buildSite(options = {}) {
       description: SITE.description,
       canonical: 'index.html',
       current: 'index.html',
+      isHome: true,
+      bodyClass: 'is-board',
       head: siteStructuredData(),
       body: renderHome(board, { now }),
     }),

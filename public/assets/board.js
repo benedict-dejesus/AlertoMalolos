@@ -88,8 +88,7 @@
       }
       if (counter) {
         counter.textContent =
-          'Showing ' + shown + (shown === 1 ? ' announcement' : ' announcements') +
-          (wanted === 'all' ? '. The board holds up to 20.' : ' in this category.');
+          shown + (shown === 1 ? ' active announcement' : ' active announcements');
       }
     });
   }

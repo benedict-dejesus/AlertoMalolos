@@ -87,20 +87,12 @@ export function renderHome(board, options = {}) {
     ? `<div class="board__notes" data-notes>
 ${announcements.map((record, index) => renderNote(record, { index })).join('\n')}
 </div>
-<p class="board__count" data-count>Showing ${announcements.length} active announcement${
+<p class="board__count" data-count>${announcements.length} active announcement${
         announcements.length === 1 ? '' : 's'
-      }. The board holds up to 20.</p>`
+      }</p>`
     : renderEmptyState();
 
-  const priorityNote = announcements.length
-    ? `<p class="board__lede">The three notices at the top are what matters most right now. Everything below is still active.</p>`
-    : '';
-
   return `<section class="board-section">
-  <div class="board-head">
-    <h1 class="board-head__title">Announcement board</h1>
-    ${priorityNote}
-  </div>
   ${filters}
   <div class="board" role="region" aria-label="Active public announcements for Malolos">
     <div class="board__surface">
@@ -108,7 +100,6 @@ ${boardBody}
     </div>
   </div>
 </section>
-${renderHowItWorksStrip()}
 ${
   announcements.length
     ? `<script type="application/json" id="board-data">${escapeJson(board)}</script>\n${renderDialog()}`
@@ -121,29 +112,7 @@ function renderEmptyState() {
   <span class="empty__pin" aria-hidden="true"></span>
   <h2 class="empty__title">${escapeHtml(EMPTY_STATE.title)}</h2>
   <p class="empty__body">${escapeHtml(EMPTY_STATE.body)}</p>
-  <p class="empty__meta">Nothing is posted unless an official source publishes something that affects Malolos.</p>
 </div>`;
-}
-
-function renderHowItWorksStrip() {
-  return `<section class="strip" aria-labelledby="strip-heading">
-  <h2 class="strip__heading" id="strip-heading">How this board works</h2>
-  <div class="strip__grid">
-    <div class="strip__item">
-      <h3>Official sources only</h3>
-      <p>Notices come from the city government, the provincial government and national agencies. Nothing is taken from unofficial pages.</p>
-    </div>
-    <div class="strip__item">
-      <h3>Advisories, not news</h3>
-      <p>Only announcements that change what you should do today are posted: suspensions, closures, interruptions, warnings and deadlines.</p>
-    </div>
-    <div class="strip__item">
-      <h3>The source is the authority</h3>
-      <p>Each notice shows its publisher and links to the original. Confirm anything urgent with that source.</p>
-    </div>
-  </div>
-  <p class="strip__credit">${escapeHtml(AUTHOR.short)}</p>
-</section>`;
 }
 
 /** The expanded view, used by the dialog. Detail pages work without it. */

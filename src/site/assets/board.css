@@ -197,23 +197,30 @@ svg {
 }
 
 /* ------------------------------------------------------------- masthead */
+/* The sign above the board: name, when it was last checked, and the way out.
+   Two rows on a phone, one on anything wider. */
 .masthead {
-  padding: 1.15rem 0.75rem 0;
+  padding: 0.75rem 0.75rem 0;
   max-width: var(--page);
   margin-inline: auto;
 }
 
 .masthead__inner {
   position: relative;
-  padding-bottom: 0.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
+  padding-bottom: 0.6rem;
 }
 
 /* A thin capiz-window band: the local cue, kept to one hairline element. */
 .masthead::before {
   content: '';
   display: block;
-  height: 6px;
-  margin-bottom: 0.9rem;
+  height: 5px;
+  margin-bottom: 0.7rem;
   background-image:
     linear-gradient(90deg, rgba(243, 230, 213, 0.5) 1px, transparent 1px),
     linear-gradient(180deg, rgba(243, 230, 213, 0.28), rgba(243, 230, 213, 0.05));
@@ -221,10 +228,17 @@ svg {
   border-block: 1px solid rgba(243, 230, 213, 0.22);
 }
 
+.masthead__name {
+  grid-column: 1;
+  margin: 0;
+  font-size: inherit;
+  line-height: 1;
+}
+
 .wordmark {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 11vw, 3.4rem);
+  font-size: clamp(1.75rem, 8.5vw, 2.9rem);
   line-height: 0.94;
   letter-spacing: -0.015em;
   text-transform: uppercase;
@@ -236,34 +250,23 @@ svg {
 }
 
 .masthead__tagline {
-  margin-top: 0.3rem;
-  font-size: 0.97rem;
-  line-height: 1.35;
-  color: var(--ink-onwood);
-  max-width: 34ch;
-}
-
-.masthead__byline {
-  margin-top: 0.3rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  font-size: 0.9rem;
+  line-height: 1.3;
   color: var(--ink-onwood-soft);
-}
-.masthead__byline strong {
-  color: var(--paper-priority);
-  font-weight: 500;
+  max-width: 40ch;
 }
 
 .status {
-  margin-top: 0.7rem;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  margin-top: 0.15rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 0.4rem;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   letter-spacing: 0.03em;
   color: var(--ink-onwood-soft);
 }
@@ -278,32 +281,28 @@ svg {
   background: #86c46a;
   box-shadow: 0 0 0 3px rgba(134, 196, 106, 0.2);
   flex: none;
-  align-self: center;
-}
-.status__sep {
-  opacity: 0.5;
 }
 
 .nav {
-  margin-top: 1rem;
+  grid-column: 2;
+  grid-row: 1;
 }
 .nav ul {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.3rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .nav a {
-  display: block;
-  padding: 0.55rem 0.9rem;
-  min-height: 44px;
   display: flex;
   align-items: center;
+  padding: 0.4rem 0.7rem;
+  min-height: 44px;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-decoration: none;
   color: var(--ink-onwood-soft);
   border: 1px solid rgba(243, 230, 213, 0.2);
@@ -321,40 +320,11 @@ svg {
   font-weight: 500;
 }
 
-.masthead__disclaimer {
-  margin-top: 0.85rem;
-  padding: 0.4rem 0.6rem;
-  border-left: 3px solid var(--alert);
-  background: rgba(0, 0, 0, 0.2);
-  font-size: 0.78rem;
-  line-height: 1.35;
-  color: var(--ink-onwood-soft);
-}
-
 /* ---------------------------------------------------------------- board */
 .board-section {
   max-width: var(--page);
-  margin: 1.25rem auto 0;
+  margin: 0.5rem auto 0;
   padding-inline: 0.75rem;
-}
-
-.board-head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1rem;
-  align-items: baseline;
-  margin-bottom: 0.6rem;
-}
-.board-head__title {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--ink-onwood-soft);
-}
-.board__lede {
-  font-size: 0.88rem;
-  color: var(--ink-onwood-soft);
-  max-width: 60ch;
 }
 
 /* The frame: a stained timber edge. The border is transparent so the wood
@@ -772,98 +742,36 @@ svg {
   color: rgba(25, 20, 16, 0.6);
 }
 
-/* ---------------------------------------------------------------- strip */
-.strip {
-  max-width: var(--page);
-  margin: 2.5rem auto 0;
-  padding: 0 0.75rem;
-}
-.strip__heading {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--ink-onwood-soft);
-  margin-bottom: 0.9rem;
-}
-.strip__grid {
-  display: grid;
-  gap: 1rem;
-}
-.strip__item {
-  padding: 1rem 1.1rem;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(243, 230, 213, 0.14);
-  border-radius: 3px;
-}
-.strip__item h3 {
-  font-size: 1.05rem;
-  color: var(--paper-priority);
-}
-.strip__item p {
-  margin-top: 0.35rem;
-  font-size: 0.9rem;
-  color: var(--ink-onwood-soft);
-}
-.strip__credit {
-  margin-top: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: var(--ink-onwood-soft);
-}
-
 /* --------------------------------------------------------------- footer */
 .footer {
   max-width: var(--page);
-  margin: 3rem auto 0;
-  padding: 1.75rem 0.75rem 3rem;
-  border-top: 1px solid rgba(243, 230, 213, 0.16);
+  margin: 1.25rem auto 0;
+  padding: 0.9rem 0.75rem 2rem;
+  border-top: 1px solid rgba(243, 230, 213, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.3rem 1.5rem;
 }
-.footer__grid {
-  display: grid;
-  gap: 1.6rem;
-}
-.footer__heading {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--paper-priority);
-  margin-bottom: 0.45rem;
-}
-.footer__block p {
-  font-size: 0.88rem;
-  color: var(--ink-onwood-soft);
-  margin-bottom: 0.4rem;
-}
-.footer__block a {
-  display: inline-block;
-  padding-block: 0.4rem;
-  color: var(--civic-light);
-}
-.footer__block--credit {
-  padding: 1rem 1.1rem;
-  background: rgba(0, 0, 0, 0.24);
-  border-left: 3px solid var(--paper-priority);
-}
-.credit-name {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  color: var(--ink-onwood) !important;
-  line-height: 1.1;
-}
-.credit-role {
+.footer__credit {
   font-family: var(--font-mono);
-  font-size: 0.7rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-.footer__legal {
-  margin-top: 1.75rem;
-  padding-top: 1rem;
-  border-top: 1px dashed rgba(243, 230, 213, 0.16);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
   color: var(--ink-onwood-soft);
-  max-width: 70ch;
+}
+.footer__credit strong {
+  color: var(--ink-onwood);
+  font-weight: 500;
+}
+.footer__note {
+  font-size: 0.74rem;
+  color: var(--ink-onwood-soft);
+}
+.footer__note a {
+  display: inline-block;
+  padding-block: 0.35rem;
+  color: var(--civic-light);
 }
 
 /* ---------------------------------------------------------- prose pages */
@@ -1123,7 +1031,6 @@ svg {
 @media (min-width: 34rem) {
   .board-section,
   .masthead,
-  .strip,
   .footer {
     padding-inline: 1rem;
   }
@@ -1133,22 +1040,32 @@ svg {
   .board__surface {
     padding: 1.4rem 1.2rem 1.6rem;
   }
-  .filters {
-    flex-wrap: wrap;
-  }
-  .filters__chips {
-    flex-wrap: wrap;
-    overflow-x: visible;
-  }
-  .footer__grid,
-  .strip__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 52rem) {
   .masthead {
-    padding-top: 2.25rem;
+    padding-top: 1.5rem;
+  }
+  /* Room enough for the name, the tagline and the status on one line. */
+  .masthead__inner {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+  .masthead__tagline {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.95rem;
+    border-left: 1px solid rgba(243, 230, 213, 0.22);
+    padding-left: 1.5rem;
+  }
+  .status {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .nav {
+    grid-column: 3;
+    grid-row: 1;
   }
   .board__notes {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1156,12 +1073,6 @@ svg {
   }
   .board {
     border-width: 14px;
-  }
-  .strip__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .footer__grid {
-    grid-template-columns: 1fr 1fr 1.1fr;
   }
   .detail__row {
     grid-template-columns: 12rem 1fr;
@@ -1190,25 +1101,155 @@ svg {
 }
 
 @media (min-width: 72rem) {
+  /* Wide enough for the whole set of chips on one line, so they can wrap
+     instead of scrolling. Below this they stay a single rail: wrapped rows of
+     chips cost more height than they are worth above the board. */
+  .filters {
+    flex-wrap: wrap;
+  }
+  .filters__chips {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
   .board__notes {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .note--emergency {
     grid-column: span 2;
   }
+  /* Everything on one line: name, tagline, last checked, navigation. */
   .masthead__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    column-gap: 2rem;
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+  }
+  .status {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+/* ---- a phone held sideways is a wide corkboard ------------------------
+   Chrome shrinks to a single slim row and the notes take the screen. There is
+   no way for a web page to rotate a device, so this is what rotating one
+   should be worth. */
+@media (orientation: landscape) and (max-height: 33rem) {
+  .masthead {
+    padding-top: 0.4rem;
+  }
+  .masthead::before {
+    height: 3px;
+    margin-bottom: 0.45rem;
+  }
+  .masthead__inner {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    padding-bottom: 0.4rem;
+    row-gap: 0;
+  }
+  .wordmark {
+    font-size: 1.5rem;
+    padding-block: 0.25rem;
+  }
+  /* The tagline is the first thing to go: the board explains itself. */
+  .masthead__tagline {
+    display: none;
+  }
+  .status {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    justify-content: flex-end;
+    padding-right: 0.75rem;
   }
   .nav {
-    grid-column: 2;
-    grid-row: 1 / span 4;
-    align-self: start;
+    grid-column: 3;
+    grid-row: 1;
   }
-  .masthead__tagline {
+  .nav a {
+    min-height: 34px;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.66rem;
+  }
+  .board-section {
+    margin-top: 0.35rem;
+  }
+  .board {
+    border-width: 6px;
+  }
+  .board__surface {
+    padding: 0.8rem 0.7rem 1rem;
+  }
+  .board__notes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 0.9rem;
+  }
+  .note {
+    padding: 1.25rem 0.8rem 0.8rem;
+  }
+  /* A full-width emergency sheet would take the whole screen on a short
+     viewport. It stays the most prominent note without being the only one. */
+  .note--emergency {
+    grid-column: span 2;
+  }
+  .note__flags {
+    margin-bottom: 0.35rem;
+  }
+  .note__title {
+    font-size: 0.98rem;
+  }
+  .note--emergency .note__title {
     font-size: 1.1rem;
+  }
+  .note__attribution {
+    margin-top: 0.55rem;
+  }
+  .note__foot {
+    margin-top: 0.55rem;
+    padding-top: 0.5rem;
+  }
+  /* Short screen, so the face of the note shows the opening lines and the
+     rest is one tap away. The full text is on the note's own page either way. */
+  .note__snippet {
+    font-size: 0.85rem;
+    /* The -webkit-box form only. The standard line-clamp property is still
+       settling down and, paired with this, currently clamps to a single line
+       in Chromium. */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .note--emergency .note__snippet {
+    -webkit-line-clamp: 4;
+  }
+  /* One scrollable rail again: on a short screen, three wrapped rows of chips
+     would cost more height than the notes they filter. */
+  .filters {
+    flex-wrap: nowrap;
+    margin-bottom: 0.5rem;
+  }
+  .filters__chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .filter {
+    min-height: 34px;
+    padding-block: 0.2rem;
+    font-size: 0.78rem;
+  }
+  .footer {
+    margin-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 33rem) and (min-width: 62rem) {
+  .board__notes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .note--emergency {
+    grid-column: span 2;
   }
 }
 

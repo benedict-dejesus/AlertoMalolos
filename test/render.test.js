@@ -150,7 +150,6 @@ describe('the board page', () => {
     const html = await readFile(join(dir, 'index.html'), 'utf8');
     assert.ok(html.includes(`data-last-checked="${NOW}"`));
     assert.ok(/Checked \d/.test(html));
-    assert.ok(html.includes('checked every hour'));
     await rm(dir, { recursive: true, force: true });
   });
 
@@ -166,12 +165,47 @@ describe('the board page', () => {
   it('states that it is not the official city website', async () => {
     const { dir } = await buildInto(emptyState());
     for (const page of ['index.html', 'about.html', 'sources.html']) {
-      const html = await readFile(join(dir, page), 'utf8');
+      const html = (await readFile(join(dir, page), 'utf8')).toLowerCase();
       assert.ok(
-        html.includes('not the official website of the City Government of Malolos'),
+        html.includes('not the official website of the city government of malolos'),
         `${page} must carry the disclaimer`
       );
     }
+    await rm(dir, { recursive: true, force: true });
+  });
+
+  it('keeps the board free of explanatory copy', async () => {
+    const { state } = boardFrom(QUALIFYING);
+    const { dir } = await buildInto(state);
+    const html = await readFile(join(dir, 'index.html'), 'utf8');
+
+    for (const phrase of [
+      'How this board works',
+      'Official sources only',
+      'Advisories, not news',
+      'The source is the authority',
+      'is an independent civic information project',
+      'was designed and built by',
+    ]) {
+      assert.ok(!html.includes(phrase), `the board should not explain itself: "${phrase}"`);
+    }
+
+    // The About page is where that belongs, and it is one tap away.
+    const about = await readFile(join(dir, 'about.html'), 'utf8');
+    assert.ok(about.includes('is an independent civic information project'));
+    assert.ok(html.includes('about.html'));
+    await rm(dir, { recursive: true, force: true });
+  });
+
+  it('leads with the board rather than with prose', async () => {
+    const { state } = boardFrom(QUALIFYING);
+    const { dir } = await buildInto(state);
+    const html = await readFile(join(dir, 'index.html'), 'utf8');
+
+    const body = html.split('<body')[1];
+    const firstNote = body.indexOf('class="note note--');
+    const paragraphs = (body.slice(0, firstNote).match(/<p[\s>]/g) ?? []).length;
+    assert.ok(paragraphs <= 4, `${paragraphs} paragraphs before the first post-it is too many`);
     await rm(dir, { recursive: true, force: true });
   });
 
