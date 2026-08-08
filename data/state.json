@@ -1,13 +1,13 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-08T11:02:48.051Z",
-  "lastCheckedAt": "2026-08-08T11:02:48.051Z",
+  "lastCheckedAt": "2026-08-08T11:32:13.271Z",
   "board": [],
   "retired": [],
   "sources": {
     "malolos-city-website": {
-      "consecutiveFailures": 1,
-      "lastFailureAt": "2026-08-08T11:02:48.060Z",
+      "consecutiveFailures": 2,
+      "lastFailureAt": "2026-08-08T11:32:13.274Z",
       "lastError": {
         "kind": "network",
         "message": "fetch failed",
@@ -16,42 +16,52 @@
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T11:02:48.245Z",
+      "lastSuccessAt": "2026-08-08T11:32:13.329Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T11:02:49.022Z",
+      "lastSuccessAt": "2026-08-08T11:32:15.980Z",
       "lastError": null,
       "etag": "\"7e34f416a78a697e09f0cb1971a312f3-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 05:59:35 GMT"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-08T11:02:48.802Z",
+      "lastSuccessAt": "2026-08-08T11:32:16.373Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-08-08T11:02:48.511Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
       "etag": "\"1786163573.904-0\"",
-      "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT"
+      "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT",
+      "lastFailureAt": "2026-08-08T11:32:13.332Z"
     },
     "deped-central": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-08-08T11:02:49.761Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "http",
+        "message": "HTTP 403",
+        "status": 403
+      },
       "etag": "\"66ce4c940bcc642212304ebf3827318d\"",
-      "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT"
+      "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT",
+      "lastFailureAt": "2026-08-08T11:32:13.333Z"
     },
     "deped-region3": {
-      "consecutiveFailures": 1,
-      "lastFailureAt": "2026-08-08T11:02:48.254Z",
+      "consecutiveFailures": 2,
+      "lastFailureAt": "2026-08-08T11:32:13.334Z",
       "lastError": {
         "kind": "http",
         "message": "HTTP 403",
@@ -59,11 +69,16 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-08-08T11:02:48.828Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "http",
+        "message": "HTTP 403",
+        "status": 403
+      },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
-      "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT"
+      "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
+      "lastFailureAt": "2026-08-08T11:32:13.335Z"
     }
   }
 }
