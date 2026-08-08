@@ -37,9 +37,18 @@ export function emptyState() {
  * @param {(id:string)=>object} [options.sourceLookup]
  * @returns {{state: object, changes: object}}
  */
-export function mergeBoard({ state, incoming, now = nowIso(), sourceLookup = (id) => sourceById(id) }) {
+export function mergeBoard({
+  state,
+  incoming,
+  now = nowIso(),
+  sourceLookup = (id) => sourceById(id),
+  completeSources = new Map(),
+}) {
   const previous = state ?? emptyState();
-  const changes = { added: [], updated: [], unchanged: [], expired: [], evicted: [], duplicates: [], skippedRetired: [] };
+  const changes = {
+    added: [], updated: [], unchanged: [], expired: [], evicted: [],
+    duplicates: [], skippedRetired: [], withdrawn: [],
+  };
 
   const retired = new Map((previous.retired ?? []).map((entry) => [entry.id, entry]));
   const board = (previous.board ?? []).map((record) => ({ ...record }));
@@ -93,9 +102,20 @@ export function mergeBoard({ state, incoming, now = nowIso(), sourceLookup = (id
     }
   }
 
-  // 3. Retire anything whose usefulness has run out.
+  // 3. Retire anything whose usefulness has run out, or that its source has
+  //    taken back.
   const surviving = [];
   for (const record of board) {
+    if (wasWithdrawn(record, completeSources)) {
+      changes.withdrawn.push({ id: record.id, title: record.title, source: record.sourceId });
+      retired.set(record.id, {
+        id: record.id,
+        contentHash: record.contentHash,
+        retiredAt: now,
+        reason: 'withdrawn-by-source',
+      });
+      continue;
+    }
     if (isExpired(record, now)) {
       changes.expired.push({ id: record.id, title: record.title, expiresAt: record.expiresAt });
       retired.set(record.id, {
@@ -144,6 +164,18 @@ export function mergeBoard({ state, incoming, now = nowIso(), sourceLookup = (id
     },
     changes,
   };
+}
+
+/**
+ * True when a source that reports its complete set no longer carries this
+ * notice. A post-it corroborated by another office stays up: only that office's
+ * own credit would be withdrawn, and the advisory itself still stands.
+ */
+function wasWithdrawn(record, completeSources) {
+  const present = completeSources.get(record.sourceId);
+  if (!present) return false;
+  if (present.has(record.id)) return false;
+  return (record.alsoReportedBy ?? []).length === 0;
 }
 
 /** Existing post-it representing the same announcement, or -1. */

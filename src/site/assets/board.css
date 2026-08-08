@@ -66,8 +66,32 @@
   --pin-brass: #b98a2e;
   --pin-slate: #495c68;
 
-  --shadow-note: 0 1px 1px rgba(50, 28, 10, 0.24), 0 8px 14px -6px rgba(46, 25, 8, 0.5);
-  --shadow-note-raised: 0 2px 2px rgba(50, 28, 10, 0.22), 0 18px 26px -10px rgba(46, 25, 8, 0.55);
+  /* Three layers: the contact edge where paper meets cork, a short soft
+     shadow, and a long ambient one. That separation is what stops a flat
+     rectangle from looking like a flat rectangle. */
+  --shadow-note:
+    0 1px 0 rgba(255, 255, 255, 0.28) inset,
+    0 1px 2px rgba(50, 28, 10, 0.3),
+    0 6px 10px -4px rgba(46, 25, 8, 0.42),
+    0 16px 26px -14px rgba(38, 20, 4, 0.62);
+  --shadow-note-raised:
+    0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 3px rgba(50, 28, 10, 0.26),
+    0 14px 20px -8px rgba(46, 25, 8, 0.44),
+    0 30px 44px -20px rgba(38, 20, 4, 0.66);
+
+  /* Textures.
+     Drawn as inline SVG noise rather than photographs: a few hundred bytes
+     each, no extra requests, sharp at any pixel density, and rasterised once
+     by the browser. Blend modes do the rest. */
+  --tex-grain:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  --tex-blotch:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='420' height='420' filter='url(%23b)'/%3E%3C/svg%3E");
+  --tex-wood:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='120'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.7' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='120' filter='url(%23w)'/%3E%3C/svg%3E");
+  --tex-fibre:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23f)'/%3E%3C/svg%3E");
 
   --font-body: 'Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-display: 'Plex Condensed', 'Plex Sans', 'Arial Narrow', system-ui, sans-serif;
@@ -333,39 +357,83 @@ svg {
   max-width: 60ch;
 }
 
+/* The frame: a stained timber edge. The border is transparent so the wood
+   gradient and its grain paint straight through it. */
 .board {
-  border: 8px solid var(--wood);
+  border: 8px solid transparent;
   border-radius: 6px;
-  background-image: linear-gradient(180deg, var(--wood-edge), var(--wood) 45%, var(--wood-dark));
+  background-color: var(--wood);
+  background-image: var(--tex-wood), linear-gradient(168deg, var(--wood-edge), var(--wood) 42%, var(--wood-dark));
+  background-size: 300px 120px, 100% 100%;
+  background-blend-mode: soft-light, normal;
+  background-clip: border-box;
   box-shadow:
-    0 2px 0 rgba(255, 255, 255, 0.06) inset,
-    0 22px 40px -20px rgba(0, 0, 0, 0.8);
+    inset 0 0 0 1px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 236, 210, 0.14),
+    0 24px 44px -22px rgba(0, 0, 0, 0.85);
   padding: 4px;
 }
 
 .board__surface {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 0.95rem 0.6rem 1.2rem;
   border-radius: 2px;
   background-color: var(--cork);
-  /* cork speckle, drawn in CSS so there is no image to download */
+  /* Granules and flecks. The two noise layers on top of this do the rest. */
   background-image:
-    radial-gradient(circle at 18% 22%, rgba(72, 40, 12, 0.22) 0 1.5px, transparent 2px),
-    radial-gradient(circle at 62% 71%, rgba(72, 40, 12, 0.17) 0 2px, transparent 2.5px),
-    radial-gradient(circle at 84% 34%, rgba(255, 240, 214, 0.16) 0 1.5px, transparent 2px),
-    radial-gradient(circle at 33% 84%, rgba(255, 240, 214, 0.12) 0 1.5px, transparent 2px),
-    linear-gradient(158deg, rgba(255, 226, 188, 0.14), rgba(97, 55, 18, 0.2));
+    radial-gradient(circle at 18% 22%, rgba(72, 40, 12, 0.24) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 62% 71%, rgba(72, 40, 12, 0.19) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 84% 34%, rgba(255, 240, 214, 0.18) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 33% 84%, rgba(255, 240, 214, 0.13) 0 1.5px, transparent 2px),
+    linear-gradient(158deg, rgba(255, 226, 188, 0.16), rgba(97, 55, 18, 0.22));
   background-size: 41px 37px, 67px 61px, 53px 49px, 89px 83px, 100% 100%;
-  box-shadow: inset 0 0 34px rgba(74, 40, 10, 0.42);
+  box-shadow:
+    inset 0 0 40px rgba(74, 40, 10, 0.4),
+    inset 0 2px 5px rgba(48, 24, 4, 0.45);
+}
+
+/* Fine cork grain. */
+.board__surface::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--tex-grain);
+  background-size: 200px 200px;
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Broad tonal variation, so the board is never a flat sheet of colour. */
+.board__surface::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--tex-blotch),
+    radial-gradient(120% 90% at 50% 40%, transparent 40%, rgba(58, 30, 6, 0.34) 100%);
+  background-size: 420px 420px, 100% 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .board__notes {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 1.35rem 1.1rem;
   align-items: start;
 }
 
+/* Above the texture layers, which would otherwise be painted over it and
+   darken the text: the pseudo-elements come later in tree order. */
 .board__count {
+  position: relative;
+  z-index: 1;
   margin-top: 1.5rem;
   padding-top: 0.75rem;
   border-top: 1px dashed rgba(74, 40, 10, 0.3);
@@ -436,8 +504,13 @@ svg {
   padding: 1.5rem 1.05rem 1.05rem;
   color: var(--ink);
   background-color: var(--paper-archive);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 42%),
-    repeating-linear-gradient(92deg, rgba(120, 92, 48, 0.05) 0 1px, transparent 1px 4px);
+  /* paper fibre, a sheen from the top edge, and a faint laid pattern */
+  background-image: var(--tex-fibre),
+    linear-gradient(178deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0) 38%),
+    linear-gradient(196deg, rgba(255, 255, 255, 0) 62%, rgba(104, 74, 30, 0.09)),
+    repeating-linear-gradient(92deg, rgba(120, 92, 48, 0.045) 0 1px, transparent 1px 4px);
+  background-size: 160px 160px, 100% 100%, 100% 100%, 100% 100%;
+  background-blend-mode: soft-light, normal, normal, normal;
   border-bottom: 1px solid var(--paper-archive-edge);
   border-radius: 1px 1px 2px 2px;
   box-shadow: var(--shadow-note);
@@ -464,24 +537,32 @@ svg {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 22px;
-  height: 22px;
-  background: linear-gradient(135deg, transparent 50%, rgba(97, 66, 22, 0.22) 50%);
+  width: 26px;
+  height: 26px;
+  background:
+    linear-gradient(135deg, transparent 52%, rgba(97, 66, 22, 0.1) 52%, rgba(97, 66, 22, 0.26) 74%, rgba(58, 34, 6, 0.3) 100%);
   border-radius: 0 0 2px 0;
+  pointer-events: none;
 }
 
+/* A domed drawing pin: a bright specular dot, a shaded rim, and a small
+   shadow cast down and to the right, matching the light on the notes. */
 .note__pin {
   position: absolute;
-  top: -7px;
+  top: -8px;
   left: 50%;
   translate: -50% 0;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.85) 0 2px, transparent 3px),
-    radial-gradient(circle at 50% 50%, var(--pin-colour, var(--pin-red)) 0 60%, rgba(0, 0, 0, 0.35) 100%);
-  box-shadow: 0 2px 3px rgba(40, 20, 5, 0.45);
+    radial-gradient(circle at 33% 27%, rgba(255, 255, 255, 0.95) 0 2.5px, rgba(255, 255, 255, 0) 4px),
+    radial-gradient(circle at 62% 70%, rgba(0, 0, 0, 0.3) 0 30%, rgba(0, 0, 0, 0) 62%),
+    radial-gradient(circle at 42% 38%, var(--pin-colour, var(--pin-red)) 0 52%, rgba(0, 0, 0, 0.45) 100%);
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.35) inset,
+    0 3px 4px rgba(40, 20, 5, 0.5),
+    0 6px 9px -3px rgba(40, 20, 5, 0.35);
 }
 
 .note__flags {
@@ -652,6 +733,7 @@ svg {
 /* ----------------------------------------------------------- empty state */
 .empty {
   position: relative;
+  z-index: 1;
   max-width: 34rem;
   margin: 1.5rem auto;
   padding: 2.5rem 1.5rem 2rem;
@@ -925,6 +1007,15 @@ svg {
   letter-spacing: 0.05em;
   color: rgba(25, 20, 16, 0.65);
 }
+.detail__provenance {
+  margin-top: 0.9rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px dashed rgba(25, 20, 16, 0.3);
+  border-radius: 2px;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
 .detail__cta {
   margin-top: 1.25rem;
 }
@@ -1142,9 +1233,15 @@ svg {
   .detail {
     border: 2px solid currentColor;
   }
+  /* Decoration is dropped so nothing competes with the text. */
   .note::after,
-  .note__pin {
+  .note__pin,
+  .board__surface::before,
+  .board__surface::after {
     display: none;
+  }
+  .note {
+    background-image: none;
   }
 }
 
@@ -1158,6 +1255,10 @@ svg {
     background: #fff;
     border: 1px solid #000;
     box-shadow: none;
+  }
+  .board__surface::before,
+  .board__surface::after {
+    display: none;
   }
   .note {
     background: #fff !important;

@@ -60,6 +60,7 @@ Other commands:
 
 | Command | What it does |
 | --- | --- |
+| `npm run add -- --url … --title … --text …` | Records a notice from an official page that may not be read automatically, and tells you whether the rules accept it |
 | `npm run update:dry` | Runs a full cycle against live sources and reports, writing nothing |
 | `node src/pipeline/update.js --verbose` | Same as `update`, with every rejection reason printed |
 | `npm run preview -- 25` | Builds `.preview/` from sample data (here, 25 candidates to exercise the 20 limit) |
@@ -79,7 +80,11 @@ config/       sources.js  the trusted source registry - the only place
 src/lib/      retrieval, feed and HTML reading, text, sanitising, time, logging
 src/pipeline/ discover → assess (classify, score, expiry) → dedupe → board → store
 src/site/     the static renderer, stylesheet, enhancement script and assets
-data/         state.json - the board's internal record (committed)
+data/         state.json    - the board's internal record (committed)
+              curated.json  - notices recorded by hand from pages that may
+                              not be read automatically
+docs/         DEPLOYMENT.md      - hosting walkthrough, start to finish
+              CURATED-SOURCES.md - the Facebook routes and the rules for them
 public/       the generated site (committed, served by GitHub Pages)
 logs/         per-run logs (not committed)
 test/         node:test suites and sample fixtures
@@ -104,8 +109,15 @@ publisher is credible.
 }
 ```
 
+`kind` picks the reader: `rss`, `html`, `graph` (Facebook Graph API, switched on
+only when the token named in `tokenEnv` is set) or `manual` (notices recorded by
+hand in `data/curated.json`). Facebook pages are never crawled — see
+[docs/CURATED-SOURCES.md](docs/CURATED-SOURCES.md) for why, and for the two
+routes that are legitimate.
+
 For an `html` source, add a `list` block with the container, link, title, date
-and summary selectors. Set `requiresExplicitLocalMention: true` for national
+and summary selectors. Add a `linkPattern` when a source shares its domain with
+other publishers — it pins announcements to that office's own pages. Set `requiresExplicitLocalMention: true` for national
 sources so nothing is posted unless Malolos, a Malolos barangay, Bulacan or
 Central Luzon is actually named. Set `allowEmpty: true` for a page that is
 legitimately empty most of the time. Set `enabled: false` with a
@@ -139,8 +151,10 @@ appears in the source text.
 
 ## Deployment
 
-`.github/workflows/update-board.yml` runs hourly: tests, then the update cycle,
-then it commits `data/state.json` and `public/`, uploads the run log as an
+Full walkthrough: **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**.
+
+In short, `.github/workflows/update-board.yml` runs hourly: tests, then the
+update cycle, then it commits `data/` and `public/`, uploads the run log as an
 artifact, and deploys `public/` to GitHub Pages. Set `SITE.origin` and
 `SITE.basePath` in `config/site.js` to match the address the site is served
 from.
@@ -165,10 +179,14 @@ npm test
 Covers source credibility and link verification, announcement-versus-news
 classification, local relevance including the press-release dateline trap,
 snippet fidelity, the board at 1 / 3 / 20 / 21 notices, eviction order,
-duplicates across sources, updates, expiry, idempotency, retrieval failures
-(timeout, 403, 500, malformed feed, redesigned page, not-modified), state file
-corruption, escaping of hostile content, the empty state, and the accessibility
-basics of the rendered pages.
+duplicates across sources, updates, expiry, withdrawal, idempotency, retrieval
+failures (timeout, 403, 500, malformed feed, redesigned page, not-modified),
+state file corruption, escaping of hostile content, the empty state, and the
+accessibility basics of the rendered pages.
+
+It also guards the Facebook policy directly: one test fails the build if any
+source is ever configured to crawl a Facebook page, and others cover the curated
+intake, link-pattern verification and the Graph API route.
 
 ---
 

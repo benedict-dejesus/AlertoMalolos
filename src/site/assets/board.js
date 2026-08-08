@@ -154,6 +154,16 @@
       wrap.appendChild(quote);
     }
 
+    if (record.isTranscribed) {
+      wrap.appendChild(
+        element(
+          'p',
+          'detail__provenance',
+          'This notice was recorded from the official post by hand, because that page cannot be read automatically. Open the original post for the exact wording.'
+        )
+      );
+    }
+
     var cta = element('p', 'detail__cta');
     var button = externalLink(record.announcementUrl, 'Read official announcement ↗');
     button.className = 'button';

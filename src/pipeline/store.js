@@ -56,6 +56,7 @@ export function publicRecord(record) {
     snippet: record.snippet,
     category: record.category,
     isEmergency: Boolean(record.isEmergency),
+    isTranscribed: Boolean(record.isTranscribed),
     isPriority: Boolean(record.isPriority),
     isNew: Boolean(record.isNew),
     isUpdated: record.status === 'updated' && (record.revisions ?? 0) > 0,

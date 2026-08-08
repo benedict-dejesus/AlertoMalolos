@@ -1,0 +1,4 @@
+{
+  "_readme": "Notices recorded by hand from official pages that may not be read automatically (see docs/CURATED-SOURCES.md). Add entries with: npm run add -- --url ... --title ... --text ... --published ... Each entry is judged by the same rules as every other source and may still be rejected. Paste the text exactly as the office wrote it; never summarise or reword it.",
+  "announcements": []
+}

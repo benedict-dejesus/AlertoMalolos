@@ -39,12 +39,17 @@ jobs:
 
       - name: Check official sources and rebuild the board
         run: npm run update
+        env:
+          # Optional. When the City Information Office page token is set as a
+          # repository secret, that source switches itself on; without it the
+          # board simply uses the notices recorded in data/curated.json.
+          MALOLOS_CIO_PAGE_TOKEN: ${{ secrets.MALOLOS_CIO_PAGE_TOKEN }}
 
       - name: Commit the new board state
         run: |
           git config user.name  "AlertoMalolos board"
           git config user.email "actions@users.noreply.github.com"
-          git add data/state.json public
+          git add data/state.json data/curated.json public
           if git diff --cached --quiet; then
             echo "No change to the board."
           else

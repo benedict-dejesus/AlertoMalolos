@@ -14,6 +14,7 @@
     "serve": "node tools/serve.js",
     "test": "node --test",
     "preview": "node tools/preview.js",
+    "add": "node tools/add-announcement.js",
     "fonts": "node tools/fetch-fonts.js"
   },
   "license": "MIT",

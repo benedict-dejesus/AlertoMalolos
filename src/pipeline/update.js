@@ -90,11 +90,23 @@ export async function runUpdate(options = {}) {
   }
 
   // ---- merge into the board ---------------------------------------------
+  // Sources that reported their complete set: anything of theirs that is no
+  // longer there has been taken back, not merely paged out of a feed.
+  const completeSources = new Map();
+  for (const result of results) {
+    if (!result.ok || !result.complete) continue;
+    completeSources.set(
+      result.sourceId,
+      new Set(accepted.filter((record) => record.sourceId === result.sourceId).map((record) => record.id))
+    );
+  }
+
   const { state, changes } = mergeBoard({
     state: previous,
     incoming: accepted,
     now,
     sourceLookup: (id) => sourceById(id, sources),
+    completeSources,
   });
 
   state.sources = { ...(previous.sources ?? {}) };
@@ -125,6 +137,7 @@ export async function runUpdate(options = {}) {
     updated: changes.updated.length,
     unchanged: changes.unchanged.length,
     expired: changes.expired.length,
+    withdrawn: changes.withdrawn.length,
     evicted: changes.evicted.length,
     duplicates: changes.duplicates.length,
     skippedRetired: changes.skippedRetired.length,

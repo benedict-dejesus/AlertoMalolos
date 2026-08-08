@@ -95,6 +95,10 @@ export function assess(rawCandidate, source, options = {}) {
 
     category: classification.category,
     isEmergency: classification.isEmergency,
+    // True when a person recorded the notice from a page that may not be read
+    // automatically. The reader is told, so the original post stays the wording
+    // of record.
+    isTranscribed: Boolean(candidate.transcribed || source.transcribed),
 
     publishedAt,
     publishedAtIsKnown: Boolean(publishedAt),
@@ -127,6 +131,10 @@ export function assess(rawCandidate, source, options = {}) {
  * another Philippine government domain.
  */
 export function linkBelongsToSource(url, source) {
+  // A source may pin the exact shape of its links. Where one is given it is the
+  // whole test: a page on facebook.com is only acceptable if it is *this* page.
+  if (source.linkPattern) return source.linkPattern.test(url);
+
   const linkHost = hostOf(url);
   const sourceHost = hostOf(source.homepage) ?? hostOf(source.url);
   if (!linkHost || !sourceHost) return false;

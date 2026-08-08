@@ -197,6 +197,11 @@ export function renderDetail(record, options = {}) {
   </p>
   <h1 class="detail__title">${escapeHtml(record.title)}</h1>
   ${record.snippet ? `<blockquote class="detail__snippet"><p>${escapeHtml(record.snippet)}</p><cite>From the announcement published by ${escapeHtml(record.sourceName)}</cite></blockquote>` : ''}
+  ${
+    record.isTranscribed
+      ? `<p class="detail__provenance">This notice was recorded from the official post by hand, because that page cannot be read automatically. Open the original post for the exact wording.</p>`
+      : ''
+  }
   <p class="detail__cta">
     <a class="button" href="${escapeHtml(record.announcementUrl)}" target="_blank" rel="noopener noreferrer">
       Read official announcement<span aria-hidden="true"> ↗</span>
