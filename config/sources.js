@@ -155,7 +155,10 @@ export const SOURCES = [
     homepage: 'https://www.facebook.com/BulacanPDRRMO',
     url: 'https://www.facebook.com/BulacanPDRRMO',
     file: 'data/curated.json',
-    linkPattern: /^https:\/\/(www\.|m\.|web\.)?facebook\.com\/(BulacanPDRRMO|permalink\.php|photo|share\/p|story\.php|profile\.php)/i,
+    // The page's posts are addressed both by its vanity name and by its numeric
+    // page id (61552824310902), which is the form Facebook puts in the address
+    // bar when a post is opened from the feed. Both are this office's own page.
+    linkPattern: /^https:\/\/(www\.|m\.|web\.)?facebook\.com\/(BulacanPDRRMO|61552824310902)\//i,
     transcribed: true,
     allowEmpty: true,
     enabled: true,

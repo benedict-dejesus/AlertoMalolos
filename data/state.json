@@ -1,13 +1,53 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-08-08T11:02:48.051Z",
-  "lastCheckedAt": "2026-08-09T03:08:48.486Z",
-  "board": [],
+  "lastUpdatedAt": "2026-08-09T03:34:00.137Z",
+  "lastCheckedAt": "2026-08-09T03:34:00.137Z",
+  "board": [
+    {
+      "id": "bulacan-pdrrmo-facebook-508995a721",
+      "contentHash": "fd107aa5eb1feaba",
+      "canonicalUrl": "https://facebook.com/61552824310902/posts/12224456296094143",
+      "title": "SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN SA IKA-10 NG AGOSTO 2026",
+      "snippet": "DRF-08092026-510 SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN SA IKA-10 NG AGOSTO 2026",
+      "sourceExcerpt": "DRF-08092026-510 SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN SA IKA-10 NG AGOSTO 2026",
+      "sourceId": "bulacan-pdrrmo-facebook",
+      "sourceName": "Bulacan PDRRMO",
+      "sourceType": "Provincial disaster advisories: dam releases, high tide, flooding and river levels.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://www.facebook.com/BulacanPDRRMO",
+      "announcementUrl": "https://www.facebook.com/61552824310902/posts/12224456296094143",
+      "category": "suspension",
+      "isEmergency": false,
+      "isTranscribed": true,
+      "publishedAt": "2026-08-09T02:46:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-08-09T03:34:00.137Z",
+      "firstSeenAt": "2026-08-09T03:34:00.137Z",
+      "lastSeenAt": "2026-08-09T03:34:00.137Z",
+      "updatedAt": "2026-08-09T03:34:00.137Z",
+      "expiresAt": "2026-08-10T08:46:00.000Z",
+      "expiryBasis": "category-default:suspension",
+      "status": "active",
+      "importanceScore": 97,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named",
+      "urgencyScore": 54,
+      "freshnessScore": 96,
+      "totalScore": 81,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    }
+  ],
   "retired": [],
   "sources": {
     "malolos-city-website": {
-      "consecutiveFailures": 16,
-      "lastFailureAt": "2026-08-09T03:08:48.490Z",
+      "consecutiveFailures": 17,
+      "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": {
         "kind": "network",
         "message": "fetch failed",
@@ -16,52 +56,44 @@
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T03:08:48.546Z",
+      "lastSuccessAt": "2026-08-09T03:34:00.320Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T03:08:51.034Z",
+      "lastSuccessAt": "2026-08-09T03:34:01.083Z",
       "lastError": null,
       "etag": "\"7e34f416a78a697e09f0cb1971a312f3-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 05:59:35 GMT"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T03:08:51.852Z",
+      "lastSuccessAt": "2026-08-09T03:34:00.848Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 15,
-      "lastSuccessAt": "2026-08-08T11:02:48.511Z",
-      "lastError": {
-        "kind": "network",
-        "message": "fetch failed",
-        "status": null
-      },
-      "etag": "\"1786163573.904-0\"",
-      "lastModified": "Sat, 08 Aug 2026 04:32:53 GMT",
+      "consecutiveFailures": 0,
+      "lastSuccessAt": "2026-08-09T03:34:00.570Z",
+      "lastError": null,
+      "etag": "\"1786244373.997-0\"",
+      "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
       "lastFailureAt": "2026-08-09T03:08:48.549Z"
     },
     "deped-central": {
-      "consecutiveFailures": 15,
-      "lastSuccessAt": "2026-08-08T11:02:49.761Z",
-      "lastError": {
-        "kind": "http",
-        "message": "HTTP 403",
-        "status": 403
-      },
-      "etag": "\"66ce4c940bcc642212304ebf3827318d\"",
-      "lastModified": "Sat, 08 Aug 2026 07:15:44 GMT",
+      "consecutiveFailures": 0,
+      "lastSuccessAt": "2026-08-09T03:34:01.917Z",
+      "lastError": null,
+      "etag": "\"62d82903ce538aead9f1314816a7267a\"",
+      "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
       "lastFailureAt": "2026-08-09T03:08:48.550Z"
     },
     "deped-region3": {
-      "consecutiveFailures": 16,
-      "lastFailureAt": "2026-08-09T03:08:48.551Z",
+      "consecutiveFailures": 17,
+      "lastFailureAt": "2026-08-09T03:34:00.334Z",
       "lastError": {
         "kind": "http",
         "message": "HTTP 403",
@@ -69,27 +101,23 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 15,
-      "lastSuccessAt": "2026-08-08T11:02:48.828Z",
-      "lastError": {
-        "kind": "http",
-        "message": "HTTP 403",
-        "status": 403
-      },
+      "consecutiveFailures": 0,
+      "lastSuccessAt": "2026-08-09T03:34:00.920Z",
+      "lastError": null,
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
       "lastFailureAt": "2026-08-09T03:08:48.552Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T03:08:51.333Z",
+      "lastSuccessAt": "2026-08-09T03:34:01.770Z",
       "lastError": null,
       "etag": "\"3dba156540ded3d3d89e54ec4d88cead-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 01:01:09 GMT"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T03:08:48.548Z",
+      "lastSuccessAt": "2026-08-09T03:34:00.327Z",
       "lastError": null,
       "etag": null,
       "lastModified": null

@@ -118,6 +118,22 @@ describe('the provincial disaster office', () => {
     );
     assert.equal(names.filter((name) => name === 'Bulacan PDRRMO').length, 1);
   });
+
+  // An official memorandum announces a suspension as a noun, not as a verb.
+  // These phrasings once read as having no announcement signal at all, which
+  // kept a real provincial class suspension off the board.
+  for (const wording of [
+    'SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN',
+    'Pagsuspinde ng klase sa lahat ng antas sa lalawigan ng Bulacan',
+    'Kanselado ang klase sa lahat ng paaralan sa Bulacan bukas',
+    'Walang klase sa lahat ng antas sa Bulacan bukas',
+  ]) {
+    it(`reads an official memorandum as a suspension: ${wording.slice(0, 40)}…`, () => {
+      const classification = classify({ title: wording, summary: wording, body: '' });
+      assert.equal(classification.isAnnouncement, true, classification.reason);
+      assert.equal(classification.category, 'suspension');
+    });
+  }
 });
 
 describe('announcement versus news', () => {

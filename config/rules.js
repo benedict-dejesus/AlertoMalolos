@@ -53,7 +53,12 @@ export const CATEGORIES = {
     patterns: [
       /\bsuspension of (classes|work|government work)\b/, /\bclass(es)? (are |is )?suspended\b/,
       /\bwork (is |are )?suspended\b/, /\bsuspend(ed|ing)? (classes|work)\b/,
-      /\bwalang pasok\b/, /\bsuspendido ang (klase|pasok|trabaho)\b/,
+      /\bwalang (pasok|klase)\b/, /\bsuspendido ang (klase|pasok|trabaho)\b/,
+      // The noun form is what an official memorandum actually uses:
+      // "SUSPENSYON NG KLASE SA LAHAT NG ANTAS ...". Without these a provincial
+      // or city suspension memo reads as having no announcement signal at all.
+      /\bsuspensyon ng (klase|pasok|trabaho)\b/, /\bpagsuspinde ng (klase|pasok|trabaho)\b/,
+      /\bkanselado ang (klase|pasok)\b/,
       /\bno classes\b/, /\bclass suspension\b/, /\bwork suspension\b/,
       /\bskeleton (work)?force\b/, /\bshift to (asynchronous|online) classes\b/,
     ],

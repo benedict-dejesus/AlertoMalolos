@@ -1,4 +1,14 @@
 {
   "_readme": "Notices recorded by hand from official pages that may not be read automatically (see docs/CURATED-SOURCES.md). Add entries with: npm run add -- --url ... --title ... --text ... --published ... Each entry is judged by the same rules as every other source and may still be rejected. Paste the text exactly as the office wrote it; never summarise or reword it.",
-  "announcements": []
+  "announcements": [
+    {
+      "id": "bulacan-pdrrmo-facebook-12224456296094143",
+      "sourceId": "bulacan-pdrrmo-facebook",
+      "title": "SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN SA IKA-10 NG AGOSTO 2026",
+      "url": "https://www.facebook.com/61552824310902/posts/12224456296094143",
+      "text": "DRF-08092026-510 SUSPENSYON NG KLASE SA LAHAT NG ANTAS NG PAMPUBLIKO AT PRIBADONG PAARALAN SA LALAWIGAN NG BULACAN SA IKA-10 NG AGOSTO 2026",
+      "publishedAt": "2026-08-09T02:46:00.000Z",
+      "addedAt": "2026-08-09T03:33:51.353Z"
+    }
+  ]
 }
