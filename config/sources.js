@@ -160,6 +160,25 @@ export const SOURCES = [
     allowEmpty: true,
     enabled: true,
   },
+  {
+    id: 'bulacan-pdrrmo-graph',
+    name: 'Bulacan PDRRMO',
+    publicDescription:
+      'Provincial disaster advisories: dam releases, high tide, flooding and river levels.',
+    tier: 3,
+    scope: 'bulacan',
+    // The sanctioned automated route, as for the city information office: a Page
+    // access token issued by the office's own administrators. Off until the
+    // token exists, so the hand-recorded route carries the page until then.
+    kind: 'graph',
+    homepage: 'https://www.facebook.com/BulacanPDRRMO',
+    url: 'https://graph.facebook.com/v21.0/BulacanPDRRMO/posts',
+    tokenEnv: 'BULACAN_PDRRMO_PAGE_TOKEN',
+    linkPattern: /^https:\/\/(www\.|m\.|web\.)?facebook\.com\//i,
+    allowEmpty: true,
+    enabled: true,
+    requiresToken: true,
+  },
 
   // ---------------------------------------------------------------------
   // Tier 4 - National government agencies

@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { SOURCES, sourceById, sourcesForPublicDisplay } from '../config/sources.js';
+import { SOURCES, activeSources, sourceById, sourcesForPublicDisplay } from '../config/sources.js';
 import { SNIPPET } from '../config/rules.js';
 import { assess, buildSnippet, linkBelongsToSource } from '../src/pipeline/assess.js';
 import { classify, splitDateline } from '../src/pipeline/classify.js';
@@ -59,16 +59,34 @@ describe('source credibility', () => {
 });
 
 describe('the provincial disaster office', () => {
-  it('is registered at the provincial tier, by feed and by hand', () => {
+  it('is registered at the provincial tier, by feed, by hand and by token', () => {
     const feed = sourceById('bulacan-pdrrmo', SOURCES);
     const manual = sourceById('bulacan-pdrrmo-facebook', SOURCES);
-    for (const source of [feed, manual]) {
+    const graph = sourceById('bulacan-pdrrmo-graph', SOURCES);
+    for (const source of [feed, manual, graph]) {
       assert.equal(source.tier, 3);
       assert.equal(source.scope, 'bulacan');
       assert.equal(source.enabled, true);
     }
     assert.equal(feed.kind, 'rss');
     assert.equal(manual.kind, 'manual');
+    assert.equal(graph.kind, 'graph');
+  });
+
+  it('leaves the Facebook page unread until its own token is configured', () => {
+    const active = (env) => activeSources(SOURCES, env).map((source) => source.id);
+    assert.ok(!active({}).includes('bulacan-pdrrmo-graph'));
+    // The two pages have separate tokens: the office's token must not switch on
+    // the city information office, or the other way round.
+    assert.ok(!active({ MALOLOS_CIO_PAGE_TOKEN: 'a-token' }).includes('bulacan-pdrrmo-graph'));
+    const withToken = active({ BULACAN_PDRRMO_PAGE_TOKEN: 'a-token' });
+    assert.ok(withToken.includes('bulacan-pdrrmo-graph'));
+    assert.ok(!withToken.includes('malolos-cio-graph'));
+  });
+
+  it('asks the Graph API for the office’s own page', () => {
+    const graph = sourceById('bulacan-pdrrmo-graph', SOURCES);
+    assert.match(graph.url, /^https:\/\/graph\.facebook\.com\/v\d+\.\d+\/BulacanPDRRMO\/posts$/);
   });
 
   it('accepts a dam release advisory that names Bulacan', () => {

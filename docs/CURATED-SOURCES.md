@@ -133,7 +133,7 @@ permission. A token from a Meta app that the office's administrator has
 authorised for their page.
 
 Then set it as described in
-[DEPLOYMENT.md, Step 6](DEPLOYMENT.md#step-6--optional-the-city-information-office-page-token).
+[DEPLOYMENT.md, Step 6](DEPLOYMENT.md#step-6--optional-the-facebook-page-tokens).
 The `malolos-cio-graph` source switches itself on when the token exists and
 stays off when it does not.
 
@@ -195,6 +195,12 @@ those are recorded by hand:
 ```bash
 npm run add -- --source bulacan-pdrrmo-facebook --url "https://www.facebook.com/BulacanPDRRMO/posts/…" --title "…" --text "…"
 ```
+
+The same two routes as the information office apply here: if the office's
+administrators issue a long-lived Page access token, set it as
+`BULACAN_PDRRMO_PAGE_TOKEN` and the `bulacan-pdrrmo-graph` source reads the page
+hourly with no manual step. Until then it stays off and the hand-recorded route
+carries the page.
 
 It is a provincial office, judged on the same provincial footing as the
 provincial feed: a notice naming Malolos or one of its barangays ranks well

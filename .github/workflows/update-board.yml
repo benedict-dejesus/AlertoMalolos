@@ -40,10 +40,11 @@ jobs:
       - name: Check official sources and rebuild the board
         run: npm run update
         env:
-          # Optional. When the City Information Office page token is set as a
-          # repository secret, that source switches itself on; without it the
-          # board simply uses the notices recorded in data/curated.json.
+          # Optional. When an office's page token is set as a repository secret,
+          # that source switches itself on; without it the board simply uses the
+          # notices recorded in data/curated.json.
           MALOLOS_CIO_PAGE_TOKEN: ${{ secrets.MALOLOS_CIO_PAGE_TOKEN }}
+          BULACAN_PDRRMO_PAGE_TOKEN: ${{ secrets.BULACAN_PDRRMO_PAGE_TOKEN }}
 
       - name: Commit the new board state
         run: |

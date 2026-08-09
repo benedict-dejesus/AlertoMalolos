@@ -119,23 +119,30 @@ sources were checked and nothing qualified.
 > **If Actions is disabled** on a new repository, the Actions tab will say so.
 > Click **I understand my workflows, go ahead and enable them**.
 
-## Step 6 — Optional: the City Information Office page token
+## Step 6 — Optional: the Facebook page tokens
 
-The board reads the Malolos City Information Office page on Facebook only if a
-Page access token is configured, because Facebook does not permit its pages to
-be collected automatically without permission. Without a token, notices from
-that page are recorded by hand instead — see
-[CURATED-SOURCES.md](CURATED-SOURCES.md). Nothing breaks either way.
+The board reads an office's Facebook page only if a Page access token is
+configured, because Facebook does not permit its pages to be collected
+automatically without permission. Without a token, notices from those pages are
+recorded by hand instead — see [CURATED-SOURCES.md](CURATED-SOURCES.md).
+Nothing breaks either way.
 
-If the page's administrators issue you a long-lived Page access token:
+Two pages are registered, each with its own secret:
+
+| Page | Secret |
+| --- | --- |
+| Malolos City Information Office | `MALOLOS_CIO_PAGE_TOKEN` |
+| Bulacan PDRRMO | `BULACAN_PDRRMO_PAGE_TOKEN` |
+
+If a page's administrators issue you a long-lived Page access token:
 
 1. **Settings → Secrets and variables → Actions**
 2. **New repository secret**
-3. Name: `MALOLOS_CIO_PAGE_TOKEN`
+3. Name: the secret from the table above
 4. Value: the token
 5. **Add secret**
 
-Then pass it to the update step in
+Both are already passed to the update step in
 [`.github/workflows/update-board.yml`](../.github/workflows/update-board.yml):
 
 ```yaml
@@ -143,10 +150,11 @@ Then pass it to the update step in
         run: npm run update
         env:
           MALOLOS_CIO_PAGE_TOKEN: ${{ secrets.MALOLOS_CIO_PAGE_TOKEN }}
+          BULACAN_PDRRMO_PAGE_TOKEN: ${{ secrets.BULACAN_PDRRMO_PAGE_TOKEN }}
 ```
 
-The source switches itself on when the token is present and stays off when it is
-not. Tokens expire; when one does, the run logs
+A secret that has never been set arrives empty, and its source simply stays
+off. Each source switches itself on when its own token is present. Tokens expire; when one does, the run logs
 `Graph API: Session has expired` and the rest of the board carries on
 untouched.
 
