@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-09T03:34:00.137Z",
-  "lastCheckedAt": "2026-08-09T05:55:01.400Z",
+  "lastCheckedAt": "2026-08-09T07:11:45.125Z",
   "board": [
     {
       "id": "bulacan-pdrrmo-facebook-508995a721",
@@ -24,7 +24,7 @@
       "publishedAtIsKnown": true,
       "discoveredAt": "2026-08-09T03:34:00.137Z",
       "firstSeenAt": "2026-08-09T03:34:00.137Z",
-      "lastSeenAt": "2026-08-09T05:55:01.400Z",
+      "lastSeenAt": "2026-08-09T07:11:45.125Z",
       "updatedAt": "2026-08-09T03:34:00.137Z",
       "expiresAt": "2026-08-10T08:46:00.000Z",
       "expiryBasis": "category-default:suspension",
@@ -33,8 +33,8 @@
       "relevanceScore": 74,
       "relevanceBasis": "bulacan-named",
       "urgencyScore": 54,
-      "freshnessScore": 84,
-      "totalScore": 80,
+      "freshnessScore": 78,
+      "totalScore": 79,
       "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
@@ -46,8 +46,8 @@
   "retired": [],
   "sources": {
     "malolos-city-website": {
-      "consecutiveFailures": 20,
-      "lastFailureAt": "2026-08-09T05:55:01.403Z",
+      "consecutiveFailures": 21,
+      "lastFailureAt": "2026-08-09T07:11:45.128Z",
       "lastError": {
         "kind": "network",
         "message": "fetch failed",
@@ -56,27 +56,27 @@
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T05:55:01.460Z",
+      "lastSuccessAt": "2026-08-09T07:11:45.189Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T05:55:03.845Z",
+      "lastSuccessAt": "2026-08-09T07:11:47.630Z",
       "lastError": null,
       "etag": "\"7e34f416a78a697e09f0cb1971a312f3-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 05:59:35 GMT"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T05:55:04.836Z",
+      "lastSuccessAt": "2026-08-09T07:11:48.419Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "lastSuccessAt": "2026-08-09T03:34:00.570Z",
       "lastError": {
         "kind": "network",
@@ -85,10 +85,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-09T05:55:01.463Z"
+      "lastFailureAt": "2026-08-09T07:11:45.192Z"
     },
     "deped-central": {
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "lastSuccessAt": "2026-08-09T03:34:01.917Z",
       "lastError": {
         "kind": "http",
@@ -97,11 +97,11 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-09T05:55:01.464Z"
+      "lastFailureAt": "2026-08-09T07:11:45.193Z"
     },
     "deped-region3": {
-      "consecutiveFailures": 20,
-      "lastFailureAt": "2026-08-09T05:55:01.465Z",
+      "consecutiveFailures": 21,
+      "lastFailureAt": "2026-08-09T07:11:45.194Z",
       "lastError": {
         "kind": "http",
         "message": "HTTP 403",
@@ -109,7 +109,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "lastSuccessAt": "2026-08-09T03:34:00.920Z",
       "lastError": {
         "kind": "http",
@@ -118,18 +118,18 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-09T05:55:01.466Z"
+      "lastFailureAt": "2026-08-09T07:11:45.195Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T05:55:05.156Z",
+      "lastSuccessAt": "2026-08-09T07:11:48.064Z",
       "lastError": null,
       "etag": "\"3dba156540ded3d3d89e54ec4d88cead-gzip\"",
       "lastModified": "Fri, 07 Aug 2026 01:01:09 GMT"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-09T05:55:01.462Z",
+      "lastSuccessAt": "2026-08-09T07:11:45.191Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
