@@ -181,6 +181,26 @@ entry in `config/sources.js`:
 pointing anywhere other than that office's own page. Then record entries against
 it with `--source malolos-cdrrmo-facebook`.
 
+### Already registered: Bulacan PDRRMO
+
+The Provincial Disaster Risk Reduction and Management Office is in the registry
+twice, the same way the information office is. Its site at
+[pdrrmo.bulacan.gov.ph](https://pdrrmo.bulacan.gov.ph/) is read hourly from
+`/news/feed/`, but the posts there are usually a picture with no text, and a
+notice with no words to quote is refused rather than described. Its rainfall
+warnings and evacuation advisories go on
+[the office's Facebook page](https://www.facebook.com/BulacanPDRRMO) first, so
+those are recorded by hand:
+
+```bash
+npm run add -- --source bulacan-pdrrmo-facebook --url "https://www.facebook.com/BulacanPDRRMO/posts/…" --title "…" --text "…"
+```
+
+It is a provincial office, judged on the same provincial footing as the
+provincial feed: a notice naming Malolos or one of its barangays ranks well
+above one that names only the province, and one that names neither still has to
+clear the thresholds on its own importance.
+
 ---
 
 **AlertoMalolos** — a civic information project by Benedict de Jesus.

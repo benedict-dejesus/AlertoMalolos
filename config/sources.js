@@ -123,6 +123,44 @@ export const SOURCES = [
     enabled: true,
   },
 
+  {
+    id: 'bulacan-pdrrmo',
+    name: 'Bulacan PDRRMO',
+    publicDescription:
+      'Provincial disaster advisories: dam releases, high tide, flooding and river levels.',
+    tier: 3,
+    scope: 'bulacan',
+    kind: 'rss',
+    homepage: 'https://pdrrmo.bulacan.gov.ph/',
+    // The site's root feed carries no items; the news feed is the one that
+    // publishes the advisories.
+    url: 'https://pdrrmo.bulacan.gov.ph/news/feed/',
+    enabled: true,
+    notes:
+      'Provincial disaster office, based in the Capitol compound in Malolos. Dam and tide '
+      + 'advisories decide whether Malolos floods, so they qualify on their own terms.',
+  },
+  {
+    id: 'bulacan-pdrrmo-facebook',
+    name: 'Bulacan PDRRMO',
+    publicDescription:
+      'Provincial disaster advisories: dam releases, high tide, flooding and river levels.',
+    tier: 3,
+    scope: 'bulacan',
+    // The office posts its rainfall and evacuation warnings on Facebook first.
+    // Facebook may not be crawled, so those notices are recorded by hand in
+    // data/curated.json with `npm run add -- --source bulacan-pdrrmo-facebook`.
+    // See docs/CURATED-SOURCES.md.
+    kind: 'manual',
+    homepage: 'https://www.facebook.com/BulacanPDRRMO',
+    url: 'https://www.facebook.com/BulacanPDRRMO',
+    file: 'data/curated.json',
+    linkPattern: /^https:\/\/(www\.|m\.|web\.)?facebook\.com\/(BulacanPDRRMO|permalink\.php|photo|share\/p|story\.php|profile\.php)/i,
+    transcribed: true,
+    allowEmpty: true,
+    enabled: true,
+  },
+
   // ---------------------------------------------------------------------
   // Tier 4 - National government agencies
   // ---------------------------------------------------------------------

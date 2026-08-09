@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { SOURCES, sourceById } from '../config/sources.js';
+import { SOURCES, sourceById, sourcesForPublicDisplay } from '../config/sources.js';
 import { SNIPPET } from '../config/rules.js';
 import { assess, buildSnippet, linkBelongsToSource } from '../src/pipeline/assess.js';
 import { classify, splitDateline } from '../src/pipeline/classify.js';
@@ -55,6 +55,50 @@ describe('source credibility', () => {
     const verdict = assessNow(candidate({ announcementUrl: 'javascript:alert(1)' }));
     assert.equal(verdict.ok, false);
     assert.equal(verdict.reason, 'unusable-link');
+  });
+});
+
+describe('the provincial disaster office', () => {
+  it('is registered at the provincial tier, by feed and by hand', () => {
+    const feed = sourceById('bulacan-pdrrmo', SOURCES);
+    const manual = sourceById('bulacan-pdrrmo-facebook', SOURCES);
+    for (const source of [feed, manual]) {
+      assert.equal(source.tier, 3);
+      assert.equal(source.scope, 'bulacan');
+      assert.equal(source.enabled, true);
+    }
+    assert.equal(feed.kind, 'rss');
+    assert.equal(manual.kind, 'manual');
+  });
+
+  it('accepts a dam release advisory that names Bulacan', () => {
+    const verdict = assessNow(
+      candidate({
+        sourceId: 'bulacan-pdrrmo',
+        title: 'Advisory: Angat Dam water release beginning August 9, 2026',
+        announcementUrl: 'https://pdrrmo.bulacan.gov.ph/news/angat-dam-water-release',
+        summary:
+          'Please be advised that Angat Dam will release water beginning August 9, 2026. Residents of low-lying barangays along the rivers of Bulacan are advised to evacuate to higher ground and to monitor official advisories.',
+        guid: 'pdrrmo-angat-release-aug-9',
+      })
+    );
+    assert.equal(verdict.ok, true, verdict.reason);
+    assert.equal(verdict.record.sourceName, 'Bulacan PDRRMO');
+    assert.equal(verdict.record.sourceTier, 3);
+  });
+
+  it('pins a hand-recorded notice to the office’s own Facebook page', () => {
+    const manual = sourceById('bulacan-pdrrmo-facebook', SOURCES);
+    assert.equal(linkBelongsToSource('https://www.facebook.com/BulacanPDRRMO/posts/123', manual), true);
+    assert.equal(linkBelongsToSource('https://www.facebook.com/SomeOtherPage/posts/1', manual), false);
+    assert.equal(linkBelongsToSource('https://facebook.com.evil.example/BulacanPDRRMO', manual), false);
+  });
+
+  it('shows the office once on the public sources page', () => {
+    const names = sourcesForPublicDisplay(SOURCES).flatMap((group) =>
+      group.sources.map((source) => source.name)
+    );
+    assert.equal(names.filter((name) => name === 'Bulacan PDRRMO').length, 1);
   });
 });
 
