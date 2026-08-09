@@ -49,21 +49,14 @@ export const SOURCES = [
     publicDescription: 'Official public announcements from the city government.',
     tier: 1,
     scope: 'malolos',
-    kind: 'html',
-    homepage: 'https://www.cityofmalolos.gov.ph/',
-    url: 'https://www.cityofmalolos.gov.ph/announcements/',
-    // The city portal has been intermittently unreachable. It stays in the
-    // registry because it is the highest-authority source; the pipeline logs a
-    // failure and carries on when it cannot be reached.
+    kind: 'rss',
+    homepage: 'https://maloloscity.gov.ph/',
+    url: 'https://maloloscity.gov.ph/feed/',
     enabled: true,
-    list: {
-      item: 'article',
-      link: 'a',
-      title: 'h2, h3, .entry-title',
-      date: 'time, .entry-date, .date',
-      summary: '.entry-summary, .excerpt, p',
-    },
-    notes: 'Highest authority for anything affecting Malolos.',
+    notes:
+      'Highest authority for anything affecting Malolos. The registry pointed at '
+      + 'cityofmalolos.gov.ph until 2026-08-09; that domain does not resolve at all, so this '
+      + 'source had never once succeeded. maloloscity.gov.ph is the live city site.',
   },
 
   {
@@ -243,7 +236,11 @@ export const SOURCES = [
     kind: 'rss',
     homepage: 'https://region3.deped.gov.ph/',
     url: 'https://region3.deped.gov.ph/feed/',
-    enabled: true,
+    // The whole host answers 403 to anything that is not a browser - even
+    // /robots.txt, so their crawl policy cannot be read. Pretending to be a
+    // browser to get past it is not something this board will do.
+    enabled: false,
+    disabledReason: 'Site blocks automated retrieval. Re-enable when access is restored.',
   },
   {
     id: 'official-gazette',

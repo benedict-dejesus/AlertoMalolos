@@ -86,7 +86,10 @@ export const QUALIFYING = [
     guid: 'bulacan-rabies-vaccination',
   }),
   candidate({
-    sourceId: 'deped-region3',
+    // Filed under DepEd central: the regional office's site answers 403 to every
+    // automated request, so that source is switched off in the registry. The
+    // regional wording is the point of the case and is unchanged.
+    sourceId: 'deped-central',
     title: 'Advisory on the suspension of classes in Central Luzon due to Tropical Depression',
     announcementUrl: 'https://region3.deped.gov.ph/2026/08/07/class-suspension-advisory',
     summary:

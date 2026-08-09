@@ -15,6 +15,8 @@
     "test": "node --test",
     "preview": "node tools/preview.js",
     "add": "node tools/add-announcement.js",
+    "health": "node tools/source-health.js",
+    "health:live": "node tools/source-health.js --live",
     "fonts": "node tools/fetch-fonts.js"
   },
   "license": "MIT",

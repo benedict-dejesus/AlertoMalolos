@@ -144,6 +144,11 @@ export const ANNOUNCEMENT_SIGNALS = [
  * unless the text also carries an emergency or suspension signal.
  */
 export const NEWS_DISQUALIFIERS = [
+  // The city government files its press releases under its own news brand:
+  // "Maloleñews: Inilunsad ng City Health Office ...". The brand is the giveaway
+  // that the item is a story about something, not a notice to act on. An
+  // advisory posted under it still gets through on the overrides below.
+  /\bmalolenews\b/,
   /\bphoto release\b/, /\bpress release on\b/, /\bfeature story\b/, /\bin photos\b/,
   /\blook:/, /\bwatch:/, /\bread:/, /\bstory by\b/, /\bphotos? by\b/,
   /\bcongratulat(e|es|ions|ory)\b/, /\bmabuhay\b/, /\bpagbati\b/,

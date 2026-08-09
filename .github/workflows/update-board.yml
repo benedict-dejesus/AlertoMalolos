@@ -27,6 +27,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      health: ${{ steps.health.outcome }}
     steps:
       - uses: actions/checkout@v4
 
@@ -53,10 +55,32 @@ jobs:
           git add data/state.json data/curated.json public
           if git diff --cached --quiet; then
             echo "No change to the board."
-          else
-            git commit -m "Board update: $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
+            exit 0
           fi
+          git commit -m "Board update: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          # A notice recorded by hand, or any other push, can land while this run
+          # is working. Losing an hour of updates to that race is avoidable:
+          # rebase onto whatever arrived and try again.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebasing onto the branch."
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || exit 1
+            sleep $((attempt * 5))
+          done
+          echo "Could not push the board update after 3 attempts." >&2
+          exit 1
+
+      # A broken source must never stop a good board from going out, so this step
+      # cannot fail the job - the verdict is carried to the `health` job below,
+      # which turns the run red without touching the deploy. The city website
+      # spent 17 runs pointing at a domain that does not resolve and nothing ever
+      # said so; that is the failure this closes.
+      - name: Report source health
+        id: health
+        continue-on-error: true
+        run: node tools/source-health.js
 
       - name: Keep the run log as an artifact
         if: always()
@@ -81,3 +105,18 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Runs after the deploy, so a broken source is reported without ever delaying
+  # the board. Its only job is to make the run fail, which is what sends the
+  # notification. Read the "Source health" table on the run summary to see which
+  # source it is.
+  health:
+    needs: [update, deploy]
+    if: always() && needs.update.outputs.health == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "One or more sources could not be retrieved. See the Source health" >&2
+          echo "table on this run's summary, then fix the URL in config/sources.js" >&2
+          echo "or switch the source off with a disabledReason." >&2
+          exit 1

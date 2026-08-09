@@ -61,6 +61,8 @@ Other commands:
 | Command | What it does |
 | --- | --- |
 | `npm run add -- --url … --title … --text …` | Records a notice from an official page that may not be read automatically, and tells you whether the rules accept it |
+| `npm run health` | Reports whether each source is actually being retrieved, and exits non-zero when one is broken |
+| `npm run health:live` | The same, but contacts every source now — use it after changing a URL |
 | `npm run update:dry` | Runs a full cycle against live sources and reports, writing nothing |
 | `node src/pipeline/update.js --verbose` | Same as `update`, with every rejection reason printed |
 | `npm run preview -- 25` | Builds `.preview/` from sample data (here, 25 candidates to exercise the 20 limit) |
@@ -78,6 +80,8 @@ config/       sources.js  the trusted source registry - the only place
                           thresholds, scoring weights, board limits
               site.js     public wording, disclaimer, author credit
 src/lib/      retrieval, feed and HTML reading, text, sanitising, time, logging
+              health.js   turns the per-source record into a verdict, so a
+                          source that never works cannot stay quiet
 src/pipeline/ discover → assess (classify, score, expiry) → dedupe → board → store
 src/site/     the static renderer, stylesheet, enhancement script and assets
 data/         state.json    - the board's internal record (committed)
@@ -161,6 +165,36 @@ from.
 
 The update writes state only after a successful cycle, so a failed run leaves
 the previous board in place.
+
+## Keeping the hourly cycle honest
+
+Sources are contacted independently so one site being down never empties the
+board. The cost of that resilience is silence: a source can fail every hour for
+weeks and the board still looks fine. It happened — the city website was
+registered against a domain that does not resolve and had **never once**
+succeeded across 17 runs, while the board sat there looking healthy.
+
+So every run now ends with a verdict on each source:
+
+| | |
+| --- | --- |
+| `healthy` | retrieved on the last run |
+| `stale` | failing, but under the limit — a site having a bad hour |
+| `broken` | failing for `--max-failures` runs in a row, **or never once retrieved** |
+
+Never-once-retrieved is broken immediately rather than after the limit, because
+that is not an outage — it is a wrong URL, and waiting three runs to say so only
+delays the fix.
+
+The hourly workflow publishes the board first and reports health afterwards, so
+a broken source turns the run red without ever delaying an announcement. The
+per-source table appears on the run summary in Actions.
+
+What this does **not** promise: GitHub's scheduled runs are best-effort and can
+be late or skipped when Actions is busy, and GitHub disables scheduled workflows
+after roughly 60 days without repository activity. The cycle is idempotent, so a
+missed hour costs nothing but freshness — but if the board must never miss an
+hour, it needs a scheduler that guarantees one.
 
 ## Logs
 
