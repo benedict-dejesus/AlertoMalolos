@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-09T03:42:08.089Z",
-  "lastCheckedAt": "2026-08-11T02:23:40.017Z",
+  "lastCheckedAt": "2026-08-11T04:36:15.294Z",
   "board": [],
   "retired": [
     {
@@ -16,33 +16,38 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-08-11T02:23:40.898Z",
+      "lastSuccessAt": "2026-08-11T04:36:15.880Z",
       "etag": null,
       "lastModified": "Mon, 10 Aug 2026 02:17:08 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-11T02:23:40.117Z",
+      "lastSuccessAt": "2026-08-11T04:36:15.362Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-08-11T02:23:43.534Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
       "etag": "\"8df9e40d4cc14140efa93fa04e37426f-gzip\"",
-      "lastModified": "Mon, 10 Aug 2026 12:54:23 GMT"
+      "lastModified": "Mon, 10 Aug 2026 12:54:23 GMT",
+      "lastFailureAt": "2026-08-11T04:36:15.362Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-11T02:23:43.770Z",
+      "lastSuccessAt": "2026-08-11T04:36:18.605Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 28,
+      "consecutiveFailures": 29,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "network",
@@ -51,10 +56,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-11T02:23:40.122Z"
+      "lastFailureAt": "2026-08-11T04:36:15.367Z"
     },
     "deped-central": {
-      "consecutiveFailures": 28,
+      "consecutiveFailures": 29,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -63,7 +68,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-11T02:23:40.124Z"
+      "lastFailureAt": "2026-08-11T04:36:15.368Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -75,7 +80,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 28,
+      "consecutiveFailures": 29,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -84,18 +89,23 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-11T02:23:40.125Z"
+      "lastFailureAt": "2026-08-11T04:36:15.369Z"
     },
     "bulacan-pdrrmo": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-08-11T02:23:43.602Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
       "etag": "\"c1846158f6d0094113fcd41f657f712e-gzip\"",
-      "lastModified": "Tue, 11 Aug 2026 01:04:30 GMT"
+      "lastModified": "Tue, 11 Aug 2026 01:04:30 GMT",
+      "lastFailureAt": "2026-08-11T04:36:15.364Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-11T02:23:40.121Z",
+      "lastSuccessAt": "2026-08-11T04:36:15.366Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
