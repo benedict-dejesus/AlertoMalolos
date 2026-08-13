@@ -1,86 +1,8 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-08-11T07:32:30.940Z",
-  "lastCheckedAt": "2026-08-13T06:41:29.113Z",
+  "lastUpdatedAt": "2026-08-13T08:41:00.011Z",
+  "lastCheckedAt": "2026-08-13T08:41:00.011Z",
   "board": [
-    {
-      "id": "malolos-city-website-cf089d6320",
-      "contentHash": "08206591ac92e18b",
-      "canonicalUrl": "https://maloloscity.gov.ph/malolenews-malolos-pinatatatag-ang-rescue-capability-sa-advanced-rope-at-high-angle-rescue-training",
-      "title": "Maloleñews: Malolos, Pinatatatag ang Rescue Capability sa Advanced Rope at High-Angle Rescue Training",
-      "snippet": "Pinatatatag ng Pamahalaang Lungsod ng Malolos ang kakayahan ng mga local responders sa pagsasagawa ng specialized rescue operations sa pamamagitan ng Advanced Rope and High-Angle Rescue…",
-      "sourceExcerpt": "Pinatatatag ng Pamahalaang Lungsod ng Malolos ang kakayahan ng mga local responders sa pagsasagawa ng specialized rescue operations sa pamamagitan ng Advanced Rope and High-Angle Rescue Training na isinagawa noong ika-4 hanggang ika-7 ng Agosto, 2026. Pinangunahan ito ng City Disaster Risk Reduction and Management Office (CDRRMO) ng Malolos. Layunin ng apat na araw na continue reading : Maloleñews: Malolos, Pinatatatag ang Rescue Capability sa Advanced Rope at High-Angle Rescue Training",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/malolenews-malolos-pinatatatag-ang-rescue-capability-sa-advanced-rope-at-high-angle-rescue-training/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-08-11T07:16:56.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-08-11T07:32:30.940Z",
-      "firstSeenAt": "2026-08-11T07:32:30.940Z",
-      "lastSeenAt": "2026-08-11T07:32:30.940Z",
-      "updatedAt": "2026-08-11T07:32:30.940Z",
-      "expiresAt": "2026-08-13T07:16:56.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 100,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 19,
-      "totalScore": 91,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    },
-    {
-      "id": "malolos-city-website-31b8b5ceca",
-      "contentHash": "86e941b2b3e50325",
-      "canonicalUrl": "https://maloloscity.gov.ph/%f0%9d%90%8c%f0%9d%90%9a%f0%9d%90%a5%f0%9d%90%a8%f0%9d%90%a5%f0%9d%90%9en%f0%9d%90%9e%f0%9d%90%b0%f0%9d%90%ac-day-1-ng-advance-rope-and-high-angle-rescue-training-para-sa-mas-pinaigting-na-kahandaan",
-      "title": "𝐌𝐚𝐥𝐨𝐥𝐞ñ𝐞𝐰𝐬: Day 1 ng Advance Rope and High Angle Rescue Training para sa mas pinaigting na kahandaan ng mga emergency responder sa Lungsod ng Malolos",
-      "snippet": "Bilang bahagi ng patuloy na pagpapalakas ng kahandaan sa pagtugon sa mga sakuna at kalamidad, sinimulan ngayong ika-4 ng Agosto 2026 ang Day 1 ng Advance Rope and High Angle Rescue Training…",
-      "sourceExcerpt": "Bilang bahagi ng patuloy na pagpapalakas ng kahandaan sa pagtugon sa mga sakuna at kalamidad, sinimulan ngayong ika-4 ng Agosto 2026 ang Day 1 ng Advance Rope and High Angle Rescue Training sa Malolos CDRRMO Operations Center, Brgy. Bulihan, Malolos, Bulacan. Ang naturang pagsasanay ay proyekto ng Pamahalaang Lungsod ng Malolos at ng City Disaster continue reading : 𝐌𝐚𝐥𝐨𝐥𝐞ñ𝐞𝐰𝐬: Day 1 ng Advance Rope and High Angle Rescue Training para sa mas pinaigting na kahandaan ng mga emergency responder sa Lungsod ng Malolos",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/%f0%9d%90%8c%f0%9d%90%9a%f0%9d%90%a5%f0%9d%90%a8%f0%9d%90%a5%f0%9d%90%9en%f0%9d%90%9e%f0%9d%90%b0%f0%9d%90%ac-day-1-ng-advance-rope-and-high-angle-rescue-training-para-sa-mas-pinaigting-na-kahandaan/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-08-11T07:10:11.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-08-11T07:32:30.940Z",
-      "firstSeenAt": "2026-08-11T07:32:30.940Z",
-      "lastSeenAt": "2026-08-11T07:32:30.940Z",
-      "updatedAt": "2026-08-11T07:32:30.940Z",
-      "expiresAt": "2026-08-13T07:10:11.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 96,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 19,
-      "totalScore": 90,
-      "priorityRank": 2,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    },
     {
       "id": "malolos-city-website-041965ed14",
       "contentHash": "b7c021711b865347",
@@ -111,9 +33,9 @@
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
       "urgencyScore": 20,
-      "freshnessScore": 72,
+      "freshnessScore": 71,
       "totalScore": 74,
-      "priorityRank": 3,
+      "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
@@ -122,6 +44,18 @@
     }
   ],
   "retired": [
+    {
+      "id": "malolos-city-website-cf089d6320",
+      "contentHash": "08206591ac92e18b",
+      "retiredAt": "2026-08-13T08:41:00.011Z",
+      "reason": "expired"
+    },
+    {
+      "id": "malolos-city-website-31b8b5ceca",
+      "contentHash": "86e941b2b3e50325",
+      "retiredAt": "2026-08-13T08:41:00.011Z",
+      "reason": "expired"
+    },
     {
       "id": "bulacan-pdrrmo-facebook-508995a721",
       "contentHash": "fd107aa5eb1feaba",
@@ -134,20 +68,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-08-13T06:41:29.627Z",
+      "lastSuccessAt": "2026-08-13T08:41:00.708Z",
       "etag": null,
       "lastModified": "Tue, 11 Aug 2026 07:27:59 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-13T06:41:29.161Z",
+      "lastSuccessAt": "2026-08-13T08:41:00.068Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-13T06:41:31.537Z",
+      "lastSuccessAt": "2026-08-13T08:41:02.556Z",
       "lastError": null,
       "etag": "\"98e63383582c985d11c5480f57410a39-gzip\"",
       "lastModified": "Thu, 13 Aug 2026 03:32:56 GMT",
@@ -155,13 +89,13 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-13T06:41:32.597Z",
+      "lastSuccessAt": "2026-08-13T08:41:02.456Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 59,
+      "consecutiveFailures": 60,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -170,10 +104,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-13T06:41:30.736Z"
+      "lastFailureAt": "2026-08-13T08:41:01.658Z"
     },
     "deped-central": {
-      "consecutiveFailures": 59,
+      "consecutiveFailures": 60,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -182,7 +116,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-13T06:41:29.164Z"
+      "lastFailureAt": "2026-08-13T08:41:00.072Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -194,7 +128,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 59,
+      "consecutiveFailures": 60,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -203,11 +137,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-13T06:41:29.165Z"
+      "lastFailureAt": "2026-08-13T08:41:00.073Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-13T06:41:32.415Z",
+      "lastSuccessAt": "2026-08-13T08:41:03.300Z",
       "lastError": null,
       "etag": "\"93746f1d7ccee1c13240848e7b39f748-gzip\"",
       "lastModified": "Thu, 13 Aug 2026 00:20:39 GMT",
@@ -215,7 +149,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-13T06:41:29.163Z",
+      "lastSuccessAt": "2026-08-13T08:41:00.070Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
