@@ -37,10 +37,10 @@
       </a></h1>
     </div>
     <p class="topbar__tagline">Important announcements for the citizens of Malolos.</p>
-    <div class="cycle" data-cycle data-last-checked="2026-08-25T14:59:30.803Z" data-interval="60">
+    <div class="cycle" data-cycle data-last-checked="2026-08-25T15:55:26.889Z" data-interval="60">
       <p class="cycle__row">
         <span class="cycle__label">Checked</span>
-        <span class="cycle__value" data-cycle-checked>10:59 PM</span>
+        <span class="cycle__value" data-cycle-checked>11:55 PM</span>
         <span class="cycle__spacer"></span>
         <span class="cycle__label cycle__label--next">Next check</span>
         <span class="cycle__value" data-cycle-next>in under an hour</span>
@@ -58,14 +58,51 @@
 <section class="monitor">
   
   <div class="monitor__screen" role="region" aria-label="Active public announcements for Malolos">
-<div class="empty">
-  <span class="empty__radar" aria-hidden="true"><span class="empty__ring"></span><span class="empty__ring"></span><span class="empty__dot"></span></span>
-  <h2 class="empty__title">No major announcements right now.</h2>
-  <p class="empty__body">AlertoMalolos is monitoring official sources. When an advisory affects Malolos, it is posted here.</p>
+<div class="alerts" data-alerts>
+<article class="alert alert--weather alert--priority"
+  style="--i:0"
+  data-id="bulacan-province-4c4b4ab6f6"
+  data-category="weather"
+  data-emergency="false"
+  aria-labelledby="title-bulacan-province-4c4b4ab6f6">
+  <span class="alert__spine" aria-hidden="true"></span>
+  <span class="alert__sweep" aria-hidden="true"></span>
+  <p class="alert__head">
+    <span class="alert__rank" aria-hidden="true">01</span>
+    <span class="alert__category">Weather</span>
+    <span class="alert__status alert__status--priority">
+      <span class="alert__status-dot" aria-hidden="true"></span>Priority 1
+    </span>
+    
+  </p>
+  <h3 class="alert__title" id="title-bulacan-province-4c4b4ab6f6">
+    <a class="alert__link" href="a/bulacan-province-4c4b4ab6f6.html">Fernando refocuses public eye on P41 billion flood-control budget</a>
+  </h3>
+  <p class="alert__snippet">CITY OF MALOLOS – “Where did the P41 billion budget go?  Why is Bulacan still flooded? ” Bulacan Governor Daniel R. …</p>
+  <p class="alert__meta">
+    <span class="alert__source">Provincial Government of Bulacan</span>
+    <span class="alert__time"><time datetime="2026-08-25T13:36:00.000Z" data-relative="2026-08-25T13:36:00.000Z">Aug 25, 2026, 9:36 PM</time></span>
+  </p>
+  <p class="alert__foot">
+    <a class="alert__official" href="https://bulacan.gov.ph/fernando-refocuses-public-eye-on-p41-billion-flood-control-budget/" target="_blank" rel="noopener noreferrer">
+      Read official announcement<span class="alert__arrow" aria-hidden="true">→</span>
+      <span class="visually-hidden">(opens the Provincial Government of Bulacan website in a new tab)</span>
+    </a>
+  </p>
+</article>
 </div>
+<p class="alerts__count" data-count><span class="alerts__count-n">1</span> active announcement</p>
   </div>
 </section>
-
+<script type="application/json" id="board-data">{"lastCheckedAt":"2026-08-25T15:55:26.889Z","lastUpdatedAt":"2026-08-25T15:55:26.889Z","count":1,"announcements":[{"id":"bulacan-province-4c4b4ab6f6","title":"Fernando refocuses public eye on P41 billion flood-control budget","snippet":"CITY OF MALOLOS – “Where did the P41 billion budget go?  Why is Bulacan still flooded? ” Bulacan Governor Daniel R. …","category":"weather","isEmergency":false,"isTranscribed":false,"isPriority":true,"isNew":true,"isUpdated":false,"displayState":"priority","priorityRank":1,"sourceName":"Provincial Government of Bulacan","sourceType":"Provincial advisories and public-service announcements.","sourceHomepage":"https://bulacan.gov.ph/","announcementUrl":"https://bulacan.gov.ph/fernando-refocuses-public-eye-on-p41-billion-flood-control-budget/","publishedAt":"2026-08-25T13:36:00.000Z","publishedAtIsKnown":true,"firstSeenAt":"2026-08-25T15:55:26.889Z","updatedAt":"2026-08-25T15:55:26.889Z","alsoReportedBy":[]}]}</script>
+<dialog class="sheet" id="detail-dialog" aria-labelledby="detail-dialog-title">
+  <article class="detail detail--dialog">
+    <button type="button" class="sheet__close" data-close-dialog aria-label="Close announcement">
+      <span aria-hidden="true">✕</span>
+    </button>
+    <div data-dialog-content></div>
+  </article>
+</dialog>
 </main>
 <footer class="footer">
   <p class="footer__credit"><strong>AlertoMalolos</strong> — a civic project by Benedict de Jesus</p>
