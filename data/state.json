@@ -1,49 +1,15 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-08-25T15:55:26.889Z",
-  "lastCheckedAt": "2026-08-25T15:55:26.889Z",
-  "board": [
+  "lastUpdatedAt": "2026-08-25T16:51:36.506Z",
+  "lastCheckedAt": "2026-08-25T16:51:36.506Z",
+  "board": [],
+  "retired": [
     {
       "id": "bulacan-province-4c4b4ab6f6",
       "contentHash": "7c5e575374999018",
-      "canonicalUrl": "https://bulacan.gov.ph/fernando-refocuses-public-eye-on-p41-billion-flood-control-budget",
-      "title": "Fernando refocuses public eye on P41 billion flood-control budget",
-      "snippet": "CITY OF MALOLOS – “Where did the P41 billion budget go?  Why is Bulacan still flooded? ” Bulacan Governor Daniel R. …",
-      "sourceExcerpt": "CITY OF MALOLOS – “Where did the P41 billion budget go? Why is Bulacan still flooded?” Bulacan Governor Daniel R. Fernando urges the public and media to focus on real solutions rather than online distractions, challenging authorities to account for P41 billion in missing flood-control results. “Iyan din ang tanong ko. Iyan ang tanong ng…",
-      "sourceId": "bulacan-province",
-      "sourceName": "Provincial Government of Bulacan",
-      "sourceType": "Provincial advisories and public-service announcements.",
-      "sourceTier": 3,
-      "sourceAuthority": 78,
-      "sourceHomepage": "https://bulacan.gov.ph/",
-      "announcementUrl": "https://bulacan.gov.ph/fernando-refocuses-public-eye-on-p41-billion-flood-control-budget/",
-      "category": "weather",
-      "isEmergency": false,
-      "isTranscribed": false,
-      "publishedAt": "2026-08-25T13:36:00.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-08-25T15:55:26.889Z",
-      "firstSeenAt": "2026-08-25T15:55:26.889Z",
-      "lastSeenAt": "2026-08-25T15:55:26.889Z",
-      "updatedAt": "2026-08-25T15:55:26.889Z",
-      "expiresAt": "2026-08-25T15:59:59.000Z",
-      "expiryBasis": "relative-day:today",
-      "status": "active",
-      "importanceScore": 90,
-      "relevanceScore": 74,
-      "relevanceBasis": "bulacan-named-dateline-ignored",
-      "urgencyScore": 54,
-      "freshnessScore": 85,
-      "totalScore": 77,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": true
-    }
-  ],
-  "retired": [
+      "retiredAt": "2026-08-25T16:51:36.506Z",
+      "reason": "expired"
+    },
     {
       "id": "malolos-city-website-041965ed14",
       "contentHash": "b7c021711b865347",
@@ -74,20 +40,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-08-25T15:55:27.214Z",
+      "lastSuccessAt": "2026-08-25T16:51:37.070Z",
       "etag": null,
       "lastModified": "Tue, 25 Aug 2026 07:44:55 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-25T15:55:26.949Z",
+      "lastSuccessAt": "2026-08-25T16:51:36.565Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-25T15:55:29.333Z",
+      "lastSuccessAt": "2026-08-25T16:51:39.344Z",
       "lastError": null,
       "etag": "\"b84891c14b434e7836b55fbbe81baee1-gzip\"",
       "lastModified": "Tue, 25 Aug 2026 15:40:11 GMT",
@@ -95,14 +61,14 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-25T15:55:29.595Z",
+      "lastSuccessAt": "2026-08-25T16:51:41.554Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-08-21T14:49:50.746Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 316,
+      "consecutiveFailures": 317,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -111,10 +77,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-25T15:55:28.316Z"
+      "lastFailureAt": "2026-08-25T16:51:38.792Z"
     },
     "deped-central": {
-      "consecutiveFailures": 316,
+      "consecutiveFailures": 317,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -123,7 +89,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-25T15:55:26.954Z"
+      "lastFailureAt": "2026-08-25T16:51:36.570Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -135,7 +101,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 316,
+      "consecutiveFailures": 317,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -144,11 +110,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-25T15:55:26.955Z"
+      "lastFailureAt": "2026-08-25T16:51:36.571Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-25T15:55:28.883Z",
+      "lastSuccessAt": "2026-08-25T16:51:38.840Z",
       "lastError": null,
       "etag": "\"272c578b844bc4398b9ea9bac4cf287b-gzip\"",
       "lastModified": "Mon, 24 Aug 2026 03:19:12 GMT",
@@ -156,7 +122,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-25T15:55:26.952Z",
+      "lastSuccessAt": "2026-08-25T16:51:36.568Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
