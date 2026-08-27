@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-08-26T01:54:58.698Z",
-  "lastCheckedAt": "2026-08-26T23:26:31.482Z",
+  "lastCheckedAt": "2026-08-27T09:35:28.280Z",
   "board": [
     {
       "id": "malolos-city-website-0cd740c776",
@@ -32,15 +32,15 @@
       "importanceScore": 100,
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 62,
-      "freshnessScore": 44,
-      "totalScore": 92,
+      "urgencyScore": 76,
+      "freshnessScore": 31,
+      "totalScore": 93,
       "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
       "isPriority": true,
-      "isNew": true
+      "isNew": false
     }
   ],
   "retired": [
@@ -80,35 +80,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-08-26T23:26:32.314Z",
+      "lastSuccessAt": "2026-08-27T09:35:28.813Z",
       "etag": null,
       "lastModified": "Wed, 26 Aug 2026 09:41:21 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-26T23:26:31.541Z",
+      "lastSuccessAt": "2026-08-27T09:35:28.321Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-26T23:26:34.521Z",
+      "lastSuccessAt": "2026-08-27T09:35:30.786Z",
       "lastError": null,
-      "etag": "\"0b5db7039af762f1cb4233f73ef43f26-gzip\"",
-      "lastModified": "Wed, 26 Aug 2026 03:44:29 GMT",
+      "etag": "\"23b07129d14a5bee453b9998cd7e7c10-gzip\"",
+      "lastModified": "Thu, 27 Aug 2026 07:02:34 GMT",
       "lastFailureAt": "2026-08-25T21:39:06.931Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-26T23:26:35.079Z",
+      "lastSuccessAt": "2026-08-27T09:35:31.220Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-08-21T14:49:50.746Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 339,
+      "consecutiveFailures": 340,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -117,10 +117,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-26T23:26:33.502Z"
+      "lastFailureAt": "2026-08-27T09:35:31.051Z"
     },
     "deped-central": {
-      "consecutiveFailures": 339,
+      "consecutiveFailures": 340,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -129,7 +129,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-26T23:26:31.546Z"
+      "lastFailureAt": "2026-08-27T09:35:28.325Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -141,7 +141,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 339,
+      "consecutiveFailures": 340,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -150,19 +150,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-26T23:26:31.547Z"
+      "lastFailureAt": "2026-08-27T09:35:28.326Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-26T23:26:34.055Z",
+      "lastSuccessAt": "2026-08-27T09:35:30.922Z",
       "lastError": null,
-      "etag": "\"eac67ee6d59ce2d48b1b4016c8afff8c-gzip\"",
-      "lastModified": "Wed, 26 Aug 2026 00:24:31 GMT",
+      "etag": "\"34fa231e72eccfadaaf5e924294cc636-gzip\"",
+      "lastModified": "Thu, 27 Aug 2026 01:47:54 GMT",
       "lastFailureAt": "2026-08-25T21:39:06.932Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-26T23:26:31.544Z",
+      "lastSuccessAt": "2026-08-27T09:35:28.323Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
