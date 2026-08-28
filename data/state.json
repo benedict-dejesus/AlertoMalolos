@@ -1,49 +1,15 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-08-26T01:54:58.698Z",
-  "lastCheckedAt": "2026-08-27T20:21:59.520Z",
-  "board": [
+  "lastUpdatedAt": "2026-08-28T05:20:29.591Z",
+  "lastCheckedAt": "2026-08-28T05:20:29.591Z",
+  "board": [],
+  "retired": [
     {
       "id": "malolos-city-website-0cd740c776",
       "contentHash": "0e16fa206d1aa0e9",
-      "canonicalUrl": "https://maloloscity.gov.ph/pamahalaang-lungsod-ng-malolos-tuloy-tuloy-na-umaaksyon-sa-gitna-ng-kalamidad",
-      "title": "Pamahalaang Lungsod ng Malolos, tuloy-tuloy na umaaksyon sa gitna ng kalamidad",
-      "snippet": "Sa pananatili ng makulimlim na panahon, pabugso-bugsong pag-ulan, at malakas na ihip ng hangin bunsod ng habagat, ang Pamahalaang Lungsod ng Malolos nitong ika-17 ng Agosto, 2026 katuwang…",
-      "sourceExcerpt": "Sa pananatili ng makulimlim na panahon, pabugso-bugsong pag-ulan, at malakas na ihip ng hangin bunsod ng habagat, ang Pamahalaang Lungsod ng Malolos nitong ika-17 ng Agosto, 2026 katuwang ang BulSU – Social Work at Philippine National Police – Malolos ay walang tigil sa pamamahagi ng relief packs sa mga Maloleño na nasa evacuation centers at continue reading : Pamahalaang Lungsod ng Malolos, tuloy-tuloy na umaaksyon sa gitna ng kalamidad",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/pamahalaang-lungsod-ng-malolos-tuloy-tuloy-na-umaaksyon-sa-gitna-ng-kalamidad/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-08-26T00:02:10.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-08-26T01:54:58.698Z",
-      "firstSeenAt": "2026-08-26T01:54:58.698Z",
-      "lastSeenAt": "2026-08-26T09:53:49.130Z",
-      "updatedAt": "2026-08-26T01:54:58.698Z",
-      "expiresAt": "2026-08-28T00:02:10.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 100,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 21,
-      "totalScore": 91,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    }
-  ],
-  "retired": [
+      "retiredAt": "2026-08-28T05:20:29.591Z",
+      "reason": "expired"
+    },
     {
       "id": "bulacan-province-4c4b4ab6f6",
       "contentHash": "7c5e575374999018",
@@ -80,35 +46,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-08-27T20:22:00.234Z",
+      "lastSuccessAt": "2026-08-28T05:20:30.527Z",
       "etag": null,
       "lastModified": "Wed, 26 Aug 2026 09:41:21 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-27T20:21:59.575Z",
+      "lastSuccessAt": "2026-08-28T05:20:29.649Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-27T20:22:02.315Z",
+      "lastSuccessAt": "2026-08-28T05:20:32.400Z",
       "lastError": null,
-      "etag": "\"23b07129d14a5bee453b9998cd7e7c10-gzip\"",
-      "lastModified": "Thu, 27 Aug 2026 07:02:34 GMT",
+      "etag": "\"3c891988475103e1d73b451861a3f219-gzip\"",
+      "lastModified": "Fri, 28 Aug 2026 03:21:36 GMT",
       "lastFailureAt": "2026-08-25T21:39:06.931Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-27T20:22:02.812Z",
+      "lastSuccessAt": "2026-08-28T05:20:32.038Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-08-21T14:49:50.746Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 341,
+      "consecutiveFailures": 342,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -117,10 +83,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-08-27T20:22:02.002Z"
+      "lastFailureAt": "2026-08-28T05:20:31.943Z"
     },
     "deped-central": {
-      "consecutiveFailures": 341,
+      "consecutiveFailures": 342,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -129,7 +95,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-08-27T20:21:59.580Z"
+      "lastFailureAt": "2026-08-28T05:20:29.654Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -141,7 +107,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 341,
+      "consecutiveFailures": 342,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -150,19 +116,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-08-27T20:21:59.581Z"
+      "lastFailureAt": "2026-08-28T05:20:29.655Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-27T20:22:02.191Z",
+      "lastSuccessAt": "2026-08-28T05:20:32.572Z",
       "lastError": null,
-      "etag": "\"34fa231e72eccfadaaf5e924294cc636-gzip\"",
-      "lastModified": "Thu, 27 Aug 2026 01:47:54 GMT",
+      "etag": "\"62716bf3dc87a7aa73a41033ee418565-gzip\"",
+      "lastModified": "Fri, 28 Aug 2026 00:11:01 GMT",
       "lastFailureAt": "2026-08-25T21:39:06.932Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-08-27T20:21:59.578Z",
+      "lastSuccessAt": "2026-08-28T05:20:29.652Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
