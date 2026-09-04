@@ -1,8 +1,47 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-09-04T05:49:11.084Z",
-  "lastCheckedAt": "2026-09-04T05:49:11.084Z",
+  "lastUpdatedAt": "2026-09-04T11:11:14.101Z",
+  "lastCheckedAt": "2026-09-04T11:11:14.101Z",
   "board": [
+    {
+      "id": "bulacan-province-ed8e6fb430",
+      "contentHash": "c2b424a117f3e870",
+      "canonicalUrl": "https://bulacan.gov.ph/mga-kulay-ng-pag-asa-art-exhibit-to-showcase-local-creativity-raise-funds-for-community-initiatives",
+      "title": "“Mga Kulay ng Pag-asa” Art Exhibit to showcase local creativity, raise funds for community initiatives",
+      "snippet": "CITY OF MALOLOS — Art and community service will come together as the Rotary Club of Malolos Liping Hiyas, in partnership with Bahaghari ng Malolos and the Provincial History, Arts, Culture…",
+      "sourceExcerpt": "CITY OF MALOLOS — Art and community service will come together as the Rotary Club of Malolos Liping Hiyas, in partnership with Bahaghari ng Malolos and the Provincial History, Arts, Culture and Tourism Office (PHACTO), presents “Mga Kulay ng Pag-asa: Art Exhibit and Charity Auction” which will run from September 5 to 30, 2026 at…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/mga-kulay-ng-pag-asa-art-exhibit-to-showcase-local-creativity-raise-funds-for-community-initiatives/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-09-04T06:56:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-09-04T11:11:14.101Z",
+      "firstSeenAt": "2026-09-04T11:11:14.101Z",
+      "lastSeenAt": "2026-09-04T11:11:14.101Z",
+      "updatedAt": "2026-09-04T11:11:14.101Z",
+      "expiresAt": "2026-09-30T15:59:59.000Z",
+      "expiryBasis": "explicit-date-range",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-text",
+      "urgencyScore": 42,
+      "freshnessScore": 86,
+      "totalScore": 94,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
     {
       "id": "bulacan-province-88dadddbb1",
       "contentHash": "090d88e23bab4774",
@@ -33,9 +72,9 @@
       "relevanceScore": 74,
       "relevanceBasis": "bulacan-named-dateline-ignored",
       "urgencyScore": 88,
-      "freshnessScore": 85,
-      "totalScore": 96,
-      "priorityRank": 1,
+      "freshnessScore": 71,
+      "totalScore": 93,
+      "priorityRank": 2,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
@@ -86,35 +125,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-09-04T05:49:11.848Z",
+      "lastSuccessAt": "2026-09-04T11:11:14.802Z",
       "etag": null,
       "lastModified": "Wed, 02 Sep 2026 10:05:08 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-04T05:49:11.145Z",
+      "lastSuccessAt": "2026-09-04T11:11:14.159Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-04T05:49:13.279Z",
+      "lastSuccessAt": "2026-09-04T11:11:17.172Z",
       "lastError": null,
-      "etag": "\"56f7d4a4a0c0e74c7cb4d0491e84027e-gzip\"",
-      "lastModified": "Fri, 04 Sep 2026 01:16:21 GMT",
+      "etag": "\"c015dd163fe21dac7ae794efa42f220e-gzip\"",
+      "lastModified": "Fri, 04 Sep 2026 09:03:24 GMT",
       "lastFailureAt": "2026-09-04T00:56:47.467Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-04T05:49:14.230Z",
+      "lastSuccessAt": "2026-09-04T11:11:16.657Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-08-21T14:49:50.746Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 377,
+      "consecutiveFailures": 378,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -123,10 +162,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-09-04T05:49:13.511Z"
+      "lastFailureAt": "2026-09-04T11:11:16.263Z"
     },
     "deped-central": {
-      "consecutiveFailures": 377,
+      "consecutiveFailures": 378,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -135,7 +174,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-09-04T05:49:11.151Z"
+      "lastFailureAt": "2026-09-04T11:11:14.164Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -147,7 +186,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 377,
+      "consecutiveFailures": 378,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -156,11 +195,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-09-04T05:49:11.152Z"
+      "lastFailureAt": "2026-09-04T11:11:14.165Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-04T05:49:14.208Z",
+      "lastSuccessAt": "2026-09-04T11:11:16.589Z",
       "lastError": null,
       "etag": "\"767b515a2648472a573e112ea1c2d50a-gzip\"",
       "lastModified": "Fri, 04 Sep 2026 00:24:58 GMT",
@@ -168,7 +207,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-04T05:49:11.149Z",
+      "lastSuccessAt": "2026-09-04T11:11:14.162Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
