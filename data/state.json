@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-09-04T16:17:15.451Z",
-  "lastCheckedAt": "2026-09-10T11:11:47.516Z",
+  "lastCheckedAt": "2026-09-10T16:20:23.018Z",
   "board": [
     {
       "id": "bulacan-province-ed8e6fb430",
@@ -33,8 +33,8 @@
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-text",
       "urgencyScore": 42,
-      "freshnessScore": 1,
-      "totalScore": 82,
+      "freshnessScore": 0,
+      "totalScore": 81,
       "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
@@ -92,35 +92,39 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-08-09T03:34:00.144Z",
       "lastError": null,
-      "lastSuccessAt": "2026-09-10T11:11:48.457Z",
+      "lastSuccessAt": "2026-09-10T16:20:23.778Z",
       "etag": null,
       "lastModified": "Wed, 09 Sep 2026 10:08:23 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-10T11:11:47.577Z",
+      "lastSuccessAt": "2026-09-10T16:20:23.082Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-09-10T11:11:50.337Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
       "etag": "\"dcc2839e4069d097b34a600abb9bb77d-gzip\"",
       "lastModified": "Wed, 09 Sep 2026 08:55:21 GMT",
-      "lastFailureAt": "2026-09-05T00:53:30.140Z"
+      "lastFailureAt": "2026-09-10T16:20:23.082Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-10T11:11:51.481Z",
+      "lastSuccessAt": "2026-09-10T16:20:26.408Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-08-21T14:49:50.746Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 415,
+      "consecutiveFailures": 416,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -129,10 +133,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-09-10T11:11:49.748Z"
+      "lastFailureAt": "2026-09-10T16:20:25.415Z"
     },
     "deped-central": {
-      "consecutiveFailures": 415,
+      "consecutiveFailures": 416,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -141,7 +145,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-09-10T11:11:47.583Z"
+      "lastFailureAt": "2026-09-10T16:20:23.087Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -153,7 +157,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 415,
+      "consecutiveFailures": 416,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -162,19 +166,23 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-09-10T11:11:47.584Z"
+      "lastFailureAt": "2026-09-10T16:20:23.088Z"
     },
     "bulacan-pdrrmo": {
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccessAt": "2026-09-10T11:11:50.744Z",
-      "lastError": null,
+      "lastError": {
+        "kind": "network",
+        "message": "fetch failed",
+        "status": null
+      },
       "etag": "\"67a3408ac53d172c5d709f3b5ce42ae6-gzip\"",
       "lastModified": "Thu, 10 Sep 2026 03:37:24 GMT",
-      "lastFailureAt": "2026-09-05T00:53:30.141Z"
+      "lastFailureAt": "2026-09-10T16:20:23.084Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-10T11:11:47.580Z",
+      "lastSuccessAt": "2026-09-10T16:20:23.085Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
