@@ -1,8 +1,47 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-09-04T16:17:15.451Z",
-  "lastCheckedAt": "2026-09-21T01:01:59.395Z",
+  "lastUpdatedAt": "2026-09-21T06:15:22.521Z",
+  "lastCheckedAt": "2026-09-21T06:15:22.521Z",
   "board": [
+    {
+      "id": "bulacan-province-d405abfd80",
+      "contentHash": "cc198295fb8a76d0",
+      "canonicalUrl": "https://bulacan.gov.ph/fernando-puts-bulakenyos-plight-at-forefront-of-flood-control-meeting-with-dizon",
+      "title": "Fernando puts Bulakenyos’ plight at forefront of flood-control meeting with Dizon",
+      "snippet": "CITY OF MALOLOS — Governor Daniel R. Fernando underscored the urgent need to ease the suffering of flood-stricken Bulakenyos as Department of Public Works and Highways (DPWH) Secretary…",
+      "sourceExcerpt": "CITY OF MALOLOS — Governor Daniel R. Fernando underscored the urgent need to ease the suffering of flood-stricken Bulakenyos as Department of Public Works and Highways (DPWH) Secretary Vivencio Dizon presented immediate, medium- and long-term flood management measures during a meeting with provincial and local government officials today at the Balagtas Hall of the Hiyas…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/fernando-puts-bulakenyos-plight-at-forefront-of-flood-control-meeting-with-dizon/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-09-21T02:34:34.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-09-21T06:15:22.521Z",
+      "firstSeenAt": "2026-09-21T06:15:22.521Z",
+      "lastSeenAt": "2026-09-21T06:15:22.521Z",
+      "updatedAt": "2026-09-21T06:15:22.521Z",
+      "expiresAt": "2026-09-21T15:59:59.000Z",
+      "expiryBasis": "relative-day:today",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named-dateline-ignored",
+      "urgencyScore": 100,
+      "freshnessScore": 88,
+      "totalScore": 98,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
     {
       "id": "bulacan-province-ed8e6fb430",
       "contentHash": "c2b424a117f3e870",
@@ -35,7 +74,7 @@
       "urgencyScore": 42,
       "freshnessScore": 0,
       "totalScore": 81,
-      "priorityRank": 1,
+      "priorityRank": 2,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
@@ -89,8 +128,8 @@
   ],
   "sources": {
     "malolos-city-website": {
-      "consecutiveFailures": 33,
-      "lastFailureAt": "2026-09-21T01:02:02.584Z",
+      "consecutiveFailures": 34,
+      "lastFailureAt": "2026-09-21T06:15:25.679Z",
       "lastError": {
         "kind": "format",
         "message": "Response is not a feed",
@@ -102,29 +141,29 @@
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-21T01:01:59.450Z",
+      "lastSuccessAt": "2026-09-21T06:15:22.581Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-21T01:02:01.868Z",
+      "lastSuccessAt": "2026-09-21T06:15:24.835Z",
       "lastError": null,
-      "etag": "\"e729218baba74d111c59459f0b800aab-gzip\"",
-      "lastModified": "Fri, 18 Sep 2026 06:49:04 GMT",
+      "etag": "\"6d924ee2ef28ad86ecb2807015010e6c-gzip\"",
+      "lastModified": "Mon, 21 Sep 2026 02:37:48 GMT",
       "lastFailureAt": "2026-09-13T19:25:16.136Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-21T01:02:02.760Z",
+      "lastSuccessAt": "2026-09-21T06:15:25.523Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 477,
+      "consecutiveFailures": 478,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -133,10 +172,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-09-21T01:02:11.520Z"
+      "lastFailureAt": "2026-09-21T06:15:34.619Z"
     },
     "deped-central": {
-      "consecutiveFailures": 477,
+      "consecutiveFailures": 478,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -145,7 +184,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-09-21T01:01:59.454Z"
+      "lastFailureAt": "2026-09-21T06:15:22.586Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -157,7 +196,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 477,
+      "consecutiveFailures": 478,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -166,19 +205,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-09-21T01:01:59.455Z"
+      "lastFailureAt": "2026-09-21T06:15:22.587Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-21T01:02:02.921Z",
+      "lastSuccessAt": "2026-09-21T06:15:25.868Z",
       "lastError": null,
-      "etag": "\"41e230f37d183b9c13132e632dd5e6df-gzip\"",
-      "lastModified": "Thu, 17 Sep 2026 01:00:37 GMT",
+      "etag": "\"c24ac3f2287baaac6e3795b7541a2dd6-gzip\"",
+      "lastModified": "Mon, 21 Sep 2026 02:53:40 GMT",
       "lastFailureAt": "2026-09-13T19:25:16.137Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-21T01:01:59.452Z",
+      "lastSuccessAt": "2026-09-21T06:15:22.584Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
