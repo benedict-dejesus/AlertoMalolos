@@ -1,8 +1,47 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-09-21T19:21:28.369Z",
-  "lastCheckedAt": "2026-09-29T01:52:22.246Z",
+  "lastUpdatedAt": "2026-09-29T08:23:03.367Z",
+  "lastCheckedAt": "2026-09-29T08:23:03.367Z",
   "board": [
+    {
+      "id": "malolos-city-website-3783e0d27f",
+      "contentHash": "abf89ab8ec4aaaf4",
+      "canonicalUrl": "https://maloloscity.gov.ph/mga-delegado-ng-asean-dumating-sa-malolos-para-sa-cross-learning-event-2026",
+      "title": "Mga Delegado Ng Asean, Dumating Sa Malolos Para Sa Cross-Learning Event 2026",
+      "snippet": "Malugod na tinatanggap ng Pamahalaang Lungsod ng Malolos sa pangunguna ni Punong Lungsod, Mayor Christian D. …",
+      "sourceExcerpt": "Malugod na tinatanggap ng Pamahalaang Lungsod ng Malolos sa pangunguna ni Punong Lungsod, Mayor Christian D. Natividad, ang mga delegado mula sa iba’t ibang bansang kasapi ng Association of Southeast Asian Nations (ASEAN) para sa ASEAN Cross-Learning Event 2026 nitong ika-28 ng Setyembre, 2026. Bitbit ang temang “Beyond the Risk: Strategic Choices for Climate Resilient continue reading : Mga Delegado Ng Asean, Dumating Sa Malolos Para Sa Cross-Learning Event 2026",
+      "sourceId": "malolos-city-website",
+      "sourceName": "City Government of Malolos",
+      "sourceType": "Official public announcements from the city government.",
+      "sourceTier": 1,
+      "sourceAuthority": 100,
+      "sourceHomepage": "https://maloloscity.gov.ph/",
+      "announcementUrl": "https://maloloscity.gov.ph/mga-delegado-ng-asean-dumating-sa-malolos-para-sa-cross-learning-event-2026/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-09-29T05:51:42.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-09-29T08:23:03.367Z",
+      "firstSeenAt": "2026-09-29T08:23:03.367Z",
+      "lastSeenAt": "2026-09-29T08:23:03.367Z",
+      "updatedAt": "2026-09-29T08:23:03.367Z",
+      "expiresAt": "2026-10-01T05:51:42.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-title",
+      "urgencyScore": 62,
+      "freshnessScore": 92,
+      "totalScore": 99,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
     {
       "id": "bulacan-province-ed8e6fb430",
       "contentHash": "c2b424a117f3e870",
@@ -35,7 +74,7 @@
       "urgencyScore": 62,
       "freshnessScore": 0,
       "totalScore": 85,
-      "priorityRank": 1,
+      "priorityRank": 2,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
@@ -98,20 +137,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-09-29T01:52:22.915Z",
+      "lastSuccessAt": "2026-09-29T08:23:04.286Z",
       "etag": null,
-      "lastModified": "Tue, 22 Sep 2026 08:01:43 GMT"
+      "lastModified": "Tue, 29 Sep 2026 06:01:46 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-29T01:52:22.302Z",
+      "lastSuccessAt": "2026-09-29T08:23:03.425Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-29T01:52:25.185Z",
+      "lastSuccessAt": "2026-09-29T08:23:06.261Z",
       "lastError": null,
       "etag": "\"eec680dd514005ff2597482d003c482a-gzip\"",
       "lastModified": "Thu, 24 Sep 2026 08:04:55 GMT",
@@ -119,14 +158,14 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-29T01:52:26.609Z",
+      "lastSuccessAt": "2026-09-29T08:23:06.729Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 518,
+      "consecutiveFailures": 519,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -135,10 +174,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-09-29T01:52:28.215Z"
+      "lastFailureAt": "2026-09-29T08:23:15.487Z"
     },
     "deped-central": {
-      "consecutiveFailures": 518,
+      "consecutiveFailures": 519,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -147,7 +186,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-09-29T01:52:22.307Z"
+      "lastFailureAt": "2026-09-29T08:23:03.430Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -159,7 +198,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 518,
+      "consecutiveFailures": 519,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -168,19 +207,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-09-29T01:52:22.308Z"
+      "lastFailureAt": "2026-09-29T08:23:03.431Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-29T01:52:25.475Z",
+      "lastSuccessAt": "2026-09-29T08:23:06.324Z",
       "lastError": null,
-      "etag": "\"7ed96eb0107680e2e5bebed6dcc9db14-gzip\"",
-      "lastModified": "Tue, 29 Sep 2026 00:08:00 GMT",
+      "etag": "\"7791eebb360e22149478081a7e3beaa8-gzip\"",
+      "lastModified": "Tue, 29 Sep 2026 02:38:20 GMT",
       "lastFailureAt": "2026-09-24T22:21:08.978Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-09-29T01:52:22.305Z",
+      "lastSuccessAt": "2026-09-29T08:23:03.428Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
