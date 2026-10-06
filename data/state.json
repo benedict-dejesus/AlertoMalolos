@@ -1,8 +1,87 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-01T13:04:17.133Z",
-  "lastCheckedAt": "2026-10-05T22:34:57.919Z",
-  "board": [],
+  "lastUpdatedAt": "2026-10-06T02:55:04.609Z",
+  "lastCheckedAt": "2026-10-06T02:55:04.609Z",
+  "board": [
+    {
+      "id": "malolos-city-website-3c81ef501f",
+      "contentHash": "dfa357298ff654e1",
+      "canonicalUrl": "https://maloloscity.gov.ph/city-of-malolos-drrmo-pinangunahan-ang-tecc-training-para-sa-mas-handa-at-maagap-na-emergency-responders",
+      "title": "City of Malolos DRRMO, pinangunahan ang TECC training para sa mas handa at maagap na emergency responders",
+      "snippet": "Pinalakas ng City Disaster Risk Reduction and Management Office (CDRRMO) ang kahandaan at kakayahan ng mga emergency responder sa pamamagitan ng Tactical Emergency Casualty Care (TECC)…",
+      "sourceExcerpt": "Pinalakas ng City Disaster Risk Reduction and Management Office (CDRRMO) ang kahandaan at kakayahan ng mga emergency responder sa pamamagitan ng Tactical Emergency Casualty Care (TECC) Training na nagtapos noong Oktubre 2, 2026, sa Mac Mac Shooting Range, Plaridel, Bulacan. Lumahok sa pagsasanay ang mga kinatawan mula sa Philippine National Police (PNP), Bureau of Fire continue reading : City of Malolos DRRMO, pinangunahan ang TECC training para sa mas handa at maagap na emergency responders",
+      "sourceId": "malolos-city-website",
+      "sourceName": "City Government of Malolos",
+      "sourceType": "Official public announcements from the city government.",
+      "sourceTier": 1,
+      "sourceAuthority": 100,
+      "sourceHomepage": "https://maloloscity.gov.ph/",
+      "announcementUrl": "https://maloloscity.gov.ph/city-of-malolos-drrmo-pinangunahan-ang-tecc-training-para-sa-mas-handa-at-maagap-na-emergency-responders/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-06T01:41:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-06T02:55:04.609Z",
+      "firstSeenAt": "2026-10-06T02:55:04.609Z",
+      "lastSeenAt": "2026-10-06T02:55:04.609Z",
+      "updatedAt": "2026-10-06T02:55:04.609Z",
+      "expiresAt": "2026-10-08T01:41:00.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-title",
+      "urgencyScore": 62,
+      "freshnessScore": 96,
+      "totalScore": 100,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
+    {
+      "id": "malolos-city-website-4b8486d4ba",
+      "contentHash": "7806e116fc086f25",
+      "canonicalUrl": "https://maloloscity.gov.ph/malolos-cdrrmo-muling-ipinakita-ang-kahandaan-sa-26th-gawad-kalasag-desk-assessment-and-validation",
+      "title": "Malolos CDRRMO, muling ipinakita ang kahandaan sa 26th Gawad Kalasag Desk Assessment and Validation.",
+      "snippet": "Sumailalim ang Malolos City Disaster Risk Reduction and Management Office (CDRRMO) sa 26th Gawad Kalasag Desk Assessment and Validation ngayong Oktubre 1, 2026 sa PGB Compound, The Capitol…",
+      "sourceExcerpt": "Sumailalim ang Malolos City Disaster Risk Reduction and Management Office (CDRRMO) sa 26th Gawad Kalasag Desk Assessment and Validation ngayong Oktubre 1, 2026 sa PGB Compound, The Capitol Hostel, Malolos, Bulacan. Kabilang sa sinuri ang mga dokumento, accomplishment reports, polisiya at istruktura ng DRRM, kakayahan ng personnel at responders, mga training, pakikipag-ugnayan sa iba’t ibang continue reading : Malolos CDRRMO, muling ipinakita ang kahandaan sa 26th Gawad Kalasag Desk Assessment and Validation.",
+      "sourceId": "malolos-city-website",
+      "sourceName": "City Government of Malolos",
+      "sourceType": "Official public announcements from the city government.",
+      "sourceTier": 1,
+      "sourceAuthority": 100,
+      "sourceHomepage": "https://maloloscity.gov.ph/",
+      "announcementUrl": "https://maloloscity.gov.ph/malolos-cdrrmo-muling-ipinakita-ang-kahandaan-sa-26th-gawad-kalasag-desk-assessment-and-validation/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-06T01:35:05.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-06T02:55:04.609Z",
+      "firstSeenAt": "2026-10-06T02:55:04.609Z",
+      "lastSeenAt": "2026-10-06T02:55:04.609Z",
+      "updatedAt": "2026-10-06T02:55:04.609Z",
+      "expiresAt": "2026-10-08T01:35:05.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-title",
+      "urgencyScore": 62,
+      "freshnessScore": 95,
+      "totalScore": 100,
+      "priorityRank": 2,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    }
+  ],
   "retired": [
     {
       "id": "malolos-city-website-3783e0d27f",
@@ -70,35 +149,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-05T22:34:58.787Z",
+      "lastSuccessAt": "2026-10-06T02:55:05.195Z",
       "etag": null,
-      "lastModified": "Tue, 29 Sep 2026 09:58:10 GMT"
+      "lastModified": "Tue, 06 Oct 2026 01:47:41 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-05T22:34:57.978Z",
+      "lastSuccessAt": "2026-10-06T02:55:04.643Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-05T22:35:01.098Z",
+      "lastSuccessAt": "2026-10-06T02:55:06.797Z",
       "lastError": null,
-      "etag": "\"1c956f0664fdb6defd8bbfa4e7f03ec8-gzip\"",
-      "lastModified": "Mon, 05 Oct 2026 00:24:20 GMT",
+      "etag": "\"d6a83aa11d619b6d2f8d23d4872531da-gzip\"",
+      "lastModified": "Tue, 06 Oct 2026 02:22:23 GMT",
       "lastFailureAt": "2026-09-24T22:21:08.976Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-05T22:35:01.363Z",
+      "lastSuccessAt": "2026-10-06T02:55:07.573Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 548,
+      "consecutiveFailures": 549,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -107,10 +186,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-05T22:35:06.281Z"
+      "lastFailureAt": "2026-10-06T02:55:29.862Z"
     },
     "deped-central": {
-      "consecutiveFailures": 548,
+      "consecutiveFailures": 549,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -119,7 +198,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-05T22:34:57.983Z"
+      "lastFailureAt": "2026-10-06T02:55:04.646Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -131,7 +210,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 548,
+      "consecutiveFailures": 549,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -140,19 +219,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-05T22:34:57.984Z"
+      "lastFailureAt": "2026-10-06T02:55:04.646Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-05T22:35:00.954Z",
+      "lastSuccessAt": "2026-10-06T02:55:06.948Z",
       "lastError": null,
-      "etag": "\"35d8f1276060c8c36882ae5eb25f090e-gzip\"",
-      "lastModified": "Mon, 05 Oct 2026 04:41:24 GMT",
+      "etag": "\"d09bab3f61382bb80813a90179ca30d6-gzip\"",
+      "lastModified": "Tue, 06 Oct 2026 01:33:36 GMT",
       "lastFailureAt": "2026-09-24T22:21:08.978Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-05T22:34:57.981Z",
+      "lastSuccessAt": "2026-10-06T02:55:04.645Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
