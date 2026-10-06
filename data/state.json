@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-06T02:55:04.609Z",
-  "lastCheckedAt": "2026-10-06T02:55:04.609Z",
+  "lastUpdatedAt": "2026-10-06T10:09:23.717Z",
+  "lastCheckedAt": "2026-10-06T10:09:23.717Z",
   "board": [
     {
       "id": "malolos-city-website-3c81ef501f",
@@ -33,8 +33,8 @@
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
       "urgencyScore": 62,
-      "freshnessScore": 96,
-      "totalScore": 100,
+      "freshnessScore": 75,
+      "totalScore": 97,
       "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
@@ -72,9 +72,48 @@
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
       "urgencyScore": 62,
-      "freshnessScore": 95,
-      "totalScore": 100,
+      "freshnessScore": 74,
+      "totalScore": 97,
       "priorityRank": 2,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
+    {
+      "id": "bulacan-province-473e97fcf7",
+      "contentHash": "178a888d704481ca",
+      "canonicalUrl": "https://bulacan.gov.ph/pgb-extends-calamity-assistance-emergency-kits-and-medical-support-to-over-500-bulakenyos",
+      "title": "PGB extends calamity assistance, emergency kits, and medical support to over 500 Bulakenyos",
+      "snippet": "CITY OF MALOLOS – Following the calamities that affected the province recently, the Provincial Government of Bulacan distributed financial assistance, emergency kits, and assistive and…",
+      "sourceExcerpt": "CITY OF MALOLOS – Following the calamities that affected the province recently, the Provincial Government of Bulacan distributed financial assistance, emergency kits, and assistive and medical devices to a total of 580 Bulakenyos that are in need of essential support held at the Bulacan Capitol Gymnasium in this city yesterday. Accordingly, a total of 390…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/pgb-extends-calamity-assistance-emergency-kits-and-medical-support-to-over-500-bulakenyos/",
+      "category": "weather",
+      "isEmergency": false,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-06T03:20:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-06T10:09:23.717Z",
+      "firstSeenAt": "2026-10-06T10:09:23.717Z",
+      "lastSeenAt": "2026-10-06T10:09:23.717Z",
+      "updatedAt": "2026-10-06T10:09:23.717Z",
+      "expiresAt": "2026-10-07T03:20:00.000Z",
+      "expiryBasis": "category-default:weather",
+      "status": "active",
+      "importanceScore": 90,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named-dateline-ignored",
+      "urgencyScore": 54,
+      "freshnessScore": 62,
+      "totalScore": 74,
+      "priorityRank": 3,
       "displayState": "priority",
       "revisions": 0,
       "alsoReportedBy": [],
@@ -149,35 +188,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-06T02:55:05.195Z",
+      "lastSuccessAt": "2026-10-06T10:09:24.133Z",
       "etag": null,
       "lastModified": "Tue, 06 Oct 2026 01:47:41 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-06T02:55:04.643Z",
+      "lastSuccessAt": "2026-10-06T10:09:23.757Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-06T02:55:06.797Z",
+      "lastSuccessAt": "2026-10-06T10:09:25.812Z",
       "lastError": null,
-      "etag": "\"d6a83aa11d619b6d2f8d23d4872531da-gzip\"",
-      "lastModified": "Tue, 06 Oct 2026 02:22:23 GMT",
+      "etag": "\"91a6192bb32796e11d8e8794b1a26324-gzip\"",
+      "lastModified": "Tue, 06 Oct 2026 08:57:57 GMT",
       "lastFailureAt": "2026-09-24T22:21:08.976Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-06T02:55:07.573Z",
+      "lastSuccessAt": "2026-10-06T10:09:26.432Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 549,
+      "consecutiveFailures": 550,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -186,10 +225,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-06T02:55:29.862Z"
+      "lastFailureAt": "2026-10-06T10:09:26.942Z"
     },
     "deped-central": {
-      "consecutiveFailures": 549,
+      "consecutiveFailures": 550,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -198,7 +237,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-06T02:55:04.646Z"
+      "lastFailureAt": "2026-10-06T10:09:23.761Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -210,7 +249,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 549,
+      "consecutiveFailures": 550,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -219,19 +258,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-06T02:55:04.646Z"
+      "lastFailureAt": "2026-10-06T10:09:23.762Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-06T02:55:06.948Z",
+      "lastSuccessAt": "2026-10-06T10:09:25.733Z",
       "lastError": null,
-      "etag": "\"d09bab3f61382bb80813a90179ca30d6-gzip\"",
-      "lastModified": "Tue, 06 Oct 2026 01:33:36 GMT",
+      "etag": "\"c13fcadd93cf7e103c4af57af49b62e0-gzip\"",
+      "lastModified": "Tue, 06 Oct 2026 02:56:18 GMT",
       "lastFailureAt": "2026-09-24T22:21:08.978Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-06T02:55:04.645Z",
+      "lastSuccessAt": "2026-10-06T10:09:23.759Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
