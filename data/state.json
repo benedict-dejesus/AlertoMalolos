@@ -1,8 +1,87 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-13T18:12:04.037Z",
-  "lastCheckedAt": "2026-10-14T04:45:53.859Z",
-  "board": [],
+  "lastUpdatedAt": "2026-10-14T10:06:45.128Z",
+  "lastCheckedAt": "2026-10-14T10:06:45.128Z",
+  "board": [
+    {
+      "id": "malolos-city-website-0847cd0638",
+      "contentHash": "1b9454db68ff59ea",
+      "canonicalUrl": "https://maloloscity.gov.ph/malolos-city-recognized-as-one-of-the-winners-finalists-at-the-manila-times-philippine-model-cities-and-municipalities-awards-2026",
+      "title": "Malolos City recognized as one of the winners/finalists at The Manila Times Philippine Model Cities and Municipalities Awards 2026",
+      "snippet": "The City of Malolos strengthened its reputation for responsive governance, community empowerment, environmental sustainability, and disaster preparedness after receiving recognition at The…",
+      "sourceExcerpt": "The City of Malolos strengthened its reputation for responsive governance, community empowerment, environmental sustainability, and disaster preparedness after receiving recognition at The Manila Times Philippine Model Cities and Municipalities 2026 Awards. Malolos City emerged as Champion in the Eco-Friendly category for the Malolos Skate and Bike Park and secured 1st Runner-Up distinctions in both the continue reading : Malolos City recognized as one of the winners/finalists at The Manila Times Philippine Model Cities and Municipalities Awards 2026",
+      "sourceId": "malolos-city-website",
+      "sourceName": "City Government of Malolos",
+      "sourceType": "Official public announcements from the city government.",
+      "sourceTier": 1,
+      "sourceAuthority": 100,
+      "sourceHomepage": "https://maloloscity.gov.ph/",
+      "announcementUrl": "https://maloloscity.gov.ph/malolos-city-recognized-as-one-of-the-winners-finalists-at-the-manila-times-philippine-model-cities-and-municipalities-awards-2026/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-14T09:08:10.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-14T10:06:45.128Z",
+      "firstSeenAt": "2026-10-14T10:06:45.128Z",
+      "lastSeenAt": "2026-10-14T10:06:45.128Z",
+      "updatedAt": "2026-10-14T10:06:45.128Z",
+      "expiresAt": "2026-10-14T15:59:59.000Z",
+      "expiryBasis": "relative-day:today",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-title",
+      "urgencyScore": 76,
+      "freshnessScore": 97,
+      "totalScore": 103,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
+    {
+      "id": "malolos-city-website-45e9d7b419",
+      "contentHash": "0f9b060482b72b5d",
+      "canonicalUrl": "https://maloloscity.gov.ph/kooperatibang-sama-sama-tungo-sa-payapa-at-maunlad-na-lungsod-ng-malolos",
+      "title": "Kooperatibang sama-sama tungo sa Payapa at Maunlad na Lungsod ng Malolos",
+      "snippet": "Nagkaisa ang 22 kooperatiba sa Lungsod ng Malolos sa pagdiriwang ng Cooperative Month at Cooperative Family Day 2026, na ginanap nitong Oktubre 7 sa Malolos Sports and Convention Center, sa…",
+      "sourceExcerpt": "Nagkaisa ang 22 kooperatiba sa Lungsod ng Malolos sa pagdiriwang ng Cooperative Month at Cooperative Family Day 2026, na ginanap nitong Oktubre 7 sa Malolos Sports and Convention Center, sa pangunguna ng City Training, Employment and Cooperative Office (CTECO). Nagsimula sa isang unity walk sa paligid ng City Government of Malolos Compound ang aktibidad. Suot continue reading : Kooperatibang sama-sama tungo sa Payapa at Maunlad na Lungsod ng Malolos",
+      "sourceId": "malolos-city-website",
+      "sourceName": "City Government of Malolos",
+      "sourceType": "Official public announcements from the city government.",
+      "sourceTier": 1,
+      "sourceAuthority": 100,
+      "sourceHomepage": "https://maloloscity.gov.ph/",
+      "announcementUrl": "https://maloloscity.gov.ph/kooperatibang-sama-sama-tungo-sa-payapa-at-maunlad-na-lungsod-ng-malolos/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-14T09:13:13.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-14T10:06:45.128Z",
+      "firstSeenAt": "2026-10-14T10:06:45.128Z",
+      "lastSeenAt": "2026-10-14T10:06:45.128Z",
+      "updatedAt": "2026-10-14T10:06:45.128Z",
+      "expiresAt": "2026-10-16T09:13:13.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 100,
+      "relevanceBasis": "malolos-in-title",
+      "urgencyScore": 62,
+      "freshnessScore": 97,
+      "totalScore": 100,
+      "priorityRank": 2,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    }
+  ],
   "retired": [
     {
       "id": "bulacan-province-92e54bf9bd",
@@ -94,20 +173,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-14T04:45:54.658Z",
+      "lastSuccessAt": "2026-10-14T10:06:45.752Z",
       "etag": null,
-      "lastModified": "Thu, 08 Oct 2026 04:46:36 GMT"
+      "lastModified": "Wed, 14 Oct 2026 09:31:19 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-14T04:45:53.893Z",
+      "lastSuccessAt": "2026-10-14T10:06:45.168Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-14T04:45:56.397Z",
+      "lastSuccessAt": "2026-10-14T10:06:47.621Z",
       "lastError": null,
       "etag": "\"e85dc8c51e999a2f94341e0e9df8dbd7-gzip\"",
       "lastModified": "Wed, 14 Oct 2026 01:11:37 GMT",
@@ -115,14 +194,14 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-14T04:45:57.125Z",
+      "lastSuccessAt": "2026-10-14T10:06:47.544Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 581,
+      "consecutiveFailures": 582,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -131,10 +210,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-14T04:46:00.985Z"
+      "lastFailureAt": "2026-10-14T10:07:10.262Z"
     },
     "deped-central": {
-      "consecutiveFailures": 581,
+      "consecutiveFailures": 582,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -143,7 +222,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-14T04:45:53.896Z"
+      "lastFailureAt": "2026-10-14T10:06:45.172Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -155,7 +234,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 581,
+      "consecutiveFailures": 582,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -164,19 +243,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-14T04:45:53.896Z"
+      "lastFailureAt": "2026-10-14T10:06:45.172Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-14T04:45:56.498Z",
+      "lastSuccessAt": "2026-10-14T10:06:47.366Z",
       "lastError": null,
-      "etag": "\"73a74a21df1924bfb2e94476c5640388-gzip\"",
-      "lastModified": "Wed, 14 Oct 2026 00:43:30 GMT",
+      "etag": "\"728285c75bd41e51fa4aa4931c30f611-gzip\"",
+      "lastModified": "Wed, 14 Oct 2026 08:16:06 GMT",
       "lastFailureAt": "2026-10-12T02:18:46.443Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-14T04:45:53.895Z",
+      "lastSuccessAt": "2026-10-14T10:06:45.170Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
