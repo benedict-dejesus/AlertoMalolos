@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-14T19:22:07.181Z",
-  "lastCheckedAt": "2026-10-15T22:13:06.931Z",
+  "lastUpdatedAt": "2026-10-16T01:15:36.418Z",
+  "lastCheckedAt": "2026-10-16T01:15:36.418Z",
   "board": [
     {
       "id": "malolos-city-website-45e9d7b419",
@@ -33,7 +33,7 @@
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
       "urgencyScore": 76,
-      "freshnessScore": 28,
+      "freshnessScore": 25,
       "totalScore": 92,
       "priorityRank": 1,
       "displayState": "priority",
@@ -41,6 +41,45 @@
       "alsoReportedBy": [],
       "isPriority": true,
       "isNew": false
+    },
+    {
+      "id": "bulacan-province-d93230f9d6",
+      "contentHash": "e95cfff72bbfb79f",
+      "canonicalUrl": "https://bulacan.gov.ph/fernando-to-aews-link-knowledge-funding-technology-and-action-to-deliver-proper-services-to-farmers-communities",
+      "title": "Fernando to AEWs: Link knowledge, funding, technology, and action to deliver proper services to farmers, communities",
+      "snippet": "CITY OF MALOLOS – “Link knowledge, funding, technology, and action to deliver proper services that farmers and communities can feel. ” This was the challenge of Governor Daniel R. …",
+      "sourceExcerpt": "CITY OF MALOLOS – “Link knowledge, funding, technology, and action to deliver proper services that farmers and communities can feel.” This was the challenge of Governor Daniel R. Fernando to the Agricultural Extension Workers (AEWs) of the province during their summit held at The Pavilion, Hiyas ng Bulacan Convention Center in this city last Tuesday.…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/fernando-to-aews-link-knowledge-funding-technology-and-action-to-deliver-proper-services-to-farmers-communities/",
+      "category": "weather",
+      "isEmergency": false,
+      "isTranscribed": false,
+      "publishedAt": "2026-10-15T02:08:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-10-16T01:15:36.418Z",
+      "firstSeenAt": "2026-10-16T01:15:36.418Z",
+      "lastSeenAt": "2026-10-16T01:15:36.418Z",
+      "updatedAt": "2026-10-16T01:15:36.418Z",
+      "expiresAt": "2026-10-16T02:08:00.000Z",
+      "expiryBasis": "category-default:weather",
+      "status": "active",
+      "importanceScore": 90,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named-dateline-ignored",
+      "urgencyScore": 54,
+      "freshnessScore": 20,
+      "totalScore": 68,
+      "priorityRank": 2,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
     }
   ],
   "retired": [
@@ -140,35 +179,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-15T22:13:07.730Z",
+      "lastSuccessAt": "2026-10-16T01:15:36.895Z",
       "etag": null,
       "lastModified": "Wed, 14 Oct 2026 09:31:19 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-15T22:13:06.991Z",
+      "lastSuccessAt": "2026-10-16T01:15:36.477Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-15T22:13:10.226Z",
+      "lastSuccessAt": "2026-10-16T01:15:39.818Z",
       "lastError": null,
-      "etag": "\"ae9ea9d171e82aed9cc1d3880e0533d4-gzip\"",
-      "lastModified": "Thu, 15 Oct 2026 08:39:19 GMT",
+      "etag": "\"cfb5d3739d9d225288665221f2a30ba4-gzip\"",
+      "lastModified": "Fri, 16 Oct 2026 01:03:42 GMT",
       "lastFailureAt": "2026-10-12T02:18:46.442Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-15T22:13:10.508Z",
+      "lastSuccessAt": "2026-10-16T01:15:41.349Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 590,
+      "consecutiveFailures": 591,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -177,10 +216,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-15T22:13:12.617Z"
+      "lastFailureAt": "2026-10-16T01:15:48.494Z"
     },
     "deped-central": {
-      "consecutiveFailures": 590,
+      "consecutiveFailures": 591,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -189,7 +228,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-15T22:13:06.996Z"
+      "lastFailureAt": "2026-10-16T01:15:36.482Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -201,7 +240,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 590,
+      "consecutiveFailures": 591,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -210,11 +249,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-15T22:13:06.997Z"
+      "lastFailureAt": "2026-10-16T01:15:36.483Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-15T22:13:09.484Z",
+      "lastSuccessAt": "2026-10-16T01:15:39.119Z",
       "lastError": null,
       "etag": "\"e16f18ffa5d46949ecfeb106df00382e-gzip\"",
       "lastModified": "Thu, 15 Oct 2026 07:15:12 GMT",
@@ -222,7 +261,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-15T22:13:06.994Z",
+      "lastSuccessAt": "2026-10-16T01:15:36.480Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
