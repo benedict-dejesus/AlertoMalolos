@@ -1,49 +1,15 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-16T07:04:44.580Z",
-  "lastCheckedAt": "2026-10-16T07:04:44.580Z",
-  "board": [
+  "lastUpdatedAt": "2026-10-16T12:22:08.144Z",
+  "lastCheckedAt": "2026-10-16T12:22:08.144Z",
+  "board": [],
+  "retired": [
     {
       "id": "malolos-city-website-45e9d7b419",
       "contentHash": "0f9b060482b72b5d",
-      "canonicalUrl": "https://maloloscity.gov.ph/kooperatibang-sama-sama-tungo-sa-payapa-at-maunlad-na-lungsod-ng-malolos",
-      "title": "Kooperatibang sama-sama tungo sa Payapa at Maunlad na Lungsod ng Malolos",
-      "snippet": "Nagkaisa ang 22 kooperatiba sa Lungsod ng Malolos sa pagdiriwang ng Cooperative Month at Cooperative Family Day 2026, na ginanap nitong Oktubre 7 sa Malolos Sports and Convention Center, sa…",
-      "sourceExcerpt": "Nagkaisa ang 22 kooperatiba sa Lungsod ng Malolos sa pagdiriwang ng Cooperative Month at Cooperative Family Day 2026, na ginanap nitong Oktubre 7 sa Malolos Sports and Convention Center, sa pangunguna ng City Training, Employment and Cooperative Office (CTECO). Nagsimula sa isang unity walk sa paligid ng City Government of Malolos Compound ang aktibidad. Suot continue reading : Kooperatibang sama-sama tungo sa Payapa at Maunlad na Lungsod ng Malolos",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/kooperatibang-sama-sama-tungo-sa-payapa-at-maunlad-na-lungsod-ng-malolos/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-10-14T09:13:13.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-10-14T10:06:45.128Z",
-      "firstSeenAt": "2026-10-14T10:06:45.128Z",
-      "lastSeenAt": "2026-10-14T10:06:45.128Z",
-      "updatedAt": "2026-10-14T10:06:45.128Z",
-      "expiresAt": "2026-10-16T09:13:13.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 100,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 20,
-      "totalScore": 91,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    }
-  ],
-  "retired": [
+      "retiredAt": "2026-10-16T12:22:08.144Z",
+      "reason": "expired"
+    },
     {
       "id": "bulacan-province-d93230f9d6",
       "contentHash": "e95cfff72bbfb79f",
@@ -146,47 +112,47 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-16T07:04:45.374Z",
+      "lastSuccessAt": "2026-10-16T12:22:08.922Z",
       "etag": null,
       "lastModified": "Wed, 14 Oct 2026 09:31:19 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-16T07:04:44.617Z",
+      "lastSuccessAt": "2026-10-16T12:22:08.206Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-16T07:04:47.475Z",
+      "lastSuccessAt": "2026-10-16T12:22:11.543Z",
       "lastError": null,
-      "etag": "\"8db435c89b7b79fcd0a2fb1084ed8354-gzip\"",
-      "lastModified": "Fri, 16 Oct 2026 06:28:34 GMT",
+      "etag": "\"3fe04a8606f1a0f75cabb7569551a76b-gzip\"",
+      "lastModified": "Fri, 16 Oct 2026 08:54:59 GMT",
       "lastFailureAt": "2026-10-12T02:18:46.442Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-16T07:04:47.670Z",
+      "lastSuccessAt": "2026-10-16T12:22:11.880Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 592,
+      "consecutiveFailures": 593,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
-        "kind": "format",
-        "message": "Response is not a feed",
+        "kind": "network",
+        "message": "fetch failed",
         "status": null
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-16T07:04:55.065Z"
+      "lastFailureAt": "2026-10-16T12:22:08.210Z"
     },
     "deped-central": {
-      "consecutiveFailures": 592,
+      "consecutiveFailures": 593,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -195,7 +161,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-16T07:04:44.620Z"
+      "lastFailureAt": "2026-10-16T12:22:08.211Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -207,7 +173,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 592,
+      "consecutiveFailures": 593,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -216,11 +182,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-16T07:04:44.620Z"
+      "lastFailureAt": "2026-10-16T12:22:08.212Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-16T07:04:47.255Z",
+      "lastSuccessAt": "2026-10-16T12:22:10.845Z",
       "lastError": null,
       "etag": "\"e16f18ffa5d46949ecfeb106df00382e-gzip\"",
       "lastModified": "Thu, 15 Oct 2026 07:15:12 GMT",
@@ -228,7 +194,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-16T07:04:44.619Z",
+      "lastSuccessAt": "2026-10-16T12:22:08.209Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
