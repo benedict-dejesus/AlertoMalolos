@@ -1,49 +1,15 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-27T04:55:40.749Z",
-  "lastCheckedAt": "2026-10-28T20:59:34.826Z",
-  "board": [
+  "lastUpdatedAt": "2026-10-29T00:50:59.121Z",
+  "lastCheckedAt": "2026-10-29T00:50:59.121Z",
+  "board": [],
+  "retired": [
     {
       "id": "malolos-city-website-287d6057f0",
       "contentHash": "fa9c7c3a0ec913a2",
-      "canonicalUrl": "https://maloloscity.gov.ph/malolos-pinaiigting-ang-paghahanda-sa-banta-ng-super-el-nino",
-      "title": "Malolos, pinaiigting ang paghahanda sa banta ng Super El Niño",
-      "snippet": "Patuloy na pinaiigting ng Pamahalaang Lungsod ng Malolos ang mga inisyatibo nito para sa sama-samang pag-aksyon at paghahanda sa Super El Nino. …",
-      "sourceExcerpt": "Patuloy na pinaiigting ng Pamahalaang Lungsod ng Malolos ang mga inisyatibo nito para sa sama-samang pag-aksyon at paghahanda sa Super El Nino. Sa isinagawang pagpupulong ng Lupon ng Paghahanda Laban sa Kalamidad noong Oktubre 22, 2026, sa Bulwagang Teodulo Capili Natividad ng Bagong Gusaling Pampamahalaan ng Malolos, sinuri ang kasalukuyang antas ng kahandaan ng lungsod continue reading : Malolos, pinaiigting ang paghahanda sa banta ng Super El Niño",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/malolos-pinaiigting-ang-paghahanda-sa-banta-ng-super-el-nino/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-10-27T00:29:09.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-10-27T04:55:40.749Z",
-      "firstSeenAt": "2026-10-27T04:55:40.749Z",
-      "lastSeenAt": "2026-10-27T04:55:40.749Z",
-      "updatedAt": "2026-10-27T04:55:40.749Z",
-      "expiresAt": "2026-10-29T00:29:09.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 100,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 21,
-      "totalScore": 91,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    }
-  ],
-  "retired": [
+      "retiredAt": "2026-10-29T00:50:59.121Z",
+      "reason": "expired"
+    },
     {
       "id": "malolos-city-website-79f8c2892f",
       "contentHash": "7c70c3f762d7a9d1",
@@ -158,35 +124,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-10-28T20:59:35.364Z",
+      "lastSuccessAt": "2026-10-29T00:50:59.851Z",
       "etag": null,
       "lastModified": "Tue, 27 Oct 2026 00:36:00 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-28T20:59:34.884Z",
+      "lastSuccessAt": "2026-10-29T00:50:59.177Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-28T20:59:37.199Z",
+      "lastSuccessAt": "2026-10-29T00:51:01.840Z",
       "lastError": null,
-      "etag": "\"56659bb11524597209a7682b282c84e8-gzip\"",
-      "lastModified": "Wed, 28 Oct 2026 03:28:24 GMT",
+      "etag": "\"d7ab54ab8a71fddd79c1cfe720a6d82a-gzip\"",
+      "lastModified": "Thu, 29 Oct 2026 00:20:56 GMT",
       "lastFailureAt": "2026-10-21T04:35:51.986Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-28T20:59:38.160Z",
+      "lastSuccessAt": "2026-10-29T00:51:04.640Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 659,
+      "consecutiveFailures": 660,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "format",
@@ -195,10 +161,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-10-28T20:59:36.231Z"
+      "lastFailureAt": "2026-10-29T00:51:01.502Z"
     },
     "deped-central": {
-      "consecutiveFailures": 659,
+      "consecutiveFailures": 660,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -207,7 +173,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-10-28T20:59:34.889Z"
+      "lastFailureAt": "2026-10-29T00:50:59.182Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -219,7 +185,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 659,
+      "consecutiveFailures": 660,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -228,19 +194,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-10-28T20:59:34.890Z"
+      "lastFailureAt": "2026-10-29T00:50:59.183Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-28T20:59:38.014Z",
+      "lastSuccessAt": "2026-10-29T00:51:02.730Z",
       "lastError": null,
-      "etag": "\"75b225f44f197437313dd7840227755f-gzip\"",
-      "lastModified": "Wed, 28 Oct 2026 03:17:05 GMT",
+      "etag": "\"1a1519a72d533ac09872b3cff211dd49-gzip\"",
+      "lastModified": "Thu, 29 Oct 2026 00:52:19 GMT",
       "lastFailureAt": "2026-10-21T04:35:51.988Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-10-28T20:59:34.887Z",
+      "lastSuccessAt": "2026-10-29T00:50:59.180Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
