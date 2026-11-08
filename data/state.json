@@ -1,8 +1,87 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-10-29T00:50:59.121Z",
-  "lastCheckedAt": "2026-11-08T00:30:08.646Z",
-  "board": [],
+  "lastUpdatedAt": "2026-11-08T07:14:17.150Z",
+  "lastCheckedAt": "2026-11-08T07:14:17.150Z",
+  "board": [
+    {
+      "id": "bulacan-province-92d6c2c470",
+      "contentHash": "c2ed9ed221d76c6a",
+      "canonicalUrl": "https://bulacan.gov.ph/bulacan-receives-disaster-recovery-assistance-from-pbbm",
+      "title": "Bulacan receives disaster recovery assistance from PBBM",
+      "snippet": "CITY OF MALOLOS – The Province of Bulacan headed by Governor Daniel R.  Fernando is among the 306 local government units (LGUs) nationwide set to benefit from the national government’s P8. …",
+      "sourceExcerpt": "CITY OF MALOLOS – The Province of Bulacan headed by Governor Daniel R. Fernando is among the 306 local government units (LGUs) nationwide set to benefit from the national government’s P8.6-billion financial assistance under the Disaster Rehabilitation and Reconstruction Assistance Program (DRRAP). President Ferdinand R. Marcos, Jr. led the ceremonial turnover of funds to beneficiary…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/bulacan-receives-disaster-recovery-assistance-from-pbbm/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-11-06T13:13:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-11-08T07:14:17.150Z",
+      "firstSeenAt": "2026-11-08T07:14:17.150Z",
+      "lastSeenAt": "2026-11-08T07:14:17.150Z",
+      "updatedAt": "2026-11-08T07:14:17.150Z",
+      "expiresAt": "2026-11-08T13:13:00.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named-dateline-ignored",
+      "urgencyScore": 76,
+      "freshnessScore": 23,
+      "totalScore": 84,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
+    {
+      "id": "bulacan-province-cf25812578",
+      "contentHash": "48d898430e790754",
+      "canonicalUrl": "https://bulacan.gov.ph/photo-release-drrap-beneficiary",
+      "title": "PHOTO RELEASE – DRRAP BENEFICIARY",
+      "snippet": "Governor Daniel R.  Fernando stands together with President Ferdinand R.  Marcos, Jr. …",
+      "sourceExcerpt": "Governor Daniel R. Fernando stands together with President Ferdinand R. Marcos, Jr., Executive Secretary Ralph Recto and other local chief executives during the turnover of funds under the Disaster Rehabilitation and Reconstruction Assistance Program held at Ceremonial Hall, Malacañang Palace, City of Manila yesterday. (Photo courtesy: Bongbong Marcos Facebook page)",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/photo-release-drrap-beneficiary/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-11-06T13:23:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-11-08T07:14:17.150Z",
+      "firstSeenAt": "2026-11-08T07:14:17.150Z",
+      "lastSeenAt": "2026-11-08T07:14:17.150Z",
+      "updatedAt": "2026-11-08T07:14:17.150Z",
+      "expiresAt": "2026-11-08T13:23:00.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 54,
+      "relevanceBasis": "source-is-provincial",
+      "urgencyScore": 76,
+      "freshnessScore": 23,
+      "totalScore": 78,
+      "priorityRank": 2,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    }
+  ],
   "retired": [
     {
       "id": "malolos-city-website-287d6057f0",
@@ -124,35 +203,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-11-08T00:30:09.389Z",
+      "lastSuccessAt": "2026-11-08T07:14:17.865Z",
       "etag": null,
       "lastModified": "Tue, 03 Nov 2026 07:31:28 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-08T00:30:08.682Z",
+      "lastSuccessAt": "2026-11-08T07:14:17.202Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-08T00:30:11.183Z",
+      "lastSuccessAt": "2026-11-08T07:14:19.474Z",
       "lastError": null,
-      "etag": "\"2400c19b6c3064bccda5465f6fb62eb6-gzip\"",
-      "lastModified": "Tue, 03 Nov 2026 02:24:14 GMT",
+      "etag": "\"cce69b1e0874d9ee1a0c6245bc4e505b-gzip\"",
+      "lastModified": "Sun, 08 Nov 2026 01:00:09 GMT",
       "lastFailureAt": "2026-11-06T02:20:38.423Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-08T00:30:11.869Z",
+      "lastSuccessAt": "2026-11-08T07:14:22.093Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 699,
+      "consecutiveFailures": 700,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "http",
@@ -161,10 +240,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-11-08T00:30:08.685Z"
+      "lastFailureAt": "2026-11-08T07:14:17.205Z"
     },
     "deped-central": {
-      "consecutiveFailures": 699,
+      "consecutiveFailures": 700,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -173,7 +252,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-11-08T00:30:08.685Z"
+      "lastFailureAt": "2026-11-08T07:14:17.207Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -185,7 +264,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 699,
+      "consecutiveFailures": 700,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -194,11 +273,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-11-08T00:30:08.686Z"
+      "lastFailureAt": "2026-11-08T07:14:17.207Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-08T00:30:11.289Z",
+      "lastSuccessAt": "2026-11-08T07:14:19.650Z",
       "lastError": null,
       "etag": "\"ad91ac5d29bf0a8f311009d908714045-gzip\"",
       "lastModified": "Fri, 06 Nov 2026 04:32:23 GMT",
@@ -206,7 +285,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-08T00:30:08.684Z",
+      "lastSuccessAt": "2026-11-08T07:14:17.205Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
