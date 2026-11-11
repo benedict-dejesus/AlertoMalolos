@@ -1,7 +1,7 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-11-10T09:40:57.314Z",
-  "lastCheckedAt": "2026-11-10T23:13:01.609Z",
+  "lastCheckedAt": "2026-11-11T06:01:40.793Z",
   "board": [
     {
       "id": "malolos-city-website-8b42ca8852",
@@ -32,9 +32,9 @@
       "importanceScore": 100,
       "relevanceScore": 100,
       "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 62,
-      "freshnessScore": 47,
-      "totalScore": 92,
+      "urgencyScore": 76,
+      "freshnessScore": 37,
+      "totalScore": 94,
       "priorityRank": 1,
       "displayState": "priority",
       "revisions": 0,
@@ -176,35 +176,35 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-11-10T23:13:02.153Z",
+      "lastSuccessAt": "2026-11-11T06:01:41.143Z",
       "etag": null,
       "lastModified": "Tue, 10 Nov 2026 04:57:45 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-10T23:13:01.653Z",
+      "lastSuccessAt": "2026-11-11T06:01:40.859Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-10T23:13:04.393Z",
+      "lastSuccessAt": "2026-11-11T06:01:43.007Z",
       "lastError": null,
-      "etag": "\"a07d1dc972074b2f4e53a34388897beb-gzip\"",
-      "lastModified": "Tue, 10 Nov 2026 08:14:33 GMT",
+      "etag": "\"028c7639337dcbe1e7011975b184c6a8-gzip\"",
+      "lastModified": "Wed, 11 Nov 2026 03:16:34 GMT",
       "lastFailureAt": "2026-11-06T02:20:38.423Z"
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-10T23:13:05.200Z",
+      "lastSuccessAt": "2026-11-11T06:01:42.930Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 709,
+      "consecutiveFailures": 710,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "http",
@@ -213,10 +213,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-11-10T23:13:01.655Z"
+      "lastFailureAt": "2026-11-11T06:01:40.862Z"
     },
     "deped-central": {
-      "consecutiveFailures": 709,
+      "consecutiveFailures": 710,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -225,7 +225,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-11-10T23:13:01.656Z"
+      "lastFailureAt": "2026-11-11T06:01:40.863Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -237,7 +237,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 709,
+      "consecutiveFailures": 710,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -246,19 +246,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-11-10T23:13:01.657Z"
+      "lastFailureAt": "2026-11-11T06:01:40.864Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-10T23:13:04.302Z",
+      "lastSuccessAt": "2026-11-11T06:01:43.047Z",
       "lastError": null,
-      "etag": "\"226274b8ceec07942aa3e2e3cfd3927d-gzip\"",
-      "lastModified": "Tue, 10 Nov 2026 06:46:05 GMT",
+      "etag": "\"4ddde16390ddbb80fc1b7c46b0da4dc1-gzip\"",
+      "lastModified": "Wed, 11 Nov 2026 02:41:20 GMT",
       "lastFailureAt": "2026-11-06T02:20:38.424Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-10T23:13:01.655Z",
+      "lastSuccessAt": "2026-11-11T06:01:40.861Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
