@@ -1,49 +1,15 @@
 {
   "version": 1,
-  "lastUpdatedAt": "2026-11-10T09:40:57.314Z",
-  "lastCheckedAt": "2026-11-11T21:52:51.299Z",
-  "board": [
+  "lastUpdatedAt": "2026-11-12T02:54:41.176Z",
+  "lastCheckedAt": "2026-11-12T02:54:41.176Z",
+  "board": [],
+  "retired": [
     {
       "id": "malolos-city-website-8b42ca8852",
       "contentHash": "f0642fcecfd9e34d",
-      "canonicalUrl": "https://maloloscity.gov.ph/malolos-nagsagawa-ng-kauna-unahang-tsunami-tabletop-exercise-sa-lungsod",
-      "title": "MALOLOS, NAGSAGAWA NG KAUNA-UNAHANG TSUNAMI TABLETOP EXERCISE SA LUNGSOD",
-      "snippet": "Bilang bahagi ng patuloy na pagpapalakas ng kahandaan ng lungsod sa mga posibleng sakuna, isinagawa noong Nobyembre 5, 2026 ang kauna-unahang Tsunami Tabletop Exercise (TTX) sa Lungsod ng…",
-      "sourceExcerpt": "Bilang bahagi ng patuloy na pagpapalakas ng kahandaan ng lungsod sa mga posibleng sakuna, isinagawa noong Nobyembre 5, 2026 ang kauna-unahang Tsunami Tabletop Exercise (TTX) sa Lungsod ng Malolos sa pangunguna ng City Disaster Risk Reduction and Management Office (CDRRMO), sa CDRRMO Training Room. Nilahukan ang pagsasanay ng iba’t ibang tanggapan ng pamahalaang lungsod at continue reading : MALOLOS, NAGSAGAWA NG KAUNA-UNAHANG TSUNAMI TABLETOP EXERCISE SA LUNGSOD",
-      "sourceId": "malolos-city-website",
-      "sourceName": "City Government of Malolos",
-      "sourceType": "Official public announcements from the city government.",
-      "sourceTier": 1,
-      "sourceAuthority": 100,
-      "sourceHomepage": "https://maloloscity.gov.ph/",
-      "announcementUrl": "https://maloloscity.gov.ph/malolos-nagsagawa-ng-kauna-unahang-tsunami-tabletop-exercise-sa-lungsod/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-11-10T01:43:22.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-11-10T09:40:57.314Z",
-      "firstSeenAt": "2026-11-10T09:40:57.314Z",
-      "lastSeenAt": "2026-11-10T09:40:57.314Z",
-      "updatedAt": "2026-11-10T09:40:57.314Z",
-      "expiresAt": "2026-11-12T01:43:22.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 100,
-      "relevanceBasis": "malolos-in-title",
-      "urgencyScore": 76,
-      "freshnessScore": 22,
-      "totalScore": 92,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": false
-    }
-  ],
-  "retired": [
+      "retiredAt": "2026-11-12T02:54:41.176Z",
+      "reason": "expired"
+    },
     {
       "id": "bulacan-province-92d6c2c470",
       "contentHash": "c2ed9ed221d76c6a",
@@ -176,20 +142,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-11-11T21:52:51.722Z",
+      "lastSuccessAt": "2026-11-12T02:54:41.593Z",
       "etag": null,
       "lastModified": "Tue, 10 Nov 2026 04:57:45 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-11T21:52:51.357Z",
+      "lastSuccessAt": "2026-11-12T02:54:41.210Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-11T21:52:53.299Z",
+      "lastSuccessAt": "2026-11-12T02:54:43.686Z",
       "lastError": null,
       "etag": "\"028c7639337dcbe1e7011975b184c6a8-gzip\"",
       "lastModified": "Wed, 11 Nov 2026 03:16:34 GMT",
@@ -197,14 +163,14 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-11T21:52:54.014Z",
+      "lastSuccessAt": "2026-11-12T02:54:44.656Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 712,
+      "consecutiveFailures": 713,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "http",
@@ -213,10 +179,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-11-11T21:52:51.361Z"
+      "lastFailureAt": "2026-11-12T02:54:41.213Z"
     },
     "deped-central": {
-      "consecutiveFailures": 712,
+      "consecutiveFailures": 713,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -225,7 +191,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-11-11T21:52:51.362Z"
+      "lastFailureAt": "2026-11-12T02:54:41.213Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -237,7 +203,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 712,
+      "consecutiveFailures": 713,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -246,19 +212,19 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-11-11T21:52:51.363Z"
+      "lastFailureAt": "2026-11-12T02:54:41.214Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-11T21:52:53.310Z",
+      "lastSuccessAt": "2026-11-12T02:54:43.735Z",
       "lastError": null,
-      "etag": "\"4ddde16390ddbb80fc1b7c46b0da4dc1-gzip\"",
-      "lastModified": "Wed, 11 Nov 2026 02:41:20 GMT",
+      "etag": "\"684f16819aac83251f8b59704d98f99b-gzip\"",
+      "lastModified": "Thu, 12 Nov 2026 00:40:44 GMT",
       "lastFailureAt": "2026-11-06T02:20:38.424Z"
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-11T21:52:51.360Z",
+      "lastSuccessAt": "2026-11-12T02:54:41.212Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
