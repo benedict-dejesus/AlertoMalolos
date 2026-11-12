@@ -1,47 +1,8 @@
 {
   "version": 1,
   "lastUpdatedAt": "2026-11-12T10:56:43.336Z",
-  "lastCheckedAt": "2026-11-12T10:56:43.336Z",
+  "lastCheckedAt": "2026-11-12T18:51:26.169Z",
   "board": [
-    {
-      "id": "bulacan-province-1e85151f85",
-      "contentHash": "2568ca5f4417f3f5",
-      "canonicalUrl": "https://bulacan.gov.ph/photo-release-angat-dam-inspection",
-      "title": "PHOTO RELEASE – ANGAT DAM INSPECTION",
-      "snippet": "Bulacan Governor Daniel R.  Fernando leads an on-site inspection of Angat Dam in Brgy. …",
-      "sourceExcerpt": "Bulacan Governor Daniel R. Fernando leads an on-site inspection of Angat Dam in Brgy. San Lorenzo, Norzagaray, Bulacan yesterday, to assess water levels and preparedness measures ahead of the projected very strong El Niño phenomenon, with (from right) National Power Corporation (NAPOCOR) Dams Department Manager Maria Teresa L. Serra, Provincial Disaster Risk Reduction and Management…",
-      "sourceId": "bulacan-province",
-      "sourceName": "Provincial Government of Bulacan",
-      "sourceType": "Provincial advisories and public-service announcements.",
-      "sourceTier": 3,
-      "sourceAuthority": 78,
-      "sourceHomepage": "https://bulacan.gov.ph/",
-      "announcementUrl": "https://bulacan.gov.ph/photo-release-angat-dam-inspection/",
-      "category": "emergency",
-      "isEmergency": true,
-      "isTranscribed": false,
-      "publishedAt": "2026-11-12T07:04:00.000Z",
-      "publishedAtIsKnown": true,
-      "discoveredAt": "2026-11-12T10:56:43.336Z",
-      "firstSeenAt": "2026-11-12T10:56:43.336Z",
-      "lastSeenAt": "2026-11-12T10:56:43.336Z",
-      "updatedAt": "2026-11-12T10:56:43.336Z",
-      "expiresAt": "2026-11-14T07:04:00.000Z",
-      "expiryBasis": "category-default:emergency",
-      "status": "active",
-      "importanceScore": 100,
-      "relevanceScore": 74,
-      "relevanceBasis": "bulacan-named",
-      "urgencyScore": 62,
-      "freshnessScore": 87,
-      "totalScore": 91,
-      "priorityRank": 1,
-      "displayState": "priority",
-      "revisions": 0,
-      "alsoReportedBy": [],
-      "isPriority": true,
-      "isNew": true
-    },
     {
       "id": "bulacan-province-f52bcc003c",
       "contentHash": "b52f81ec13a35e6e",
@@ -63,7 +24,7 @@
       "publishedAtIsKnown": true,
       "discoveredAt": "2026-11-12T10:56:43.336Z",
       "firstSeenAt": "2026-11-12T10:56:43.336Z",
-      "lastSeenAt": "2026-11-12T10:56:43.336Z",
+      "lastSeenAt": "2026-11-12T18:51:26.169Z",
       "updatedAt": "2026-11-12T10:56:43.336Z",
       "expiresAt": "2026-11-13T15:59:59.000Z",
       "expiryBasis": "relative-day:tomorrow",
@@ -71,9 +32,48 @@
       "importanceScore": 100,
       "relevanceScore": 74,
       "relevanceBasis": "bulacan-named-dateline-ignored",
+      "urgencyScore": 76,
+      "freshnessScore": 66,
+      "totalScore": 90,
+      "priorityRank": 1,
+      "displayState": "priority",
+      "revisions": 0,
+      "alsoReportedBy": [],
+      "isPriority": true,
+      "isNew": true
+    },
+    {
+      "id": "bulacan-province-1e85151f85",
+      "contentHash": "2568ca5f4417f3f5",
+      "canonicalUrl": "https://bulacan.gov.ph/photo-release-angat-dam-inspection",
+      "title": "PHOTO RELEASE – ANGAT DAM INSPECTION",
+      "snippet": "Bulacan Governor Daniel R.  Fernando leads an on-site inspection of Angat Dam in Brgy. …",
+      "sourceExcerpt": "Bulacan Governor Daniel R. Fernando leads an on-site inspection of Angat Dam in Brgy. San Lorenzo, Norzagaray, Bulacan yesterday, to assess water levels and preparedness measures ahead of the projected very strong El Niño phenomenon, with (from right) National Power Corporation (NAPOCOR) Dams Department Manager Maria Teresa L. Serra, Provincial Disaster Risk Reduction and Management…",
+      "sourceId": "bulacan-province",
+      "sourceName": "Provincial Government of Bulacan",
+      "sourceType": "Provincial advisories and public-service announcements.",
+      "sourceTier": 3,
+      "sourceAuthority": 78,
+      "sourceHomepage": "https://bulacan.gov.ph/",
+      "announcementUrl": "https://bulacan.gov.ph/photo-release-angat-dam-inspection/",
+      "category": "emergency",
+      "isEmergency": true,
+      "isTranscribed": false,
+      "publishedAt": "2026-11-12T07:04:00.000Z",
+      "publishedAtIsKnown": true,
+      "discoveredAt": "2026-11-12T10:56:43.336Z",
+      "firstSeenAt": "2026-11-12T10:56:43.336Z",
+      "lastSeenAt": "2026-11-12T18:51:26.169Z",
+      "updatedAt": "2026-11-12T10:56:43.336Z",
+      "expiresAt": "2026-11-14T07:04:00.000Z",
+      "expiryBasis": "category-default:emergency",
+      "status": "active",
+      "importanceScore": 100,
+      "relevanceScore": 74,
+      "relevanceBasis": "bulacan-named",
       "urgencyScore": 62,
-      "freshnessScore": 87,
-      "totalScore": 91,
+      "freshnessScore": 66,
+      "totalScore": 88,
       "priorityRank": 2,
       "displayState": "priority",
       "revisions": 0,
@@ -221,20 +221,20 @@
       "consecutiveFailures": 0,
       "lastFailureAt": "2026-09-22T04:46:58.780Z",
       "lastError": null,
-      "lastSuccessAt": "2026-11-12T10:56:43.862Z",
+      "lastSuccessAt": "2026-11-12T18:51:26.899Z",
       "etag": null,
       "lastModified": "Tue, 10 Nov 2026 04:57:45 GMT"
     },
     "malolos-cio-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-12T10:56:43.374Z",
+      "lastSuccessAt": "2026-11-12T18:51:26.208Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
     },
     "bulacan-province": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-12T10:56:45.732Z",
+      "lastSuccessAt": "2026-11-12T18:51:28.380Z",
       "lastError": null,
       "etag": "\"cd6b1adc83e009bdc3dfb6956cd3bc83-gzip\"",
       "lastModified": "Thu, 12 Nov 2026 08:00:42 GMT",
@@ -242,14 +242,14 @@
     },
     "pagasa-severe-weather": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-12T10:56:46.481Z",
+      "lastSuccessAt": "2026-11-12T18:51:29.408Z",
       "lastError": null,
       "etag": null,
       "lastModified": null,
       "lastFailureAt": "2026-09-15T07:39:38.600Z"
     },
     "dpwh-advisories": {
-      "consecutiveFailures": 714,
+      "consecutiveFailures": 715,
       "lastSuccessAt": "2026-08-09T03:43:39.628Z",
       "lastError": {
         "kind": "http",
@@ -258,10 +258,10 @@
       },
       "etag": "\"1786244373.997-0\"",
       "lastModified": "Sun, 09 Aug 2026 02:59:33 GMT",
-      "lastFailureAt": "2026-11-12T10:56:43.377Z"
+      "lastFailureAt": "2026-11-12T18:51:26.211Z"
     },
     "deped-central": {
-      "consecutiveFailures": 714,
+      "consecutiveFailures": 715,
       "lastSuccessAt": "2026-08-09T03:43:40.790Z",
       "lastError": {
         "kind": "http",
@@ -270,7 +270,7 @@
       },
       "etag": "\"62d82903ce538aead9f1314816a7267a\"",
       "lastModified": "Sat, 08 Aug 2026 23:25:34 GMT",
-      "lastFailureAt": "2026-11-12T10:56:43.377Z"
+      "lastFailureAt": "2026-11-12T18:51:26.212Z"
     },
     "deped-region3": {
       "consecutiveFailures": 17,
@@ -282,7 +282,7 @@
       }
     },
     "official-gazette": {
-      "consecutiveFailures": 714,
+      "consecutiveFailures": 715,
       "lastSuccessAt": "2026-08-09T03:43:40.014Z",
       "lastError": {
         "kind": "http",
@@ -291,11 +291,11 @@
       },
       "etag": "W/\"6408c917ba3876df047668e2d21121a4\"",
       "lastModified": "Fri, 07 Aug 2026 01:44:11 GMT",
-      "lastFailureAt": "2026-11-12T10:56:43.378Z"
+      "lastFailureAt": "2026-11-12T18:51:26.213Z"
     },
     "bulacan-pdrrmo": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-12T10:56:45.588Z",
+      "lastSuccessAt": "2026-11-12T18:51:28.919Z",
       "lastError": null,
       "etag": "\"684f16819aac83251f8b59704d98f99b-gzip\"",
       "lastModified": "Thu, 12 Nov 2026 00:40:44 GMT",
@@ -303,7 +303,7 @@
     },
     "bulacan-pdrrmo-facebook": {
       "consecutiveFailures": 0,
-      "lastSuccessAt": "2026-11-12T10:56:43.376Z",
+      "lastSuccessAt": "2026-11-12T18:51:26.211Z",
       "lastError": null,
       "etag": null,
       "lastModified": null
